@@ -1,12 +1,24 @@
-# CRT/RRT App – Question Pop-up Mock-up
+# CRT/RRT App – Mock-up
 
-Clickable design mock-up of the question screen for the CRT/RRT exam-prep app.
-Open the published page on a phone or computer; no sign-in needed.
+Live: https://kccook23-rt.github.io/rt-mockup/
 
-- Choose an answer by tapping a letter or the answer itself, then **Final**
-- Optional rule-out button (⊘) beside each answer
-- Tap images to enlarge, zoom, and rotate
-- Study and Exam modes in Settings
-- Report a problem after answering
+Clickable design mock-up of the CRT/RRT exam-prep app. Not production code: the real app will be built in Flutter + Firebase, using this as the reference for look and behavior.
 
-All questions, values, and images are original. This is a design mock-up, not the production app.
+## Who works on what
+
+| File | What it is | Owner |
+|---|---|---|
+| `js/app.js` | App shell, question pop-up, image viewer, settings, intro card, report-a-problem | Ken + Claude |
+| `js/stats.js` | Stats page and "Build a practice set" | **Noelle** |
+| `js/progress.js` | Review list and per-question progress storage (used by both) | Shared: post in Discord before changing |
+| `css/app.css` | Colors, fonts, layout | Shared: post in Discord before changing |
+| `data/questions.json` | 20-question public sample, same fields as the Firebase question document | Ken + Claude |
+| `images/` | Rhythm strips, ventilator graphics, capnogram | Ken + Claude |
+
+Rules of thumb
+- Edit only your own file when you can. For shared files, give the team a heads-up first.
+- Every change saved to the `main` branch goes live at the link above in about a minute.
+- **This project is public.** The full question bank is not here; it lives in the private `rt-question-bank` project.
+
+## Running it on your computer
+The page loads `data/questions.json`, so open it through a local web server instead of double-clicking `index.html`. For example, run `python3 -m http.server` in this folder and visit http://localhost:8000.

@@ -1,0 +1,1037 @@
+{
+ "version": 1,
+ "status": "draft",
+ "count": 20,
+ "note": "Public sample of draft questions. The full bank is private.",
+ "questions": [
+  {
+   "questionId": "RT-0001",
+   "legacyId": "RT-S001",
+   "exam": "RT",
+   "domain": "I",
+   "section": "I-D",
+   "sectionName": "Evaluate Procedure Results",
+   "topic": "DKA - acid-base interpretation",
+   "cognitiveLevel": "Analysis",
+   "portion": "Depth",
+   "patientCondition": "Adult - Medical: other",
+   "judgmentType": "Information Gathering",
+   "setting": "In a hospital",
+   "patientAge": "Adult",
+   "ethics": false,
+   "itemFormat": "SBA",
+   "stem": "A 24-year-old with type 1 diabetes arrives in the ED with 2 days of vomiting and abdominal pain. Respirations are deep and rapid. Physiologic data while breathing room air are:",
+   "stemTable": [
+    [
+     "Temperature",
+     "37.4º C (99.3º F)"
+    ],
+    [
+     "HR",
+     "124/min"
+    ],
+    [
+     "RR",
+     "30/min"
+    ],
+    [
+     "BP",
+     "102/64 mm Hg"
+    ],
+    [
+     "Glucose",
+     "540 mg/dL"
+    ],
+    [
+     "pH",
+     "7.20"
+    ],
+    [
+     "PaCO2",
+     "21 mm Hg"
+    ],
+    [
+     "PaO2",
+     "102 mm Hg"
+    ],
+    [
+     "HCO3-",
+     "8 mEq/L"
+    ],
+    [
+     "BE",
+     "-18 mEq/L"
+    ],
+    [
+     "SaO2 (calc)",
+     "96%"
+    ]
+   ],
+   "stemAfterTable": "Which of the following is the best interpretation of the ABG results?",
+   "options": [
+    "Combined metabolic and respiratory acidosis",
+    "Acute respiratory alkalosis",
+    "Metabolic acidosis with appropriate respiratory compensation",
+    "Metabolic acidosis with a separate primary respiratory alkalosis"
+   ],
+   "correctAnswer": "C",
+   "rationale": "The low pH and HCO3- identify a primary metabolic acidosis. Winter's formula predicts the expected PaCO2: 1.5 x 8 + 8 = 20 +/- 2 (18-22 mm Hg). The measured PaCO2 of 21 falls inside that range, so compensation is appropriate. A PaCO2 above 22 would point to an added respiratory acidosis; below 18, an added respiratory alkalosis. Respiratory alkalosis is excluded because the pH is acidemic.",
+   "reference": "Winter's formula for expected respiratory compensation in metabolic acidosis; standard RT ABG interpretation texts.",
+   "image": null,
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "RT-0002",
+   "legacyId": "RT-S002",
+   "exam": "RT",
+   "domain": "III",
+   "section": "III-G",
+   "sectionName": "Provide Respiratory Care in High-Risk Situations",
+   "topic": "Pulseless ventricular tachycardia",
+   "cognitiveLevel": "Analysis",
+   "portion": "Depth",
+   "patientCondition": "Adult - Cardiovascular",
+   "judgmentType": "Decision Making",
+   "setting": "In a hospital",
+   "patientAge": "Adult",
+   "ethics": false,
+   "itemFormat": "SBA",
+   "stem": "A 66-year-old on a telemetry unit suddenly becomes unresponsive. The monitor displays the rhythm shown. There is no carotid pulse, and the patient is not breathing. CPR has been started. Which of the following should be done FIRST?",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "Synchronized cardioversion",
+    "Unsynchronized defibrillation",
+    "Adenosine 6 mg rapid IV push",
+    "Transcutaneous pacing"
+   ],
+   "correctAnswer": "B",
+   "rationale": "The strip shows a regular, wide-complex tachycardia near 175/min with no P waves: ventricular tachycardia. Without a pulse it is treated as a shockable cardiac arrest rhythm, so the priority is immediate unsynchronized defibrillation with minimal interruption of CPR. Synchronized cardioversion is reserved for VT with a pulse, adenosine is for stable regular narrow-complex tachycardia, and pacing treats symptomatic bradycardia.",
+   "reference": "AHA Adult Cardiac Arrest Algorithm (ACLS).",
+   "image": {
+    "file": "images/RT-S002_ecg.png",
+    "type": "Rhythm strip",
+    "alt": "Lead II rhythm strip, 6 seconds: regular wide QRS complexes at about 175 per minute with no visible P waves.",
+    "width": 1560,
+    "height": 390
+   },
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "RT-0003",
+   "legacyId": "RT-S003",
+   "exam": "RT",
+   "domain": "I",
+   "section": "I-D",
+   "sectionName": "Evaluate Procedure Results",
+   "topic": "Atrial fibrillation recognition",
+   "cognitiveLevel": "Application",
+   "portion": "Breadth",
+   "patientCondition": null,
+   "judgmentType": null,
+   "setting": "Outside a hospital",
+   "patientAge": "Adult",
+   "ethics": false,
+   "itemFormat": "SBA",
+   "stem": "A 72-year-old with COPD is seen in a pulmonary clinic for worsening exertional dyspnea. A rhythm strip is obtained and is shown. Which of the following rhythms is present?",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "Atrial fibrillation",
+    "Atrial flutter",
+    "Multifocal atrial tachycardia",
+    "Sinus tachycardia with premature atrial contractions"
+   ],
+   "correctAnswer": "A",
+   "rationale": "The R-R intervals are irregularly irregular, there are no consistent P waves, and the baseline shows fine fibrillatory waves, all hallmarks of atrial fibrillation. Atrial flutter shows regular sawtooth flutter waves, multifocal atrial tachycardia has at least three distinct P-wave shapes, and sinus tachycardia with PACs shows a P wave before each QRS.",
+   "reference": "Standard ECG rhythm interpretation references.",
+   "image": {
+    "file": "images/RT-S003_ecg.png",
+    "type": "Rhythm strip",
+    "alt": "Lead II rhythm strip, 6 seconds: narrow QRS complexes at irregular intervals, rate about 110 per minute, no distinct P waves, wavy fibrillatory baseline.",
+    "width": 1560,
+    "height": 390
+   },
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "RT-0004",
+   "legacyId": "RT-S004",
+   "exam": "RT",
+   "domain": "III",
+   "section": "III-C",
+   "sectionName": "Support Oxygenation and Ventilation",
+   "topic": "Auto-PEEP in severe asthma",
+   "cognitiveLevel": "Analysis",
+   "portion": "Depth",
+   "patientCondition": "Adult - Chronic Lung Disease: intubation and invasive ventilation",
+   "judgmentType": "Decision Making",
+   "setting": "In a hospital",
+   "patientAge": "Adult",
+   "ethics": false,
+   "itemFormat": "SBA",
+   "stem": "An adult intubated for a severe asthma exacerbation is receiving mechanical ventilation with the following settings:",
+   "stemTable": [
+    [
+     "Mode",
+     "VC, A/C"
+    ],
+    [
+     "FIO2",
+     "0.50"
+    ],
+    [
+     "Mandatory rate",
+     "20"
+    ],
+    [
+     "Total rate",
+     "20"
+    ],
+    [
+     "VT",
+     "450 mL"
+    ],
+    [
+     "Inspiratory flow",
+     "60 L/min (constant)"
+    ],
+    [
+     "PEEP",
+     "5 cm H2O"
+    ]
+   ],
+   "stemAfterTable": "Over the last 30 minutes, BP has fallen from 128/80 to 92/58 mm Hg. The flow-time scalar is shown. Which of the following should a respiratory therapist recommend FIRST?",
+   "options": [
+    "Increase the mandatory rate to 26/min",
+    "Decrease the inspiratory flow to 40 L/min",
+    "Increase the PEEP to 15 cm H2O",
+    "Decrease the mandatory rate to 14/min"
+   ],
+   "correctAnswer": "D",
+   "rationale": "Expiratory flow never returns to zero before the next breath begins, which means exhalation is incomplete and auto-PEEP is building. Dynamic hyperinflation raises intrathoracic pressure and reduces venous return, which explains the falling blood pressure. Lowering the rate is the most effective way to lengthen expiratory time. Raising the rate or lowering inspiratory flow shortens expiratory time and worsens air trapping, and adding a high set PEEP in a passive patient adds to the hyperinflation.",
+   "reference": "Mechanical ventilation in severe asthma: managing dynamic hyperinflation; standard RT ventilator graphics references.",
+   "image": {
+    "file": "images/RT-S004_flow.png",
+    "type": "Flow-time scalar",
+    "alt": "Flow-time scalar over 12 seconds: square inspiratory flow of 60 L/min; expiratory flow decays but is still about -7 L/min when each new breath starts, never reaching the zero baseline.",
+    "width": 1300,
+    "height": 442
+   },
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "RT-0005",
+   "legacyId": "RT-S005",
+   "exam": "RT",
+   "domain": "III",
+   "section": "III-C",
+   "sectionName": "Support Oxygenation and Ventilation",
+   "topic": "Flow starvation on VC ventilation",
+   "cognitiveLevel": "Application",
+   "portion": "Breadth",
+   "patientCondition": null,
+   "judgmentType": null,
+   "setting": "In a hospital",
+   "patientAge": "Adult",
+   "ethics": false,
+   "itemFormat": "SBA",
+   "stem": "An adult with pneumonia is receiving mechanical ventilation with the following parameters:",
+   "stemTable": [
+    [
+     "Mode",
+     "VC, A/C"
+    ],
+    [
+     "FIO2",
+     "0.40"
+    ],
+    [
+     "Mandatory rate",
+     "16"
+    ],
+    [
+     "Total rate",
+     "16"
+    ],
+    [
+     "VT",
+     "500 mL"
+    ],
+    [
+     "Inspiratory flow",
+     "35 L/min (constant)"
+    ],
+    [
+     "PEEP",
+     "8 cm H2O"
+    ]
+   ],
+   "stemAfterTable": "The patient appears anxious and is using accessory muscles. The pressure-time scalar is shown. The therapist should",
+   "options": [
+    "increase the trigger sensitivity.",
+    "increase the inspiratory flow.",
+    "increase the PEEP.",
+    "decrease the tidal volume."
+   ],
+   "correctAnswer": "B",
+   "rationale": "Each breath shows a concave, scooped dip early in inspiration, pulling airway pressure down toward baseline before it rises. That shape means the patient's inspiratory demand exceeds the set flow (flow starvation). Increasing the inspiratory flow, or changing to a mode with variable flow, resolves it. The breaths are already being triggered, so trigger sensitivity isn't the problem, and PEEP or tidal volume changes don't address the flow mismatch.",
+   "reference": "Patient-ventilator asynchrony on ventilator graphics; standard RT texts.",
+   "image": {
+    "file": "images/RT-S005_pressure.png",
+    "type": "Pressure-time scalar",
+    "alt": "Pressure-time scalar: baseline 8 cm H2O; each breath rises to about 15, dips concavely to about 11, then climbs to a peak near 27 cm H2O.",
+    "width": 1300,
+    "height": 442
+   },
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "RT-0006",
+   "legacyId": "RT-S006",
+   "exam": "RT",
+   "domain": "III",
+   "section": "III-C",
+   "sectionName": "Support Oxygenation and Ventilation",
+   "topic": "Overdistension on pressure-volume loop",
+   "cognitiveLevel": "Analysis",
+   "portion": "Depth",
+   "patientCondition": "Adult - Medical: ARDS",
+   "judgmentType": "Decision Making",
+   "setting": "In a hospital",
+   "patientAge": "Adult",
+   "ethics": false,
+   "itemFormat": "SBA",
+   "stem": "A 170-cm (5-ft 7-in) male with ARDS is receiving mechanical ventilation. Ventilation parameters are:",
+   "stemTable": [
+    [
+     "Mode",
+     "VC, A/C"
+    ],
+    [
+     "FIO2",
+     "0.60"
+    ],
+    [
+     "Mandatory rate",
+     "18"
+    ],
+    [
+     "Total rate",
+     "18"
+    ],
+    [
+     "VT",
+     "650 mL"
+    ],
+    [
+     "PEEP",
+     "10 cm H2O"
+    ],
+    [
+     "PIP",
+     "40 cm H2O"
+    ],
+    [
+     "Pplat",
+     "36 cm H2O"
+    ]
+   ],
+   "stemAfterTable": "The pressure-volume loop is shown. Which of the following changes is MOST appropriate?",
+   "options": [
+    "Increase the VT to 750 mL.",
+    "Decrease the PEEP to 5 cm H2O.",
+    "Decrease the VT to 400 mL.",
+    "Increase the inspiratory flow."
+   ],
+   "correctAnswer": "C",
+   "rationale": "The upper part of the inspiratory limb flattens into a 'beak': pressure keeps rising from about 30 to 40 cm H2O while volume barely increases. That indicates alveolar overdistension. The VT of 650 mL is nearly 10 mL/kg PBW; lung-protective ventilation targets about 6 mL/kg (roughly 400 mL here) with a plateau pressure of 30 cm H2O or less. Raising VT worsens overdistension, dropping PEEP risks derecruitment in ARDS, and changing flow doesn't reduce distending volume.",
+   "reference": "ARDSNet lung-protective ventilation protocol.",
+   "image": {
+    "file": "images/RT-S006_pvloop.png",
+    "type": "Pressure-volume loop",
+    "alt": "Pressure-volume loop from 10 to about 40 cm H2O and 0 to 650 mL; the inspiratory limb flattens above 30 cm H2O, forming a beak at the top.",
+    "width": 780,
+    "height": 650
+   },
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "RT-0007",
+   "legacyId": "RT-S007",
+   "exam": "RT",
+   "domain": "I",
+   "section": "I-D",
+   "sectionName": "Evaluate Procedure Results",
+   "topic": "Alveolar-arterial oxygen gradient",
+   "cognitiveLevel": "Application",
+   "portion": "Breadth",
+   "patientCondition": null,
+   "judgmentType": null,
+   "setting": "In a hospital",
+   "patientAge": "Adult",
+   "ethics": false,
+   "itemFormat": "SBA-Numeric",
+   "stem": "A 58-year-old is breathing room air at sea level (PB 760 mm Hg). ABG analysis reveals:",
+   "stemTable": [
+    [
+     "pH",
+     "7.44"
+    ],
+    [
+     "PaCO2",
+     "38 mm Hg"
+    ],
+    [
+     "PaO2",
+     "58 mm Hg"
+    ],
+    [
+     "HCO3-",
+     "26 mEq/L"
+    ],
+    [
+     "BE",
+     "+2 mEq/L"
+    ],
+    [
+     "SaO2 (calc)",
+     "91%"
+    ]
+   ],
+   "stemAfterTable": "Which of the following is closest to the patient's P(A-a)O2?",
+   "options": [
+    "12 mm Hg",
+    "24 mm Hg",
+    "44 mm Hg",
+    "92 mm Hg"
+   ],
+   "correctAnswer": "C",
+   "rationale": "PAO2 = FIO2 x (PB - 47) - PaCO2 / 0.8 = 0.21 x 713 - 38/0.8 = 149.7 - 47.5 = about 102 mm Hg. P(A-a)O2 = 102 - 58 = about 44 mm Hg. That is well above normal for this age (roughly 10-20 mm Hg on room air), so the hypoxemia comes from V/Q mismatch, shunt, or a diffusion problem rather than hypoventilation alone; the normal PaCO2 also argues against hypoventilation.",
+   "reference": "Alveolar air equation; standard RT texts.",
+   "image": null,
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "RT-0008",
+   "legacyId": "RT-S008",
+   "exam": "RT",
+   "domain": "III",
+   "section": "III-E",
+   "sectionName": "Make or Recommend Changes to the Respiratory Care Plan",
+   "topic": "Pediatric asthma - rising PaCO2",
+   "cognitiveLevel": "Analysis",
+   "portion": "Depth",
+   "patientCondition": "Children - Pediatric",
+   "judgmentType": "Decision Making",
+   "setting": "In a hospital",
+   "patientAge": "Pediatric",
+   "ethics": false,
+   "itemFormat": "SBA",
+   "stem": "A 7-year-old with asthma has received three albuterol/ipratropium treatments and oral corticosteroids in the ED. The child is speaking in single words, has suprasternal retractions, and breath sounds are diminished bilaterally. Physiologic data while receiving O2 by 40% air-entrainment mask are:",
+   "stemTable": [
+    [
+     "HR",
+     "148/min"
+    ],
+    [
+     "RR",
+     "42/min"
+    ],
+    [
+     "BP",
+     "108/66 mm Hg"
+    ],
+    [
+     "SpO2",
+     "90%"
+    ],
+    [
+     "pH",
+     "7.35"
+    ],
+    [
+     "PaCO2",
+     "45 mm Hg"
+    ],
+    [
+     "PaO2",
+     "62 mm Hg"
+    ],
+    [
+     "HCO3-",
+     "24 mEq/L"
+    ],
+    [
+     "BE",
+     "-1 mEq/L"
+    ],
+    [
+     "SaO2 (calc)",
+     "90%"
+    ]
+   ],
+   "stemAfterTable": "Which of the following should the respiratory therapist recommend?",
+   "options": [
+    "Continue current therapy and repeat the ABG in 2 hours.",
+    "Discharge home with an oral corticosteroid burst.",
+    "Administer sodium bicarbonate IV.",
+    "Escalate care with ICU consultation and preparation for ventilatory support."
+   ],
+   "correctAnswer": "D",
+   "rationale": "In a child working this hard to breathe, PaCO2 should be low from hyperventilation. A 'normal' PaCO2 of 45 mm Hg with diminished breath sounds and single-word speech signals fatigue and impending respiratory failure, not improvement. Care should be escalated now (ICU consult, adjuncts such as IV magnesium per protocol, and readiness for ventilatory support). Waiting two hours or discharging is unsafe, and bicarbonate has no role because there is no metabolic acidosis.",
+   "reference": "GINA / NAEPP guidance on severe and life-threatening asthma exacerbations.",
+   "image": null,
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "RT-0009",
+   "legacyId": "RT-S009",
+   "exam": "RT",
+   "domain": "I",
+   "section": "I-C",
+   "sectionName": "Perform Procedures to Gather Clinical Information",
+   "topic": "Air bubble in ABG sample",
+   "cognitiveLevel": "Recall",
+   "portion": "Breadth",
+   "patientCondition": null,
+   "judgmentType": null,
+   "setting": "In a hospital",
+   "patientAge": "Adult",
+   "ethics": false,
+   "itemFormat": "SBA",
+   "stem": "An arterial blood sample from a patient breathing room air (actual PaO2 about 70 mm Hg) contains a large air bubble that was not expelled before analysis. Which of the following changes should be expected in the reported results?",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "PaO2 increased and PaCO2 decreased",
+    "PaO2 decreased and PaCO2 increased",
+    "PaO2 and PaCO2 both increased",
+    "No significant change if analyzed within 30 minutes"
+   ],
+   "correctAnswer": "A",
+   "rationale": "Room air has a PO2 of about 150 mm Hg and almost no CO2. Gases in the bubble equilibrate with the blood, pulling PaO2 toward about 150 mm Hg (up, in this case) and lowering PaCO2. The error starts at once, so prompt analysis doesn't prevent it; the bubble must be expelled immediately after collection.",
+   "reference": "AARC Clinical Practice Guideline: Blood Gas Analysis and Hemoximetry.",
+   "image": null,
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "RT-0010",
+   "legacyId": "RT-S010",
+   "exam": "RT",
+   "domain": "III",
+   "section": "III-E",
+   "sectionName": "Make or Recommend Changes to the Respiratory Care Plan",
+   "topic": "Hyperkalemia - ECG changes",
+   "cognitiveLevel": "Application",
+   "portion": "Depth",
+   "patientCondition": "Adult - Medical: other",
+   "judgmentType": "Decision Making",
+   "setting": "In a hospital",
+   "patientAge": "Adult",
+   "ethics": false,
+   "itemFormat": "SBA",
+   "stem": "An adult with end-stage renal disease missed two scheduled dialysis sessions and reports generalized weakness. Laboratory results are:",
+   "stemTable": [
+    [
+     "K+",
+     "7.1 mEq/L"
+    ],
+    [
+     "Na+",
+     "136 mEq/L"
+    ],
+    [
+     "Cl-",
+     "101 mEq/L"
+    ],
+    [
+     "HCO3-",
+     "18 mEq/L"
+    ],
+    [
+     "BUN",
+     "88 mg/dL"
+    ],
+    [
+     "Creatinine",
+     "9.4 mg/dL"
+    ],
+    [
+     "Glucose",
+     "110 mg/dL"
+    ]
+   ],
+   "stemAfterTable": "The rhythm strip is shown. Which of the following should be recommended FIRST?",
+   "options": [
+    "Oral sodium polystyrene sulfonate",
+    "Emergent hemodialysis",
+    "IV calcium gluconate",
+    "Nebulized albuterol"
+   ],
+   "correctAnswer": "C",
+   "rationale": "Tall, narrow, peaked T waves with flattened P waves are classic ECG signs of hyperkalemia, and a potassium of 7.1 mEq/L with ECG changes is an emergency. IV calcium is given first because it stabilizes the cardiac membrane within minutes. Albuterol and insulin shift potassium into cells and dialysis removes it, but they act more slowly and come after calcium. Oral binders take hours.",
+   "reference": "AHA ACLS guidance on life-threatening electrolyte abnormalities.",
+   "image": {
+    "file": "images/RT-S010_ecg.png",
+    "type": "Rhythm strip",
+    "alt": "Lead II rhythm strip, 6 seconds: regular rhythm about 78 per minute with tall, narrow, peaked T waves taller than the QRS and small flattened P waves.",
+    "width": 1560,
+    "height": 390
+   },
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "RT-0011",
+   "legacyId": null,
+   "exam": "RT",
+   "domain": "I",
+   "section": "I-A",
+   "sectionName": "Evaluate Data in the Patient Record",
+   "topic": "DNI order with hypercapnic failure",
+   "cognitiveLevel": "Analysis",
+   "portion": "Depth",
+   "patientCondition": "Adult - Chronic Lung Disease: noninvasive management",
+   "judgmentType": "Decision Making",
+   "setting": "In a hospital",
+   "patientAge": "Adult",
+   "ethics": true,
+   "itemFormat": "SBA",
+   "stem": "An 82-year-old with end-stage COPD is admitted with hypercapnic respiratory failure. The medical record contains a valid do-not-intubate (DNI) order that the patient signed. The patient is drowsy but arousable and follows commands. ABG analysis while receiving O2 by NC at 2 L/min reveals:",
+   "stemTable": [
+    [
+     "pH",
+     "7.24"
+    ],
+    [
+     "PaCO2",
+     "78 mm Hg"
+    ],
+    [
+     "PaO2",
+     "52 mm Hg"
+    ],
+    [
+     "HCO3-",
+     "33 mEq/L"
+    ],
+    [
+     "BE",
+     "+6 mEq/L"
+    ],
+    [
+     "SaO2 (calc)",
+     "79%"
+    ]
+   ],
+   "stemAfterTable": "Which of the following should the respiratory therapist recommend?",
+   "options": [
+    "Ask the family to consent to intubation on the patient's behalf",
+    "Intubate, because the DNI order was signed before this admission",
+    "Initiate NPPV as the ceiling of ventilatory support, consistent with the DNI order",
+    "Withhold all ventilatory support, because a DNI order is in place"
+   ],
+   "correctAnswer": "C",
+   "rationale": "A DNI order limits intubation, not every form of support. NPPV is an accepted ceiling-of-care option for an alert patient with hypercapnic COPD failure and fits the patient's documented wishes. A valid order stays in force across admissions, and family members cannot override a decision the patient made while competent.",
+   "reference": "GOLD report, management of exacerbations; ATS/ERS NIV guideline.",
+   "image": null,
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "RT-0017",
+   "legacyId": null,
+   "exam": "RT",
+   "domain": "I",
+   "section": "I-B",
+   "sectionName": "Perform Clinical Assessment",
+   "topic": "Physical sign of air trapping",
+   "cognitiveLevel": "Recall",
+   "portion": "Breadth",
+   "patientCondition": null,
+   "judgmentType": null,
+   "setting": "In a hospital",
+   "patientAge": "Adult",
+   "ethics": false,
+   "itemFormat": "SBA",
+   "stem": "Which of the following physical findings is most consistent with chronic air trapping?",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "increased anteroposterior chest diameter",
+    "increased tactile fremitus",
+    "dullness to percussion",
+    "tracheal deviation"
+   ],
+   "correctAnswer": "A",
+   "rationale": "Chronic hyperinflation enlarges the anteroposterior diameter, producing a barrel chest. Dullness and increased fremitus suggest consolidation or fluid, and tracheal deviation suggests a shift in volume or pressure on one side.",
+   "reference": "Wilkins' Clinical Assessment in Respiratory Care.",
+   "image": null,
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "RT-0037",
+   "legacyId": null,
+   "exam": "RT",
+   "domain": "I",
+   "section": "I-D",
+   "sectionName": "Evaluate Procedure Results",
+   "topic": "Acute respiratory acidosis - opioid overdose",
+   "cognitiveLevel": "Application",
+   "portion": "Depth",
+   "patientCondition": "Adult - Medical: other",
+   "judgmentType": "Information Gathering",
+   "setting": "In a hospital",
+   "patientAge": "Adult",
+   "ethics": false,
+   "itemFormat": "SBA",
+   "stem": "An adult is found unresponsive after a suspected opioid overdose. ABG analysis while breathing room air reveals:",
+   "stemTable": [
+    [
+     "pH",
+     "7.22"
+    ],
+    [
+     "PaCO2",
+     "68 mm Hg"
+    ],
+    [
+     "PaO2",
+     "52 mm Hg"
+    ],
+    [
+     "HCO3-",
+     "28 mEq/L"
+    ],
+    [
+     "BE",
+     "0 mEq/L"
+    ],
+    [
+     "SaO2 (calc)",
+     "78%"
+    ]
+   ],
+   "stemAfterTable": "These results indicate",
+   "options": [
+    "combined respiratory and metabolic acidosis.",
+    "chronic compensated respiratory acidosis.",
+    "acute respiratory acidosis with hypoxemia.",
+    "metabolic acidosis with hypoxemia."
+   ],
+   "correctAnswer": "C",
+   "rationale": "The low pH with a high PaCO2 points to a primary respiratory acidosis. HCO3- is only slightly elevated, consistent with acute buffering rather than renal compensation, so the process is acute. Hypoxemia follows from hypoventilation.",
+   "reference": "ABG interpretation, Egan's Fundamentals of Respiratory Care.",
+   "image": null,
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "RT-0042",
+   "legacyId": null,
+   "exam": "RT",
+   "domain": "I",
+   "section": "I-D",
+   "sectionName": "Evaluate Procedure Results",
+   "topic": "Capnogram loss of waveform",
+   "cognitiveLevel": "Application",
+   "portion": "Breadth",
+   "patientCondition": null,
+   "judgmentType": null,
+   "setting": "In a hospital",
+   "patientAge": "Adult",
+   "ethics": false,
+   "itemFormat": "SBA",
+   "stem": "A respiratory therapist is monitoring a patient receiving VC ventilation. The capnography waveform is shown. Which of the following should the therapist do FIRST?",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "Administer a bronchodilator",
+    "Check for ETT displacement or circuit disconnection",
+    "Increase the mandatory rate",
+    "Recalibrate the capnometer"
+   ],
+   "correctAnswer": "B",
+   "rationale": "A sudden fall of end-tidal CO2 to zero means no exhaled CO2 is reaching the sensor. The urgent causes are extubation, disconnection, or complete obstruction, so the patient and circuit are checked first. A gradual decline would suggest falling cardiac output or hyperventilation.",
+   "reference": "AARC CPG: Capnography/Capnometry during Mechanical Ventilation.",
+   "image": {
+    "file": "images/RT-B01_capno.png",
+    "type": "Capnogram",
+    "alt": "Time-based capnogram: normal rectangular waveforms with end-tidal CO2 about 38 mm Hg, then an abrupt drop to a flat line at zero.",
+    "width": 1300,
+    "height": 416
+   },
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "RT-0048",
+   "legacyId": null,
+   "exam": "RT",
+   "domain": "I",
+   "section": "I-E",
+   "sectionName": "Recommend Diagnostic Procedures",
+   "topic": "Suspected pulmonary tuberculosis",
+   "cognitiveLevel": "Application",
+   "portion": "Depth",
+   "patientCondition": "Adult - Medical: infectious disease",
+   "judgmentType": "Decision Making",
+   "setting": "In a hospital",
+   "patientAge": "Adult",
+   "ethics": false,
+   "itemFormat": "SBA",
+   "stem": "An adult with a 3-week cough, night sweats, weight loss, and a cavitary upper-lobe lesion is admitted. In addition to airborne isolation, which of the following should be recommended?",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "A methacholine challenge",
+    "Three sputum samples for acid-fast bacilli smear and culture",
+    "A single blood culture",
+    "A sweat chloride test"
+   ],
+   "correctAnswer": "B",
+   "rationale": "The picture strongly suggests active tuberculosis. Serial sputum specimens (usually three, at least 8 hours apart, one in the early morning) for AFB smear, culture, and nucleic acid testing confirm the diagnosis and guide isolation.",
+   "reference": "CDC/ATS/IDSA TB diagnosis guideline.",
+   "image": null,
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "RT-0058",
+   "legacyId": null,
+   "exam": "RT",
+   "domain": "II",
+   "section": "II-A",
+   "sectionName": "Troubleshoot Devices During and After Assembling",
+   "topic": "Air-entrainment mask with high demand",
+   "cognitiveLevel": "Analysis",
+   "portion": "Breadth",
+   "patientCondition": null,
+   "judgmentType": null,
+   "setting": "In a hospital",
+   "patientAge": "Adult",
+   "ethics": false,
+   "itemFormat": "SBA",
+   "stem": "A patient wearing a 35% air-entrainment mask with an O2 flow of 6 L/min has an RR of 36/min and a minute ventilation of about 18 L/min. To keep the delivered FIO2 near 35%, the respiratory therapist should",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "increase the O2 flow while keeping the 35% setting.",
+    "switch to a nasal cannula at 6 L/min.",
+    "decrease the O2 flow.",
+    "change the setting to 50%."
+   ],
+   "correctAnswer": "A",
+   "rationale": "At 35%, the air-to-O2 ratio is about 5:1, so 6 L/min gives roughly 36 L/min total flow. Peak inspiratory flow at a minute ventilation of 18 L/min can exceed that, and the patient then entrains room air and receives a lower FIO2. Raising the O2 flow raises total flow without changing the FIO2 setting.",
+   "reference": "Egan's Fundamentals of Respiratory Care.",
+   "image": null,
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "RT-0100",
+   "legacyId": null,
+   "exam": "RT",
+   "domain": "II",
+   "section": "II-B",
+   "sectionName": "Ensure Infection Prevention/Control, Safety, and QA Procedures",
+   "topic": "QC shift on a blood gas analyzer",
+   "cognitiveLevel": "Analysis",
+   "portion": "Breadth",
+   "patientCondition": null,
+   "judgmentType": null,
+   "setting": "In a hospital",
+   "patientAge": "Adult",
+   "ethics": false,
+   "itemFormat": "SBA",
+   "stem": "Quality control results for the PO2 channel of a blood gas analyzer over 6 consecutive days are:",
+   "stemTable": [
+    [
+     "Established mean",
+     "100 mm Hg"
+    ],
+    [
+     "Standard deviation",
+     "3 mm Hg"
+    ],
+    [
+     "Day 1",
+     "103 mm Hg"
+    ],
+    [
+     "Day 2",
+     "104 mm Hg"
+    ],
+    [
+     "Day 3",
+     "102 mm Hg"
+    ],
+    [
+     "Day 4",
+     "105 mm Hg"
+    ],
+    [
+     "Day 5",
+     "104 mm Hg"
+    ],
+    [
+     "Day 6",
+     "103 mm Hg"
+    ]
+   ],
+   "stemAfterTable": "This pattern most likely indicates",
+   "options": [
+    "acceptable performance with no action needed.",
+    "a systematic error that requires troubleshooting.",
+    "random error that can be ignored.",
+    "a single outlier."
+   ],
+   "correctAnswer": "B",
+   "rationale": "Every result falls on the same side of the mean. Even within 2 SD, a run of consecutive values on one side is a shift that signals systematic error, such as electrode drift or a calibration problem.",
+   "reference": "Westgard multirule QC; CLSI C24.",
+   "image": null,
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "RT-0107",
+   "legacyId": null,
+   "exam": "RT",
+   "domain": "III",
+   "section": "III-A",
+   "sectionName": "Maintain a Patent Airway Including Care of Artificial Airways",
+   "topic": "Unrecognized esophageal intubation",
+   "cognitiveLevel": "Application",
+   "portion": "Breadth",
+   "patientCondition": null,
+   "judgmentType": null,
+   "setting": "In a hospital",
+   "patientAge": "Adult",
+   "ethics": false,
+   "itemFormat": "SBA",
+   "stem": "After an intubation, waveform capnography shows no CO2 after six breaths, and gurgling is heard over the epigastrium. The respiratory therapist should",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "remove the tube and ventilate with a bag-mask before another attempt.",
+    "withdraw the tube 2 cm.",
+    "add air to the cuff.",
+    "advance the tube 2 cm."
+   ],
+   "correctAnswer": "A",
+   "rationale": "Absent exhaled CO2 with epigastric sounds means the tube is in the esophagus. It must be removed at once and oxygenation restored by bag-mask before a new attempt.",
+   "reference": "AHA ACLS guidelines.",
+   "image": null,
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "RT-0118",
+   "legacyId": null,
+   "exam": "RT",
+   "domain": "III",
+   "section": "III-B",
+   "sectionName": "Perform Airway Clearance and Lung Expansion Techniques",
+   "topic": "Postural drainage for the right middle lobe",
+   "cognitiveLevel": "Application",
+   "portion": "Breadth",
+   "patientCondition": null,
+   "judgmentType": null,
+   "setting": "In a hospital",
+   "patientAge": "Adult",
+   "ethics": false,
+   "itemFormat": "SBA",
+   "stem": "The correct postural drainage position for the right middle lobe is",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "head down about 15 degrees, lying on the left side rotated a quarter turn backward.",
+    "flat and prone.",
+    "head up 45 degrees, lying on the right side.",
+    "head down 30 degrees, lying on the right side."
+   ],
+   "correctAnswer": "A",
+   "rationale": "The right middle lobe drains with the patient tilted head down about 15 degrees, turned onto the left side, and rolled a quarter turn back with a pillow behind the right side.",
+   "reference": "Egan's Fundamentals of Respiratory Care.",
+   "image": null,
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "RT-0144",
+   "legacyId": null,
+   "exam": "RT",
+   "domain": "III",
+   "section": "III-D",
+   "sectionName": "Administer Medications and Specialty Gases",
+   "topic": "Racemic epinephrine for croup",
+   "cognitiveLevel": "Application",
+   "portion": "Depth",
+   "patientCondition": "Children - Pediatric",
+   "judgmentType": "Decision Making",
+   "setting": "In a hospital",
+   "patientAge": "Pediatric",
+   "ethics": false,
+   "itemFormat": "SBA",
+   "stem": "A 2-year-old with croup has stridor at rest and suprasternal retractions. After oral dexamethasone, nebulized racemic epinephrine is given, and the stridor improves. Data now are:",
+   "stemTable": [
+    [
+     "HR",
+     "150/min"
+    ],
+    [
+     "RR",
+     "36/min"
+    ],
+    [
+     "SpO2",
+     "96% on room air"
+    ]
+   ],
+   "stemAfterTable": "The child should be",
+   "options": [
+    "discharged home now.",
+    "given a second dose in 10 minutes regardless of symptoms.",
+    "observed for at least 2 hours for rebound symptoms.",
+    "intubated as a precaution."
+   ],
+   "correctAnswer": "C",
+   "rationale": "Racemic epinephrine works for about 1 to 2 hours, and symptoms can return as it wears off. Observation for at least 2 hours after the dose is recommended before discharge.",
+   "reference": "Pediatric croup guidelines.",
+   "image": null,
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  }
+ ]
+}
