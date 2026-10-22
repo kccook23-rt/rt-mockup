@@ -1,0 +1,31 @@
+/* On-screen calculator. Owner: Ken + Claude. Kept separate from app.css (shared). */
+
+/* Ribbon button */
+.calcbtn { width: 54px; min-height: 58px; border-radius: 14px; border: 2px solid #1F5FA8; background: #EEF4FB; color: #154A86; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 2px; cursor: pointer; padding: 4px 0; flex-shrink: 0; }
+.calcbtn span { font-size: 11px; font-weight: 700; line-height: 1.1; }
+.calcbtn.on { background: #1F5FA8; color: #fff; }
+
+/* Floating window: opens low, over the answer choices, leaving the stem/values and the answer ribbon free */
+.calc { position: absolute; left: 10px; bottom: 12px; width: min(290px, calc(100% - 96px)); z-index: 4; background: #1B2A3A; border-radius: 16px;
+  box-shadow: 0 14px 40px rgba(18,32,46,.42), 0 0 0 1px rgba(255,255,255,.06); display: flex; flex-direction: column; overflow: hidden; color: #fff; }
+.calchead { display: flex; align-items: center; gap: 6px; padding: 4px 4px 4px 8px; cursor: grab; touch-action: none; user-select: none; }
+.calchead:active { cursor: grabbing; }
+.calcgrip { width: 10px; height: 26px; flex-shrink: 0; background: radial-gradient(circle, #6E8296 1.3px, transparent 1.6px) 0 0 / 5px 6px; }
+.calcx { width: 40px; height: 40px; align-self: flex-start; border: 0; border-radius: 20px; background: transparent; color: #C9D4DF; display: flex; align-items: center; justify-content: center; cursor: pointer; }
+.calcdisp { flex: 1; min-width: 0; text-align: right; }
+.calcexpr { display: flex; justify-content: space-between; gap: 8px; min-height: 16px; font-size: 13px; color: #9FB0C1; font-variant-numeric: tabular-nums; }
+.calcm { font-weight: 700; color: #F2C14E; }
+.calcval { display: block; font-size: 26px; font-weight: 700; line-height: 1.2; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; min-height: 31px; }
+.calcval.err { font-size: 17px; line-height: 31px; color: #FFB4A0; }
+.calcmem { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; padding: 0 8px 4px; }
+.calckeys { display: grid; grid-template-columns: repeat(6, 1fr); gap: 4px; padding: 0 8px 8px; }
+.ck { min-height: 40px; padding: 0; border: 0; border-radius: 9px; background: #33465A; color: #fff; font: inherit; font-size: 18px; font-weight: 700; cursor: pointer; font-variant-numeric: tabular-nums; }
+.ck.f { background: #26384B; font-size: 14px; color: #DCE6EF; }
+.ck.m { min-height: 26px; background: transparent; font-size: 13px; color: #B9C7D4; }
+.ck.o { background: #2A4D74; font-size: 20px; }
+.ck.eq { background: #0B5CAD; font-size: 20px; }
+.ck:hover { filter: brightness(1.15); }
+.ck:active, .ck.hit { filter: brightness(1.35); }
+.ck:focus-visible, .calcx:focus-visible { outline: 3px solid #8CC4FF; outline-offset: 1px; }
+@media (max-height: 700px) { .ck { min-height: 34px; } .ck.m { min-height: 26px; } .calcval { font-size: 24px; } }

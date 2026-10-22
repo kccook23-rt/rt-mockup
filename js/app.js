@@ -115,7 +115,7 @@ function render() {
     }).join("")}</ol>`;
     if (rev) h += `<div class="result" id="result" tabindex="-1"><h3 class="${correct ? "ok" : "no"}">${correct ? ICON.check + "Correct" : "Not quite. The answer is " + q.ans + "."}</h3><p>${esc(q.why)}</p></div>${scaleButtons(q, c)}${window.VET_MODE ? vetBox(q, c) : reviewBox(q, c)}`;
     else if (c.done && exam) h += `<p style="margin:0;font-size:14px;color:var(--muted)">Answer saved.</p>`;
-    h += `</div><nav class="ribbon" aria-label="Answer choices">${window.VET_MODE ? "" : `<button type="button" class="ns ${c.unsure ? "on" : ""}" data-act="unsure" ${c.done ? "disabled" : ""} aria-pressed="${c.unsure}" aria-label="Not sure. Adds this question to your review list">${ICON.unsure}<span>Not<br>sure</span></button>`}<div class="spacer"></div>${L4.map((l) => {
+    h += `</div><nav class="ribbon" aria-label="Answer choices">${calcButton()}${window.VET_MODE ? "" : `<button type="button" class="ns ${c.unsure ? "on" : ""}" data-act="unsure" ${c.done ? "disabled" : ""} aria-pressed="${c.unsure}" aria-label="Not sure. Adds this question to your review list">${ICON.unsure}<span>Not<br>sure</span></button>`}<div class="spacer"></div>${L4.map((l) => {
         let cls;
         if (!rev) cls = c.out[l] ? "out" : (c.sel === l ? "sel" : "");
         else cls = l === q.ans ? "ok" : l === c.sel ? "no" : "dim";
@@ -172,12 +172,14 @@ function render() {
       <button type="button" class="btn" data-act="introclose" style="width:100%">Start practicing</button>
     </div></div>`;
   }
+  if (QS.length && S.page === "quiz" && (!S.results || S.reviewing)) h += calcPanel();
   if (S.scale) h += scaleSheet();
   h += `<div id="viewer-root"></div>`;
   phone.innerHTML = h;
   const c2 = document.getElementById("content"); if (c2) c2.scrollTop = scroll;
   const d = document.getElementById("fbWhy"); if (d) d.value = draftVal;
   renderViewer();
+  calcAfterRender();
 }
 
 function reviewBox(q, c) {

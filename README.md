@@ -14,6 +14,7 @@ Clickable design mock-up of the CRT/RRT exam-prep app. Not production code: the 
 | `js/stats.js` | Stats page and "Build a practice set" | **Noelle** |
 | `js/scales.js` | Info-button cards, shown only after the final answer. Scale reference cards (APGAR, GCS, GOLD, etc.): a question lists them in `infoScales`. Evidence cards for graphs and EKGs: circles drawn from the question's `evidence` field (pixel coordinates on the image, plus a note per circle). | Ken + Claude |
 | `css/evidence.css` | Styles for the evidence cards | Ken + Claude |
+| `js/calc.js`, `css/calc.css` | On-screen calculator, like the NBRC exam's. "Calc" button at the top of the answer ribbon; floating, draggable, keyboard-friendly; closes on each new question. | Ken + Claude |
 | `js/progress.js` | Review list and per-question progress storage (used by both) | Shared: post in Discord before changing |
 | `css/app.css` | Colors, fonts, layout | Shared: post in Discord before changing |
 | `data/questions.json` | 20-question public sample, same fields as the Firebase question document | Ken + Claude |
