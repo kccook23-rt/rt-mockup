@@ -80,7 +80,8 @@
    "image": null,
    "status": "draft",
    "version": 1,
-   "batch": 1
+   "batch": 1,
+   "infoScales": []
   },
   {
    "questionId": "RT-0002",
@@ -119,7 +120,8 @@
    },
    "status": "draft",
    "version": 1,
-   "batch": 1
+   "batch": 1,
+   "infoScales": []
   },
   {
    "questionId": "RT-0003",
@@ -158,7 +160,8 @@
    },
    "status": "draft",
    "version": 1,
-   "batch": 1
+   "batch": 1,
+   "infoScales": []
   },
   {
    "questionId": "RT-0004",
@@ -226,7 +229,8 @@
    },
    "status": "draft",
    "version": 1,
-   "batch": 1
+   "batch": 1,
+   "infoScales": []
   },
   {
    "questionId": "RT-0005",
@@ -294,79 +298,69 @@
    },
    "status": "draft",
    "version": 1,
-   "batch": 1
+   "batch": 1,
+   "infoScales": []
   },
   {
-   "questionId": "RT-0006",
-   "legacyId": "RT-S006",
+   "questionId": "RT-0046",
+   "legacyId": null,
    "exam": "RT",
-   "domain": "III",
-   "section": "III-C",
-   "sectionName": "Support Oxygenation and Ventilation",
-   "topic": "Overdistension on pressure-volume loop",
-   "cognitiveLevel": "Analysis",
+   "domain": "I",
+   "section": "I-D",
+   "sectionName": "Evaluate Procedure Results",
+   "topic": "P/F ratio and ARDS severity",
+   "cognitiveLevel": "Application",
    "portion": "Depth",
    "patientCondition": "Adult - Medical: ARDS",
-   "judgmentType": "Decision Making",
+   "judgmentType": "Information Gathering",
    "setting": "In a hospital",
    "patientAge": "Adult",
    "ethics": false,
    "itemFormat": "SBA",
-   "stem": "A 170-cm (5-ft 7-in) male with ARDS is receiving mechanical ventilation. Ventilation parameters are:",
+   "stem": "An adult with pneumonia is receiving VC, A/C ventilation with an FIO2 of 0.60 and PEEP of 10 cm H2O. A chest radiograph shows bilateral opacities not explained by heart failure. ABG analysis reveals:",
    "stemTable": [
     [
-     "Mode",
-     "VC, A/C"
+     "pH",
+     "7.34"
     ],
     [
-     "FIO2",
-     "0.60"
+     "PaCO2",
+     "44 mm Hg"
     ],
     [
-     "Mandatory rate",
-     "18"
+     "PaO2",
+     "72 mm Hg"
     ],
     [
-     "Total rate",
-     "18"
+     "HCO3-",
+     "23 mEq/L"
     ],
     [
-     "VT",
-     "650 mL"
+     "BE",
+     "-2 mEq/L"
     ],
     [
-     "PEEP",
-     "10 cm H2O"
-    ],
-    [
-     "PIP",
-     "40 cm H2O"
-    ],
-    [
-     "Pplat",
-     "36 cm H2O"
+     "SaO2 (calc)",
+     "93%"
     ]
    ],
-   "stemAfterTable": "The pressure-volume loop is shown. Which of the following changes is MOST appropriate?",
+   "stemAfterTable": "According to the Berlin definition, the patient has",
    "options": [
-    "Increase the VT to 750 mL.",
-    "Decrease the PEEP to 5 cm H2O.",
-    "Decrease the VT to 400 mL.",
-    "Increase the inspiratory flow."
+    "severe ARDS.",
+    "moderate ARDS.",
+    "findings that do not meet ARDS criteria.",
+    "mild ARDS."
    ],
-   "correctAnswer": "C",
-   "rationale": "The upper part of the inspiratory limb flattens into a 'beak': pressure keeps rising from about 30 to 40 cm H2O while volume barely increases. That indicates alveolar overdistension. The VT of 650 mL is nearly 10 mL/kg PBW; lung-protective ventilation targets about 6 mL/kg (roughly 400 mL here) with a plateau pressure of 30 cm H2O or less. Raising VT worsens overdistension, dropping PEEP risks derecruitment in ARDS, and changing flow doesn't reduce distending volume.",
-   "reference": "ARDSNet lung-protective ventilation protocol.",
-   "image": {
-    "file": "images/RT-S006_pvloop.png",
-    "type": "Pressure-volume loop",
-    "alt": "Pressure-volume loop from 10 to about 40 cm H2O and 0 to 650 mL; the inspiratory limb flattens above 30 cm H2O, forming a beak at the top.",
-    "width": 780,
-    "height": 650
-   },
+   "correctAnswer": "B",
+   "rationale": "PaO2/FIO2 = 72 / 0.60 = 120. With PEEP of at least 5 cm H2O, a ratio above 100 and up to 200 is moderate ARDS; above 200 to 300 is mild, and 100 or less is severe.",
+   "reference": "ARDS Definition Task Force (Berlin), JAMA 2012.",
+   "image": null,
    "status": "draft",
    "version": 1,
-   "batch": 1
+   "batch": 1,
+   "infoScales": [
+    "berlin"
+   ]
   },
   {
    "questionId": "RT-0007",
@@ -424,7 +418,8 @@
    "image": null,
    "status": "draft",
    "version": 1,
-   "batch": 1
+   "batch": 1,
+   "infoScales": []
   },
   {
    "questionId": "RT-0008",
@@ -498,7 +493,8 @@
    "image": null,
    "status": "draft",
    "version": 1,
-   "batch": 1
+   "batch": 1,
+   "infoScales": []
   },
   {
    "questionId": "RT-0009",
@@ -531,7 +527,8 @@
    "image": null,
    "status": "draft",
    "version": 1,
-   "batch": 1
+   "batch": 1,
+   "infoScales": []
   },
   {
    "questionId": "RT-0010",
@@ -599,98 +596,101 @@
    },
    "status": "draft",
    "version": 1,
-   "batch": 1
+   "batch": 1,
+   "infoScales": []
   },
   {
-   "questionId": "RT-0011",
+   "questionId": "RT-0160",
    "legacyId": null,
    "exam": "RT",
-   "domain": "I",
-   "section": "I-A",
-   "sectionName": "Evaluate Data in the Patient Record",
-   "topic": "DNI order with hypercapnic failure",
-   "cognitiveLevel": "Analysis",
+   "domain": "III",
+   "section": "III-E",
+   "sectionName": "Make or Recommend Changes to the Respiratory Care Plan",
+   "topic": "Analgesia first for agitation",
+   "cognitiveLevel": "Application",
    "portion": "Depth",
-   "patientCondition": "Adult - Chronic Lung Disease: noninvasive management",
+   "patientCondition": "Adult - Pre- and Post-Operative Care",
    "judgmentType": "Decision Making",
    "setting": "In a hospital",
    "patientAge": "Adult",
-   "ethics": true,
+   "ethics": false,
    "itemFormat": "SBA",
-   "stem": "An 82-year-old with end-stage COPD is admitted with hypercapnic respiratory failure. The medical record contains a valid do-not-intubate (DNI) order that the patient signed. The patient is drowsy but arousable and follows commands. ABG analysis while receiving O2 by NC at 2 L/min reveals:",
-   "stemTable": [
-    [
-     "pH",
-     "7.24"
-    ],
-    [
-     "PaCO2",
-     "78 mm Hg"
-    ],
-    [
-     "PaO2",
-     "52 mm Hg"
-    ],
-    [
-     "HCO3-",
-     "33 mEq/L"
-    ],
-    [
-     "BE",
-     "+6 mEq/L"
-    ],
-    [
-     "SaO2 (calc)",
-     "79%"
-    ]
-   ],
-   "stemAfterTable": "Which of the following should the respiratory therapist recommend?",
+   "stem": "An intubated adult is agitated after a laparotomy, with a RASS of +2 and a high behavioral pain score. SpO2 is 97%, and the ventilator is synchronous except during agitation. Which of the following should be recommended FIRST?",
+   "stemTable": [],
+   "stemAfterTable": "",
    "options": [
-    "Ask the family to consent to intubation on the patient's behalf",
-    "Intubate, because the DNI order was signed before this admission",
-    "Initiate NPPV as the ceiling of ventilatory support, consistent with the DNI order",
-    "Withhold all ventilatory support, because a DNI order is in place"
+    "An increase in PEEP",
+    "A neuromuscular blocking agent",
+    "An analgesic",
+    "Soft wrist restraints alone"
    ],
    "correctAnswer": "C",
-   "rationale": "A DNI order limits intubation, not every form of support. NPPV is an accepted ceiling-of-care option for an alert patient with hypercapnic COPD failure and fits the patient's documented wishes. A valid order stays in force across admissions, and family members cannot override a decision the patient made while competent.",
-   "reference": "GOLD report, management of exacerbations; ATS/ERS NIV guideline.",
+   "rationale": "Pain is a common cause of agitation in ventilated surgical patients. Guidelines recommend treating pain first (analgesia-first sedation). Paralysis hides distress, and restraints alone do not treat the cause.",
+   "reference": "SCCM PADIS guideline, 2018.",
    "image": null,
    "status": "draft",
    "version": 1,
-   "batch": 1
+   "batch": 1,
+   "infoScales": [
+    "rass"
+   ]
   },
   {
-   "questionId": "RT-0017",
+   "questionId": "RT-0024",
    "legacyId": null,
    "exam": "RT",
    "domain": "I",
    "section": "I-B",
    "sectionName": "Perform Clinical Assessment",
-   "topic": "Physical sign of air trapping",
-   "cognitiveLevel": "Recall",
+   "topic": "APGAR score calculation",
+   "cognitiveLevel": "Application",
    "portion": "Breadth",
    "patientCondition": null,
    "judgmentType": null,
    "setting": "In a hospital",
-   "patientAge": "Adult",
+   "patientAge": "Neonatal",
    "ethics": false,
-   "itemFormat": "SBA",
-   "stem": "Which of the following physical findings is most consistent with chronic air trapping?",
-   "stemTable": [],
-   "stemAfterTable": "",
-   "options": [
-    "increased anteroposterior chest diameter",
-    "increased tactile fremitus",
-    "dullness to percussion",
-    "tracheal deviation"
+   "itemFormat": "SBA-Numeric",
+   "stem": "At 1 minute after birth, a term neonate has the following findings:",
+   "stemTable": [
+    [
+     "Heart rate",
+     "90/min"
+    ],
+    [
+     "Respiratory effort",
+     "Slow, irregular"
+    ],
+    [
+     "Muscle tone",
+     "Some flexion of extremities"
+    ],
+    [
+     "Reflex irritability",
+     "Grimace"
+    ],
+    [
+     "Color",
+     "Body pink, extremities blue"
+    ]
    ],
-   "correctAnswer": "A",
-   "rationale": "Chronic hyperinflation enlarges the anteroposterior diameter, producing a barrel chest. Dullness and increased fremitus suggest consolidation or fluid, and tracheal deviation suggests a shift in volume or pressure on one side.",
-   "reference": "Wilkins' Clinical Assessment in Respiratory Care.",
+   "stemAfterTable": "What is the APGAR score?",
+   "options": [
+    "7",
+    "5",
+    "4",
+    "3"
+   ],
+   "correctAnswer": "B",
+   "rationale": "Each item scores 0 to 2. Heart rate below 100/min scores 1, slow irregular breathing 1, some flexion 1, grimace 1, and acrocyanosis 1, for a total of 5.",
+   "reference": "AAP/ACOG, The Apgar Score.",
    "image": null,
    "status": "draft",
    "version": 1,
-   "batch": 1
+   "batch": 1,
+   "infoScales": [
+    "apgar"
+   ]
   },
   {
    "questionId": "RT-0037",
@@ -748,7 +748,8 @@
    "image": null,
    "status": "draft",
    "version": 1,
-   "batch": 1
+   "batch": 1,
+   "infoScales": []
   },
   {
    "questionId": "RT-0042",
@@ -787,40 +788,61 @@
    },
    "status": "draft",
    "version": 1,
-   "batch": 1
+   "batch": 1,
+   "infoScales": []
   },
   {
-   "questionId": "RT-0048",
+   "questionId": "RT-0026",
    "legacyId": null,
    "exam": "RT",
    "domain": "I",
-   "section": "I-E",
-   "sectionName": "Recommend Diagnostic Procedures",
-   "topic": "Suspected pulmonary tuberculosis",
-   "cognitiveLevel": "Application",
+   "section": "I-B",
+   "sectionName": "Perform Clinical Assessment",
+   "topic": "Low GCS after head injury",
+   "cognitiveLevel": "Analysis",
    "portion": "Depth",
-   "patientCondition": "Adult - Medical: infectious disease",
+   "patientCondition": "Adult - Trauma",
    "judgmentType": "Decision Making",
    "setting": "In a hospital",
    "patientAge": "Adult",
    "ethics": false,
    "itemFormat": "SBA",
-   "stem": "An adult with a 3-week cough, night sweats, weight loss, and a cavitary upper-lobe lesion is admitted. In addition to airborne isolation, which of the following should be recommended?",
-   "stemTable": [],
-   "stemAfterTable": "",
-   "options": [
-    "A methacholine challenge",
-    "Three sputum samples for acid-fast bacilli smear and culture",
-    "A single blood culture",
-    "A sweat chloride test"
+   "stem": "An adult is brought to the ED after a fall from a ladder. The patient opens the eyes only to pain, makes incomprehensible sounds, and withdraws from pain. Physiologic data while receiving O2 by NRB mask are:",
+   "stemTable": [
+    [
+     "HR",
+     "58/min"
+    ],
+    [
+     "RR",
+     "10/min"
+    ],
+    [
+     "BP",
+     "168/92 mm Hg"
+    ],
+    [
+     "SpO2",
+     "93%"
+    ]
    ],
-   "correctAnswer": "B",
-   "rationale": "The picture strongly suggests active tuberculosis. Serial sputum specimens (usually three, at least 8 hours apart, one in the early morning) for AFB smear, culture, and nucleic acid testing confirm the diagnosis and guide isolation.",
-   "reference": "CDC/ATS/IDSA TB diagnosis guideline.",
+   "stemAfterTable": "Which of the following should the respiratory therapist recommend?",
+   "options": [
+    "O2 by nasal cannula at 4 L/min",
+    "Bilevel PAP by full-face mask",
+    "Endotracheal intubation with cervical spine precautions",
+    "Insertion of a nasopharyngeal airway"
+   ],
+   "correctAnswer": "C",
+   "rationale": "The GCS is 8 (E2, V2, M4), so the patient cannot reliably protect the airway. Bradycardia, hypertension, and slow breathing suggest rising intracranial pressure. Intubation with in-line stabilization is indicated. NIV is unsafe with a depressed level of consciousness, and a nasal airway is avoided with possible basilar skull fracture.",
+   "reference": "Brain Trauma Foundation guidelines; ATLS.",
    "image": null,
    "status": "draft",
    "version": 1,
-   "batch": 1
+   "batch": 1,
+   "infoScales": [
+    "gcs"
+   ]
   },
   {
    "questionId": "RT-0058",
@@ -853,7 +875,8 @@
    "image": null,
    "status": "draft",
    "version": 1,
-   "batch": 1
+   "batch": 1,
+   "infoScales": []
   },
   {
    "questionId": "RT-0100",
@@ -919,7 +942,8 @@
    "image": null,
    "status": "draft",
    "version": 1,
-   "batch": 1
+   "batch": 1,
+   "infoScales": []
   },
   {
    "questionId": "RT-0107",
@@ -952,40 +976,53 @@
    "image": null,
    "status": "draft",
    "version": 1,
-   "batch": 1
+   "batch": 1,
+   "infoScales": []
   },
   {
-   "questionId": "RT-0118",
+   "questionId": "RT-0169",
    "legacyId": null,
    "exam": "RT",
    "domain": "III",
-   "section": "III-B",
-   "sectionName": "Perform Airway Clearance and Lung Expansion Techniques",
-   "topic": "Postural drainage for the right middle lobe",
+   "section": "III-F",
+   "sectionName": "Use Evidence-Based Practice",
+   "topic": "GOLD spirometric grade",
    "cognitiveLevel": "Application",
-   "portion": "Breadth",
-   "patientCondition": null,
-   "judgmentType": null,
-   "setting": "In a hospital",
+   "portion": "Depth",
+   "patientCondition": "Adult - Chronic Lung Disease: outpatient management",
+   "judgmentType": "Information Gathering",
+   "setting": "Outside a hospital",
    "patientAge": "Adult",
    "ethics": false,
    "itemFormat": "SBA",
-   "stem": "The correct postural drainage position for the right middle lobe is",
-   "stemTable": [],
-   "stemAfterTable": "",
-   "options": [
-    "head down about 15 degrees, lying on the left side rotated a quarter turn backward.",
-    "flat and prone.",
-    "head up 45 degrees, lying on the right side.",
-    "head down 30 degrees, lying on the right side."
+   "stem": "Postbronchodilator spirometry for an adult with COPD reveals:",
+   "stemTable": [
+    [
+     "FEV1/FVC",
+     "0.58"
+    ],
+    [
+     "FEV1",
+     "45% predicted"
+    ]
    ],
-   "correctAnswer": "A",
-   "rationale": "The right middle lobe drains with the patient tilted head down about 15 degrees, turned onto the left side, and rolled a quarter turn back with a pillow behind the right side.",
-   "reference": "Egan's Fundamentals of Respiratory Care.",
+   "stemAfterTable": "This places the patient in which GOLD spirometric grade?",
+   "options": [
+    "GOLD 1",
+    "GOLD 4",
+    "GOLD 2",
+    "GOLD 3"
+   ],
+   "correctAnswer": "D",
+   "rationale": "With FEV1/FVC below 0.70, grades are set by FEV1 percent predicted: 80% or more is GOLD 1, 50% to 79% GOLD 2, 30% to 49% GOLD 3, and below 30% GOLD 4.",
+   "reference": "GOLD report.",
    "image": null,
    "status": "draft",
    "version": 1,
-   "batch": 1
+   "batch": 1,
+   "infoScales": [
+    "gold"
+   ]
   },
   {
    "questionId": "RT-0144",
@@ -1031,7 +1068,8 @@
    "image": null,
    "status": "draft",
    "version": 1,
-   "batch": 1
+   "batch": 1,
+   "infoScales": []
   }
  ]
 }

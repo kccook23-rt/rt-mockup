@@ -10,6 +10,7 @@ Clickable design mock-up of the CRT/RRT exam-prep app. Not production code: the 
 |---|---|---|
 | `js/app.js` | App shell, question pop-up, image viewer, settings, intro card, report-a-problem | Ken + Claude |
 | `js/stats.js` | Stats page and "Build a practice set" | **Noelle** |
+| `js/scales.js` | Scale reference cards (APGAR, GCS, GOLD, etc.). The info button appears only after the final answer. A question lists its cards in `infoScales`. | Ken + Claude |
 | `js/progress.js` | Review list and per-question progress storage (used by both) | Shared: post in Discord before changing |
 | `css/app.css` | Colors, fonts, layout | Shared: post in Discord before changing |
 | `data/questions.json` | 20-question public sample, same fields as the Firebase question document | Ken + Claude |

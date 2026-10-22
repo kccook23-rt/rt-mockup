@@ -7,8 +7,10 @@ function adapt(d) {
   return {
     id: d.questionId, section: d.section, sec: d.section, topic: d.topic, ans: d.correctAnswer,
     stem: d.stem, rows: d.stemTable || [], after: d.stemAfterTable || "", opts: d.options, why: d.rationale,
-    img: d.image ? d.image.file : null, cap: d.image ? IMG_KIND_SHORT(d.image.type) : "", alt: d.image ? d.image.alt : "",
-    w: d.image ? d.image.width : 0, h: d.image ? d.image.height : 0, status: d.status
+    img: d.image ? ((window.IMG_DATA && window.IMG_DATA[d.image.file]) || d.image.file) : null, cap: d.image ? IMG_KIND_SHORT(d.image.type) : "", alt: d.image ? d.image.alt : "",
+    w: d.image ? d.image.width : 0, h: d.image ? d.image.height : 0, status: d.status,
+    rank: d.vetting ? d.vetting.rank : null, score: d.vetting ? d.vetting.claudeScore : null, concern: d.vetting ? d.vetting.claudeConcern : "", conf: d.vetting ? d.vetting.confidence : null,
+    scales: d.infoScales || []
   };
 }
 const L4 = ["A","B","C","D"];
@@ -16,8 +18,8 @@ const REASONS = ["The keyed answer is wrong","More than one answer is correct","
 const ZOOMS = [1, 1.5, 2, 3];
 
 const freshRun = (set) => set.map(() => ({ out: {}, sel: null, done: false, unsure: false, note: null }));
-const S = { page: "quiz", mode: "study", requireOut: false, intro: !seenIntro(), settings: false, set: [], qi: 0, run: [], results: false, reviewing: false,
-  started: Date.now(), finishedMs: 0, fb: null, reason: null, reported: {}, view: null, zoom: 1, rot: true,
+const S = { page: "quiz", mode: "study", requireOut: false, intro: !window.VET_MODE && !seenIntro(), settings: false, set: [], qi: 0, run: [], results: false, reviewing: false,
+  started: Date.now(), finishedMs: 0, fb: null, reason: null, reported: {}, view: null, scale: null, zoom: 1, rot: true,
   build: { src: "all", secs: {}, mode: "study", count: "all" }, loadError: null };
 const Q = () => QS[S.set[S.qi]];
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -67,6 +69,8 @@ function render() {
   const phone = document.getElementById("phone");
   const keep = document.getElementById("content");
   const scroll = keep ? keep.scrollTop : 0;
+  const vn = document.getElementById("vetNotes");
+  if (vn && window.VET_MODE && VDRAFT[vn.dataset.q]) VDRAFT[vn.dataset.q].notes = vn.value;
   const draft = document.getElementById("fbWhy");
   const draftVal = draft ? draft.value : "";
   let h = "";
@@ -108,17 +112,17 @@ function render() {
       return `<li class="opt ${cls}"><button type="button" class="pick" data-act="pick" data-l="${l}" ${locked ? "disabled" : ""} aria-pressed="${c.sel === l}"><span class="l">${l}.</span><span><span class="t">${esc(q.opts[i])}</span>${tag ? `<span class="tag">${tag}</span>` : ""}</span></button>${locked ? "" :
         `<button type="button" class="strike" data-act="strike" data-l="${l}" aria-label="${c.out[l] ? "Restore choice " + l : "Rule out choice " + l}" aria-pressed="${!!c.out[l]}">${c.out[l] ? ICON.restore : ICON.ruleout}</button>`}</li>`;
     }).join("")}</ol>`;
-    if (rev) h += `<div class="result" id="result" tabindex="-1"><h3 class="${correct ? "ok" : "no"}">${correct ? ICON.check + "Correct" : "Not quite. The answer is " + q.ans + "."}</h3><p>${esc(q.why)}</p></div>${reviewBox(q, c)}`;
+    if (rev) h += `<div class="result" id="result" tabindex="-1"><h3 class="${correct ? "ok" : "no"}">${correct ? ICON.check + "Correct" : "Not quite. The answer is " + q.ans + "."}</h3><p>${esc(q.why)}</p></div>${scaleButtons(q, c)}${window.VET_MODE ? vetBox(q, c) : reviewBox(q, c)}`;
     else if (c.done && exam) h += `<p style="margin:0;font-size:14px;color:var(--muted)">Answer saved.</p>`;
-    h += `</div><nav class="ribbon" aria-label="Answer choices"><button type="button" class="ns ${c.unsure ? "on" : ""}" data-act="unsure" ${c.done ? "disabled" : ""} aria-pressed="${c.unsure}" aria-label="Not sure. Adds this question to your review list">${ICON.unsure}<span>Not<br>sure</span></button><div class="spacer"></div>${L4.map((l) => {
+    h += `</div><nav class="ribbon" aria-label="Answer choices">${window.VET_MODE ? "" : `<button type="button" class="ns ${c.unsure ? "on" : ""}" data-act="unsure" ${c.done ? "disabled" : ""} aria-pressed="${c.unsure}" aria-label="Not sure. Adds this question to your review list">${ICON.unsure}<span>Not<br>sure</span></button>`}<div class="spacer"></div>${L4.map((l) => {
         let cls;
         if (!rev) cls = c.out[l] ? "out" : (c.sel === l ? "sel" : "");
         else cls = l === q.ans ? "ok" : l === c.sel ? "no" : "dim";
         return `<button type="button" class="rb ${cls}" data-act="pick" data-l="${l}" ${c.done ? "disabled" : ""} aria-pressed="${c.sel === l}" aria-label="Choose ${l}${c.out[l] ? " (ruled out; tap to restore)" : ""}">${l}</button>`;
       }).join("")}<button type="button" class="final" data-act="final" ${canSubmit() ? "" : "disabled"} aria-label="Submit final answer">${ICON.check}<span>${exam ? "Submit" : "Final"}</span></button></nav></div>`;
     if (rev) {
-      h += `<div class="foot"><button type="button" class="btn line" data-act="fb">${ICON.flag}<span>${S.reported[q.id] ? "Reported" : "Report a problem"}</span></button><div class="spacer"></div>
-        ${S.reviewing ? `<button type="button" class="btn" data-act="backresults">Back to results</button>` : `<button type="button" class="btn" data-act="next">${S.qi === S.set.length - 1 ? "Start over" : "Next question"}</button>`}</div>`;
+      h += `<div class="foot">${window.VET_MODE ? "" : `<button type="button" class="btn line" data-act="fb">${ICON.flag}<span>${S.reported[q.id] ? "Reported" : "Report a problem"}</span></button>`}<div class="spacer"></div>
+        ${S.reviewing ? `<button type="button" class="btn" data-act="backresults">Back to results</button>` : window.VET_MODE ? vetFootBtn(q) : `<button type="button" class="btn" data-act="next">${S.qi === S.set.length - 1 ? "Start over" : "Next question"}</button>`}</div>`;
     }
     h += `</div>`;
   }
@@ -167,6 +171,7 @@ function render() {
       <button type="button" class="btn" data-act="introclose" style="width:100%">Start practicing</button>
     </div></div>`;
   }
+  if (S.scale) h += scaleSheet();
   h += `<div id="viewer-root"></div>`;
   phone.innerHTML = h;
   const c2 = document.getElementById("content"); if (c2) c2.scrollTop = scroll;
@@ -285,6 +290,8 @@ document.addEventListener("click", (e) => {
   else if (a === "introclose") { S.intro = false; markIntro(); }
   else if (a === "view") { S.view = Q().img; S.zoom = 1; S.rot = true; }
   else if (a === "vclose") { S.view = null; }
+  else if (a === "scale") { S.scale = b.dataset.k; }
+  else if (a === "scaleclose") { S.scale = null; }
   else if (a === "zin") { const i = ZOOMS.indexOf(S.zoom); if (i < ZOOMS.length - 1) S.zoom = ZOOMS[i + 1]; }
   else if (a === "zout") { const i = ZOOMS.indexOf(S.zoom); if (i > 0) S.zoom = ZOOMS[i - 1]; }
   else if (a === "rot") { S.rot = !S.rot; S.zoom = 1; }
@@ -294,7 +301,7 @@ document.addEventListener("click", (e) => {
 });
 document.addEventListener("keydown", (e) => {
   if (e.key !== "Escape") return;
-  if (S.view) S.view = null; else if (S.fb) S.fb = null; else if (S.settings) S.settings = false; else if (S.intro) { S.intro = false; markIntro(); } else return;
+  if (S.view) S.view = null; else if (S.scale) S.scale = null; else if (S.fb) S.fb = null; else if (S.settings) S.settings = false; else if (S.intro) { S.intro = false; markIntro(); } else return;
   render();
 });
 
@@ -312,7 +319,7 @@ function fit() {
 window.addEventListener("resize", () => { fit(); if (S.view) renderViewer(); });
 fit();
 render();
-fetch("data/questions.json", { cache: "no-cache" })
-  .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
-  .then((d) => { QS = d.questions.map(adapt); ALL = QS.map((_, i) => i); S.set = ALL.slice(); newRun(); render(); })
+(window.EMBEDDED_QUESTIONS ? Promise.resolve(window.EMBEDDED_QUESTIONS) : fetch("data/questions.json", { cache: "no-cache" })
+  .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); }))
+  .then((d) => { QS = d.questions.map(adapt); ALL = QS.map((_, i) => i); S.set = ALL.slice(); newRun(); render(); if (window.vetAfterLoad) vetAfterLoad(); })
   .catch((e) => { S.loadError = String(e); render(); });

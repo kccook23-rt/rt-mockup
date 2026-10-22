@@ -187,3 +187,34 @@ textarea { font-size: 15px; padding: 10px 12px; border: 1.5px solid #AAB4BF; bor
 .prog { width: 64px; height: 6px; border-radius: 3px; background: #DCE3EA; overflow: hidden; }
 .prog i { display: block; height: 100%; background: var(--accent); border-radius: 3px; }
 .draft { font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #6A4A00; background: #FFF3D1; border: 1px solid #EBC46A; padding: 2px 6px; border-radius: 5px; margin-left: 6px; }
+
+.vet { display: flex; flex-direction: column; gap: 10px; padding: 14px; border-radius: 14px; border: 2px solid #1F3864; background: #F4F7FB; }
+.vet .vclaude { margin: 0; font-size: 13px; line-height: 1.4; color: #4A3300; background: #FFF3D1; border: 1px solid #EBC46A; border-radius: 8px; padding: 8px 10px; }
+.vchip.ok[aria-pressed="true"] { background: var(--good); border-color: var(--good); }
+.vchip.fix[aria-pressed="true"] { background: var(--bad); border-color: var(--bad); }
+.vsaved { margin: 0; font-size: 13px; color: var(--muted); }
+.warn { color: #A3360A; font-weight: 700; }
+.vlist { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.vrow { width: 100%; display: flex; align-items: center; gap: 10px; text-align: left; padding: 8px 10px; border-radius: 10px; border: 1.5px solid var(--rule); background: #fff; cursor: pointer; font: inherit; color: var(--ink); min-height: 48px; }
+.vrank { font-size: 12px; font-weight: 700; color: var(--muted); width: 34px; flex-shrink: 0; font-variant-numeric: tabular-nums; }
+.vrow .info { flex: 1; min-width: 0; font-size: 12px; color: var(--muted); } .vrow .info b { display: block; font-size: 14px; color: var(--ink); }
+.vtag { font-size: 12px; font-weight: 700; padding: 3px 8px; border-radius: 10px; white-space: nowrap; }
+.vtag.ok { background: var(--good-bg); color: var(--good-ink); } .vtag.fix { background: var(--bad-bg); color: var(--bad-ink); } .vtag.todo { background: #EEF1F4; color: var(--muted); }
+
+/* Scale reference cards (info button after the final answer) */
+.scalerow { display: flex; flex-wrap: wrap; gap: 8px; margin: 2px 0 4px; }
+.scalebtn { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 14px; border-radius: 22px; border: 1.5px solid #1F5FA8; background: #EEF4FB; color: #154A86; font: inherit; font-size: 14px; font-weight: 700; cursor: pointer; text-align: left; }
+.scalebtn:hover { background: #E1ECF8; }
+.scaledlg { gap: 10px; }
+.schead { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+.schead .vb { background: #EEF1F4; color: #24313E; flex-shrink: 0; }
+.sctwrap { overflow-x: auto; -webkit-overflow-scrolling: touch; display: flex; flex-direction: column; gap: 10px; }
+.sct { border-collapse: collapse; width: 100%; font-size: 13px; line-height: 1.35; }
+.sct th { background: #1F3864; color: #fff; text-align: left; padding: 7px 8px; font-weight: 700; }
+.sct td { border-bottom: 1px solid #E3E8EE; padding: 7px 8px; vertical-align: top; color: #24313E; }
+.sct tr:nth-child(even) td { background: #F6F8FA; }
+.scnote { margin: 0; font-size: 14px; line-height: 1.45; color: #24313E; background: #FFF7E6; border-left: 4px solid #D99A1E; padding: 8px 10px; border-radius: 6px; }
+.scsrc { margin: 0; font-size: 12px; color: var(--muted); }
+
+/* Vetting page */
+.vconf{margin:2px 0 8px;font-size:14px;color:#334155}.vconf b{font-size:18px;color:#1F3864;margin-right:4px}.vnote{margin:6px 0 0;font-size:13px;line-height:1.4;color:#475569}
