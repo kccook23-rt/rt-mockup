@@ -23,3 +23,6 @@ Rules of thumb
 
 ## Running it on your computer
 The page loads `data/questions.json`, so open it through a local web server instead of double-clicking `index.html`. For example, run `python3 -m http.server` in this folder and visit http://localhost:8000.
+
+## After changing a CSS or JS file
+In `index.html`, change the `?v=` number on the file links (for example `?v=20261022` → `?v=20261022b`) so everyone's browser loads the new version instead of an old saved copy.
