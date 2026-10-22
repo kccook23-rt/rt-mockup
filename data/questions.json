@@ -63,7 +63,8 @@
    "batch": 1,
    "infoScales": [
     "berlin"
-   ]
+   ],
+   "evidence": null
   },
   {
    "questionId": "RT-0160",
@@ -99,7 +100,8 @@
    "batch": 1,
    "infoScales": [
     "rass"
-   ]
+   ],
+   "evidence": null
   },
   {
    "questionId": "RT-0024",
@@ -156,7 +158,8 @@
    "batch": 1,
    "infoScales": [
     "apgar"
-   ]
+   ],
+   "evidence": null
   },
   {
    "questionId": "RT-0026",
@@ -209,7 +212,8 @@
    "batch": 1,
    "infoScales": [
     "gcs"
-   ]
+   ],
+   "evidence": null
   },
   {
    "questionId": "RT-0169",
@@ -254,7 +258,648 @@
    "batch": 1,
    "infoScales": [
     "gold"
-   ]
+   ],
+   "evidence": null
+  },
+  {
+   "questionId": "RT-0010",
+   "legacyId": "RT-S010",
+   "exam": "RT",
+   "domain": "III",
+   "section": "III-E",
+   "sectionName": "Make or Recommend Changes to the Respiratory Care Plan",
+   "topic": "Hyperkalemia - ECG changes",
+   "cognitiveLevel": "Application",
+   "portion": "Depth",
+   "patientCondition": "Adult - Medical: other",
+   "judgmentType": "Decision Making",
+   "setting": "In a hospital",
+   "patientAge": "Adult",
+   "ethics": false,
+   "itemFormat": "SBA",
+   "stem": "An adult with end-stage renal disease missed two scheduled dialysis sessions and reports generalized weakness. Laboratory results are:",
+   "stemTable": [
+    [
+     "K+",
+     "7.1 mEq/L"
+    ],
+    [
+     "Na+",
+     "136 mEq/L"
+    ],
+    [
+     "Cl-",
+     "101 mEq/L"
+    ],
+    [
+     "HCO3-",
+     "18 mEq/L"
+    ],
+    [
+     "BUN",
+     "88 mg/dL"
+    ],
+    [
+     "Creatinine",
+     "9.4 mg/dL"
+    ],
+    [
+     "Glucose",
+     "110 mg/dL"
+    ]
+   ],
+   "stemAfterTable": "The rhythm strip is shown. Which of the following should be recommended FIRST?",
+   "options": [
+    "Oral sodium polystyrene sulfonate",
+    "Emergent hemodialysis",
+    "IV calcium gluconate",
+    "Nebulized albuterol"
+   ],
+   "correctAnswer": "C",
+   "rationale": "Tall, narrow, peaked T waves with flattened P waves are classic ECG signs of hyperkalemia, and a potassium of 7.1 mEq/L with ECG changes is an emergency. IV calcium is given first because it stabilizes the cardiac membrane within minutes. Albuterol and insulin shift potassium into cells and dialysis removes it, but they act more slowly and come after calcium. Oral binders take hours.",
+   "reference": "AHA ACLS guidance on life-threatening electrolyte abnormalities.",
+   "image": {
+    "file": "images/RT-S010_ecg.png",
+    "type": "Rhythm strip",
+    "alt": "Lead II rhythm strip, 6 seconds: regular rhythm about 78 per minute with tall, narrow, peaked T waves taller than the QRS and small flattened P waves.",
+    "width": 1560,
+    "height": 390
+   },
+   "status": "draft",
+   "version": 1,
+   "batch": 1,
+   "infoScales": [],
+   "evidence": {
+    "color": "#1F5FD6",
+    "halo": "rgba(255,255,255,.9)",
+    "label": "EKG",
+    "view": {
+     "x": 110,
+     "w": 780
+    },
+    "marks": [
+     {
+      "n": 1,
+      "kind": "ellipse",
+      "cx": 571,
+      "cy": 184,
+      "rx": 30,
+      "ry": 84,
+      "note": "Tall, narrow, peaked T wave. It is taller than the QRS just before it."
+     },
+     {
+      "n": 2,
+      "kind": "ellipse",
+      "cx": 493,
+      "cy": 216,
+      "rx": 20,
+      "ry": 56,
+      "badge": "nw",
+      "note": "The QRS, for comparison."
+     },
+     {
+      "n": 3,
+      "kind": "ellipse",
+      "cx": 452,
+      "cy": 254,
+      "rx": 22,
+      "ry": 16,
+      "badge": "sw",
+      "note": "The P wave is small and flattened, barely above the baseline."
+     }
+    ],
+    "takeaway": "Peaked T waves with flattened P waves plus K+ of 7.1 is a cardiac emergency. Give IV calcium first to protect the heart: answer C."
+   }
+  },
+  {
+   "questionId": "RT-0002",
+   "legacyId": "RT-S002",
+   "exam": "RT",
+   "domain": "III",
+   "section": "III-G",
+   "sectionName": "Provide Respiratory Care in High-Risk Situations",
+   "topic": "Pulseless ventricular tachycardia",
+   "cognitiveLevel": "Analysis",
+   "portion": "Depth",
+   "patientCondition": "Adult - Cardiovascular",
+   "judgmentType": "Decision Making",
+   "setting": "In a hospital",
+   "patientAge": "Adult",
+   "ethics": false,
+   "itemFormat": "SBA",
+   "stem": "A 66-year-old on a telemetry unit suddenly becomes unresponsive. The monitor displays the rhythm shown. There is no carotid pulse, and the patient is not breathing. CPR has been started. Which of the following should be done FIRST?",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "Synchronized cardioversion",
+    "Unsynchronized defibrillation",
+    "Adenosine 6 mg rapid IV push",
+    "Transcutaneous pacing"
+   ],
+   "correctAnswer": "B",
+   "rationale": "The strip shows a regular, wide-complex tachycardia near 175/min with no P waves: ventricular tachycardia. Without a pulse it is treated as a shockable cardiac arrest rhythm, so the priority is immediate unsynchronized defibrillation with minimal interruption of CPR. Synchronized cardioversion is reserved for VT with a pulse, adenosine is for stable regular narrow-complex tachycardia, and pacing treats symptomatic bradycardia.",
+   "reference": "AHA Adult Cardiac Arrest Algorithm (ACLS).",
+   "image": {
+    "file": "images/RT-S002_ecg.png",
+    "type": "Rhythm strip",
+    "alt": "Lead II rhythm strip, 6 seconds: regular wide QRS complexes at about 175 per minute with no visible P waves.",
+    "width": 1560,
+    "height": 390
+   },
+   "status": "draft",
+   "version": 1,
+   "batch": 1,
+   "infoScales": [],
+   "evidence": {
+    "color": "#1F5FD6",
+    "halo": "rgba(255,255,255,.9)",
+    "label": "EKG",
+    "view": {
+     "x": 0,
+     "w": 780
+    },
+    "marks": [
+     {
+      "n": 1,
+      "kind": "ellipse",
+      "cx": 399,
+      "cy": 158,
+      "rx": 36,
+      "ry": 128,
+      "badge": "nw",
+      "note": "Wide QRS complex with no P wave in front of it. Every beat looks like this."
+     },
+     {
+      "n": 2,
+      "kind": "span",
+      "x1": 487,
+      "x2": 576,
+      "y": 22,
+      "note": "R to R is about 0.34 s (just under 2 large boxes), so the rate is about 175/min and regular."
+     }
+    ],
+    "takeaway": "Regular, fast, wide-complex rhythm = ventricular tachycardia. With no pulse it is a shockable arrest rhythm: unsynchronized defibrillation, answer B."
+   }
+  },
+  {
+   "questionId": "RT-0003",
+   "legacyId": "RT-S003",
+   "exam": "RT",
+   "domain": "I",
+   "section": "I-D",
+   "sectionName": "Evaluate Procedure Results",
+   "topic": "Atrial fibrillation recognition",
+   "cognitiveLevel": "Application",
+   "portion": "Breadth",
+   "patientCondition": null,
+   "judgmentType": null,
+   "setting": "Outside a hospital",
+   "patientAge": "Adult",
+   "ethics": false,
+   "itemFormat": "SBA",
+   "stem": "A 72-year-old with COPD is seen in a pulmonary clinic for worsening exertional dyspnea. A rhythm strip is obtained and is shown. Which of the following rhythms is present?",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "Atrial fibrillation",
+    "Atrial flutter",
+    "Multifocal atrial tachycardia",
+    "Sinus tachycardia with premature atrial contractions"
+   ],
+   "correctAnswer": "A",
+   "rationale": "The R-R intervals are irregularly irregular, there are no consistent P waves, and the baseline shows fine fibrillatory waves, all hallmarks of atrial fibrillation. Atrial flutter shows regular sawtooth flutter waves, multifocal atrial tachycardia has at least three distinct P-wave shapes, and sinus tachycardia with PACs shows a P wave before each QRS.",
+   "reference": "Standard ECG rhythm interpretation references.",
+   "image": {
+    "file": "images/RT-S003_ecg.png",
+    "type": "Rhythm strip",
+    "alt": "Lead II rhythm strip, 6 seconds: narrow QRS complexes at irregular intervals, rate about 110 per minute, no distinct P waves, wavy fibrillatory baseline.",
+    "width": 1560,
+    "height": 390
+   },
+   "status": "draft",
+   "version": 1,
+   "batch": 1,
+   "infoScales": [],
+   "evidence": {
+    "color": "#1F5FD6",
+    "halo": "rgba(255,255,255,.9)",
+    "label": "EKG",
+    "view": {
+     "x": 250,
+     "w": 780
+    },
+    "marks": [
+     {
+      "n": 1,
+      "kind": "span",
+      "x1": 562,
+      "x2": 700,
+      "y": 104,
+      "note": "This R-R interval is short (about 0.53 s)…"
+     },
+     {
+      "n": 2,
+      "kind": "span",
+      "x1": 700,
+      "x2": 903,
+      "y": 104,
+      "note": "…and the next one is long (about 0.78 s). The spacing never repeats: irregularly irregular."
+     },
+     {
+      "n": 3,
+      "kind": "ellipse",
+      "cx": 472,
+      "cy": 245,
+      "rx": 74,
+      "ry": 32,
+      "badge": "s",
+      "note": "No P waves. The baseline between beats is wavy (fibrillatory waves) instead of flat."
+     }
+    ],
+    "takeaway": "Irregularly irregular R-R intervals with no P waves and a fibrillatory baseline = atrial fibrillation, answer A."
+   }
+  },
+  {
+   "questionId": "RT-0004",
+   "legacyId": "RT-S004",
+   "exam": "RT",
+   "domain": "III",
+   "section": "III-C",
+   "sectionName": "Support Oxygenation and Ventilation",
+   "topic": "Auto-PEEP in severe asthma",
+   "cognitiveLevel": "Analysis",
+   "portion": "Depth",
+   "patientCondition": "Adult - Chronic Lung Disease: intubation and invasive ventilation",
+   "judgmentType": "Decision Making",
+   "setting": "In a hospital",
+   "patientAge": "Adult",
+   "ethics": false,
+   "itemFormat": "SBA",
+   "stem": "An adult intubated for a severe asthma exacerbation is receiving mechanical ventilation with the following settings:",
+   "stemTable": [
+    [
+     "Mode",
+     "VC, A/C"
+    ],
+    [
+     "FIO2",
+     "0.50"
+    ],
+    [
+     "Mandatory rate",
+     "20"
+    ],
+    [
+     "Total rate",
+     "20"
+    ],
+    [
+     "VT",
+     "450 mL"
+    ],
+    [
+     "Inspiratory flow",
+     "60 L/min (constant)"
+    ],
+    [
+     "PEEP",
+     "5 cm H2O"
+    ]
+   ],
+   "stemAfterTable": "Over the last 30 minutes, BP has fallen from 128/80 to 92/58 mm Hg. The flow-time scalar is shown. Which of the following should a respiratory therapist recommend FIRST?",
+   "options": [
+    "Increase the mandatory rate to 26/min",
+    "Decrease the inspiratory flow to 40 L/min",
+    "Increase the PEEP to 15 cm H2O",
+    "Decrease the mandatory rate to 14/min"
+   ],
+   "correctAnswer": "D",
+   "rationale": "Expiratory flow never returns to zero before the next breath begins, which means exhalation is incomplete and auto-PEEP is building. Dynamic hyperinflation raises intrathoracic pressure and reduces venous return, which explains the falling blood pressure. Lowering the rate is the most effective way to lengthen expiratory time. Raising the rate or lowering inspiratory flow shortens expiratory time and worsens air trapping, and adding a high set PEEP in a passive patient adds to the hyperinflation.",
+   "reference": "Mechanical ventilation in severe asthma: managing dynamic hyperinflation; standard RT ventilator graphics references.",
+   "image": {
+    "file": "images/RT-S004_flow.png",
+    "type": "Flow-time scalar",
+    "alt": "Flow-time scalar over 12 seconds: square inspiratory flow of 60 L/min; expiratory flow decays but is still about -7 L/min when each new breath starts, never reaching the zero baseline.",
+    "width": 1300,
+    "height": 442
+   },
+   "status": "draft",
+   "version": 1,
+   "batch": 1,
+   "infoScales": [],
+   "evidence": {
+    "color": "#FFD43B",
+    "halo": "rgba(0,0,0,.6)",
+    "label": "graph",
+    "marks": [
+     {
+      "n": 1,
+      "kind": "ellipse",
+      "cx": 380,
+      "cy": 215,
+      "rx": 34,
+      "ry": 24,
+      "badge": "nw",
+      "note": "Expiratory flow is still about −7 L/min when the next breath starts."
+     },
+     {
+      "n": 2,
+      "kind": "ellipse",
+      "cx": 676,
+      "cy": 215,
+      "rx": 34,
+      "ry": 24,
+      "badge": "nw",
+      "note": "It happens on every breath. The trace never gets back to the zero line (dashed)."
+     },
+     {
+      "n": 0,
+      "kind": "ellipse",
+      "cx": 971,
+      "cy": 215,
+      "rx": 34,
+      "ry": 24,
+      "note": ""
+     }
+    ],
+    "takeaway": "Exhalation is cut short, so air is trapped and auto-PEEP builds, which explains the falling BP. Lowering the rate gives more time to exhale: answer D."
+   }
+  },
+  {
+   "questionId": "RT-0005",
+   "legacyId": "RT-S005",
+   "exam": "RT",
+   "domain": "III",
+   "section": "III-C",
+   "sectionName": "Support Oxygenation and Ventilation",
+   "topic": "Flow starvation on VC ventilation",
+   "cognitiveLevel": "Application",
+   "portion": "Breadth",
+   "patientCondition": null,
+   "judgmentType": null,
+   "setting": "In a hospital",
+   "patientAge": "Adult",
+   "ethics": false,
+   "itemFormat": "SBA",
+   "stem": "An adult with pneumonia is receiving mechanical ventilation with the following parameters:",
+   "stemTable": [
+    [
+     "Mode",
+     "VC, A/C"
+    ],
+    [
+     "FIO2",
+     "0.40"
+    ],
+    [
+     "Mandatory rate",
+     "16"
+    ],
+    [
+     "Total rate",
+     "16"
+    ],
+    [
+     "VT",
+     "500 mL"
+    ],
+    [
+     "Inspiratory flow",
+     "35 L/min (constant)"
+    ],
+    [
+     "PEEP",
+     "8 cm H2O"
+    ]
+   ],
+   "stemAfterTable": "The patient appears anxious and is using accessory muscles. The pressure-time scalar is shown. The therapist should",
+   "options": [
+    "increase the trigger sensitivity.",
+    "increase the inspiratory flow.",
+    "increase the PEEP.",
+    "decrease the tidal volume."
+   ],
+   "correctAnswer": "B",
+   "rationale": "Each breath shows a concave, scooped dip early in inspiration, pulling airway pressure down toward baseline before it rises. That shape means the patient's inspiratory demand exceeds the set flow (flow starvation). Increasing the inspiratory flow, or changing to a mode with variable flow, resolves it. The breaths are already being triggered, so trigger sensitivity isn't the problem, and PEEP or tidal volume changes don't address the flow mismatch.",
+   "reference": "Patient-ventilator asynchrony on ventilator graphics; standard RT texts.",
+   "image": {
+    "file": "images/RT-S005_pressure.png",
+    "type": "Pressure-time scalar",
+    "alt": "Pressure-time scalar: baseline 8 cm H2O; each breath rises to about 15, dips concavely to about 11, then climbs to a peak near 27 cm H2O.",
+    "width": 1300,
+    "height": 442
+   },
+   "status": "draft",
+   "version": 1,
+   "batch": 1,
+   "infoScales": [],
+   "evidence": {
+    "color": "#FF6FB5",
+    "halo": "rgba(0,0,0,.6)",
+    "label": "graph",
+    "marks": [
+     {
+      "n": 1,
+      "kind": "ellipse",
+      "cx": 113,
+      "cy": 236,
+      "rx": 42,
+      "ry": 32,
+      "badge": "s",
+      "note": "Early in each breath the pressure dips (scoops) down toward baseline before it rises. The patient is pulling harder than the set flow can supply."
+     },
+     {
+      "n": 0,
+      "kind": "ellipse",
+      "cx": 512,
+      "cy": 236,
+      "rx": 42,
+      "ry": 32,
+      "note": ""
+     },
+     {
+      "n": 0,
+      "kind": "ellipse",
+      "cx": 911,
+      "cy": 236,
+      "rx": 42,
+      "ry": 32,
+      "note": ""
+     }
+    ],
+    "takeaway": "A concave dip on a volume-control pressure scalar is flow starvation. Increase the inspiratory flow: answer B."
+   }
+  },
+  {
+   "questionId": "RT-0007",
+   "legacyId": "RT-S007",
+   "exam": "RT",
+   "domain": "I",
+   "section": "I-D",
+   "sectionName": "Evaluate Procedure Results",
+   "topic": "Alveolar-arterial oxygen gradient",
+   "cognitiveLevel": "Application",
+   "portion": "Breadth",
+   "patientCondition": null,
+   "judgmentType": null,
+   "setting": "In a hospital",
+   "patientAge": "Adult",
+   "ethics": false,
+   "itemFormat": "SBA-Numeric",
+   "stem": "A 58-year-old is breathing room air at sea level (PB 760 mm Hg). ABG analysis reveals:",
+   "stemTable": [
+    [
+     "pH",
+     "7.44"
+    ],
+    [
+     "PaCO2",
+     "38 mm Hg"
+    ],
+    [
+     "PaO2",
+     "58 mm Hg"
+    ],
+    [
+     "HCO3-",
+     "26 mEq/L"
+    ],
+    [
+     "BE",
+     "+2 mEq/L"
+    ],
+    [
+     "SaO2 (calc)",
+     "91%"
+    ]
+   ],
+   "stemAfterTable": "Which of the following is closest to the patient's P(A-a)O2?",
+   "options": [
+    "12 mm Hg",
+    "24 mm Hg",
+    "44 mm Hg",
+    "92 mm Hg"
+   ],
+   "correctAnswer": "C",
+   "rationale": "PAO2 = FIO2 x (PB - 47) - PaCO2 / 0.8 = 0.21 x 713 - 38/0.8 = 149.7 - 47.5 = about 102 mm Hg. P(A-a)O2 = 102 - 58 = about 44 mm Hg. That is well above normal for this age (roughly 10-20 mm Hg on room air), so the hypoxemia comes from V/Q mismatch, shunt, or a diffusion problem rather than hypoventilation alone; the normal PaCO2 also argues against hypoventilation.",
+   "reference": "Alveolar air equation; standard RT texts.",
+   "image": null,
+   "status": "draft",
+   "version": 1,
+   "batch": 1,
+   "infoScales": [],
+   "evidence": null
+  },
+  {
+   "questionId": "RT-0008",
+   "legacyId": "RT-S008",
+   "exam": "RT",
+   "domain": "III",
+   "section": "III-E",
+   "sectionName": "Make or Recommend Changes to the Respiratory Care Plan",
+   "topic": "Pediatric asthma - rising PaCO2",
+   "cognitiveLevel": "Analysis",
+   "portion": "Depth",
+   "patientCondition": "Children - Pediatric",
+   "judgmentType": "Decision Making",
+   "setting": "In a hospital",
+   "patientAge": "Pediatric",
+   "ethics": false,
+   "itemFormat": "SBA",
+   "stem": "A 7-year-old with asthma has received three albuterol/ipratropium treatments and oral corticosteroids in the ED. The child is speaking in single words, has suprasternal retractions, and breath sounds are diminished bilaterally. Physiologic data while receiving O2 by 40% air-entrainment mask are:",
+   "stemTable": [
+    [
+     "HR",
+     "148/min"
+    ],
+    [
+     "RR",
+     "42/min"
+    ],
+    [
+     "BP",
+     "108/66 mm Hg"
+    ],
+    [
+     "SpO2",
+     "90%"
+    ],
+    [
+     "pH",
+     "7.35"
+    ],
+    [
+     "PaCO2",
+     "45 mm Hg"
+    ],
+    [
+     "PaO2",
+     "62 mm Hg"
+    ],
+    [
+     "HCO3-",
+     "24 mEq/L"
+    ],
+    [
+     "BE",
+     "-1 mEq/L"
+    ],
+    [
+     "SaO2 (calc)",
+     "90%"
+    ]
+   ],
+   "stemAfterTable": "Which of the following should the respiratory therapist recommend?",
+   "options": [
+    "Continue current therapy and repeat the ABG in 2 hours.",
+    "Discharge home with an oral corticosteroid burst.",
+    "Administer sodium bicarbonate IV.",
+    "Escalate care with ICU consultation and preparation for ventilatory support."
+   ],
+   "correctAnswer": "D",
+   "rationale": "In a child working this hard to breathe, PaCO2 should be low from hyperventilation. A 'normal' PaCO2 of 45 mm Hg with diminished breath sounds and single-word speech signals fatigue and impending respiratory failure, not improvement. Care should be escalated now (ICU consult, adjuncts such as IV magnesium per protocol, and readiness for ventilatory support). Waiting two hours or discharging is unsafe, and bicarbonate has no role because there is no metabolic acidosis.",
+   "reference": "GINA / NAEPP guidance on severe and life-threatening asthma exacerbations.",
+   "image": null,
+   "status": "draft",
+   "version": 1,
+   "batch": 1,
+   "infoScales": [],
+   "evidence": null
+  },
+  {
+   "questionId": "RT-0009",
+   "legacyId": "RT-S009",
+   "exam": "RT",
+   "domain": "I",
+   "section": "I-C",
+   "sectionName": "Perform Procedures to Gather Clinical Information",
+   "topic": "Air bubble in ABG sample",
+   "cognitiveLevel": "Recall",
+   "portion": "Breadth",
+   "patientCondition": null,
+   "judgmentType": null,
+   "setting": "In a hospital",
+   "patientAge": "Adult",
+   "ethics": false,
+   "itemFormat": "SBA",
+   "stem": "An arterial blood sample from a patient breathing room air (actual PaO2 about 70 mm Hg) contains a large air bubble that was not expelled before analysis. Which of the following changes should be expected in the reported results?",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "PaO2 increased and PaCO2 decreased",
+    "PaO2 decreased and PaCO2 increased",
+    "PaO2 and PaCO2 both increased",
+    "No significant change if analyzed within 30 minutes"
+   ],
+   "correctAnswer": "A",
+   "rationale": "Room air has a PO2 of about 150 mm Hg and almost no CO2. Gases in the bubble equilibrate with the blood, pulling PaO2 toward about 150 mm Hg (up, in this case) and lowering PaCO2. The error starts at once, so prompt analysis doesn't prevent it; the bubble must be expelled immediately after collection.",
+   "reference": "AARC Clinical Practice Guideline: Blood Gas Analysis and Hemoximetry.",
+   "image": null,
+   "status": "draft",
+   "version": 1,
+   "batch": 1,
+   "infoScales": [],
+   "evidence": null
   },
   {
    "questionId": "RT-0001",
@@ -333,462 +978,8 @@
    "status": "draft",
    "version": 1,
    "batch": 1,
-   "infoScales": []
-  },
-  {
-   "questionId": "RT-0002",
-   "legacyId": "RT-S002",
-   "exam": "RT",
-   "domain": "III",
-   "section": "III-G",
-   "sectionName": "Provide Respiratory Care in High-Risk Situations",
-   "topic": "Pulseless ventricular tachycardia",
-   "cognitiveLevel": "Analysis",
-   "portion": "Depth",
-   "patientCondition": "Adult - Cardiovascular",
-   "judgmentType": "Decision Making",
-   "setting": "In a hospital",
-   "patientAge": "Adult",
-   "ethics": false,
-   "itemFormat": "SBA",
-   "stem": "A 66-year-old on a telemetry unit suddenly becomes unresponsive. The monitor displays the rhythm shown. There is no carotid pulse, and the patient is not breathing. CPR has been started. Which of the following should be done FIRST?",
-   "stemTable": [],
-   "stemAfterTable": "",
-   "options": [
-    "Synchronized cardioversion",
-    "Unsynchronized defibrillation",
-    "Adenosine 6 mg rapid IV push",
-    "Transcutaneous pacing"
-   ],
-   "correctAnswer": "B",
-   "rationale": "The strip shows a regular, wide-complex tachycardia near 175/min with no P waves: ventricular tachycardia. Without a pulse it is treated as a shockable cardiac arrest rhythm, so the priority is immediate unsynchronized defibrillation with minimal interruption of CPR. Synchronized cardioversion is reserved for VT with a pulse, adenosine is for stable regular narrow-complex tachycardia, and pacing treats symptomatic bradycardia.",
-   "reference": "AHA Adult Cardiac Arrest Algorithm (ACLS).",
-   "image": {
-    "file": "images/RT-S002_ecg.png",
-    "type": "Rhythm strip",
-    "alt": "Lead II rhythm strip, 6 seconds: regular wide QRS complexes at about 175 per minute with no visible P waves.",
-    "width": 1560,
-    "height": 390
-   },
-   "status": "draft",
-   "version": 1,
-   "batch": 1,
-   "infoScales": []
-  },
-  {
-   "questionId": "RT-0003",
-   "legacyId": "RT-S003",
-   "exam": "RT",
-   "domain": "I",
-   "section": "I-D",
-   "sectionName": "Evaluate Procedure Results",
-   "topic": "Atrial fibrillation recognition",
-   "cognitiveLevel": "Application",
-   "portion": "Breadth",
-   "patientCondition": null,
-   "judgmentType": null,
-   "setting": "Outside a hospital",
-   "patientAge": "Adult",
-   "ethics": false,
-   "itemFormat": "SBA",
-   "stem": "A 72-year-old with COPD is seen in a pulmonary clinic for worsening exertional dyspnea. A rhythm strip is obtained and is shown. Which of the following rhythms is present?",
-   "stemTable": [],
-   "stemAfterTable": "",
-   "options": [
-    "Atrial fibrillation",
-    "Atrial flutter",
-    "Multifocal atrial tachycardia",
-    "Sinus tachycardia with premature atrial contractions"
-   ],
-   "correctAnswer": "A",
-   "rationale": "The R-R intervals are irregularly irregular, there are no consistent P waves, and the baseline shows fine fibrillatory waves, all hallmarks of atrial fibrillation. Atrial flutter shows regular sawtooth flutter waves, multifocal atrial tachycardia has at least three distinct P-wave shapes, and sinus tachycardia with PACs shows a P wave before each QRS.",
-   "reference": "Standard ECG rhythm interpretation references.",
-   "image": {
-    "file": "images/RT-S003_ecg.png",
-    "type": "Rhythm strip",
-    "alt": "Lead II rhythm strip, 6 seconds: narrow QRS complexes at irregular intervals, rate about 110 per minute, no distinct P waves, wavy fibrillatory baseline.",
-    "width": 1560,
-    "height": 390
-   },
-   "status": "draft",
-   "version": 1,
-   "batch": 1,
-   "infoScales": []
-  },
-  {
-   "questionId": "RT-0004",
-   "legacyId": "RT-S004",
-   "exam": "RT",
-   "domain": "III",
-   "section": "III-C",
-   "sectionName": "Support Oxygenation and Ventilation",
-   "topic": "Auto-PEEP in severe asthma",
-   "cognitiveLevel": "Analysis",
-   "portion": "Depth",
-   "patientCondition": "Adult - Chronic Lung Disease: intubation and invasive ventilation",
-   "judgmentType": "Decision Making",
-   "setting": "In a hospital",
-   "patientAge": "Adult",
-   "ethics": false,
-   "itemFormat": "SBA",
-   "stem": "An adult intubated for a severe asthma exacerbation is receiving mechanical ventilation with the following settings:",
-   "stemTable": [
-    [
-     "Mode",
-     "VC, A/C"
-    ],
-    [
-     "FIO2",
-     "0.50"
-    ],
-    [
-     "Mandatory rate",
-     "20"
-    ],
-    [
-     "Total rate",
-     "20"
-    ],
-    [
-     "VT",
-     "450 mL"
-    ],
-    [
-     "Inspiratory flow",
-     "60 L/min (constant)"
-    ],
-    [
-     "PEEP",
-     "5 cm H2O"
-    ]
-   ],
-   "stemAfterTable": "Over the last 30 minutes, BP has fallen from 128/80 to 92/58 mm Hg. The flow-time scalar is shown. Which of the following should a respiratory therapist recommend FIRST?",
-   "options": [
-    "Increase the mandatory rate to 26/min",
-    "Decrease the inspiratory flow to 40 L/min",
-    "Increase the PEEP to 15 cm H2O",
-    "Decrease the mandatory rate to 14/min"
-   ],
-   "correctAnswer": "D",
-   "rationale": "Expiratory flow never returns to zero before the next breath begins, which means exhalation is incomplete and auto-PEEP is building. Dynamic hyperinflation raises intrathoracic pressure and reduces venous return, which explains the falling blood pressure. Lowering the rate is the most effective way to lengthen expiratory time. Raising the rate or lowering inspiratory flow shortens expiratory time and worsens air trapping, and adding a high set PEEP in a passive patient adds to the hyperinflation.",
-   "reference": "Mechanical ventilation in severe asthma: managing dynamic hyperinflation; standard RT ventilator graphics references.",
-   "image": {
-    "file": "images/RT-S004_flow.png",
-    "type": "Flow-time scalar",
-    "alt": "Flow-time scalar over 12 seconds: square inspiratory flow of 60 L/min; expiratory flow decays but is still about -7 L/min when each new breath starts, never reaching the zero baseline.",
-    "width": 1300,
-    "height": 442
-   },
-   "status": "draft",
-   "version": 1,
-   "batch": 1,
-   "infoScales": []
-  },
-  {
-   "questionId": "RT-0005",
-   "legacyId": "RT-S005",
-   "exam": "RT",
-   "domain": "III",
-   "section": "III-C",
-   "sectionName": "Support Oxygenation and Ventilation",
-   "topic": "Flow starvation on VC ventilation",
-   "cognitiveLevel": "Application",
-   "portion": "Breadth",
-   "patientCondition": null,
-   "judgmentType": null,
-   "setting": "In a hospital",
-   "patientAge": "Adult",
-   "ethics": false,
-   "itemFormat": "SBA",
-   "stem": "An adult with pneumonia is receiving mechanical ventilation with the following parameters:",
-   "stemTable": [
-    [
-     "Mode",
-     "VC, A/C"
-    ],
-    [
-     "FIO2",
-     "0.40"
-    ],
-    [
-     "Mandatory rate",
-     "16"
-    ],
-    [
-     "Total rate",
-     "16"
-    ],
-    [
-     "VT",
-     "500 mL"
-    ],
-    [
-     "Inspiratory flow",
-     "35 L/min (constant)"
-    ],
-    [
-     "PEEP",
-     "8 cm H2O"
-    ]
-   ],
-   "stemAfterTable": "The patient appears anxious and is using accessory muscles. The pressure-time scalar is shown. The therapist should",
-   "options": [
-    "increase the trigger sensitivity.",
-    "increase the inspiratory flow.",
-    "increase the PEEP.",
-    "decrease the tidal volume."
-   ],
-   "correctAnswer": "B",
-   "rationale": "Each breath shows a concave, scooped dip early in inspiration, pulling airway pressure down toward baseline before it rises. That shape means the patient's inspiratory demand exceeds the set flow (flow starvation). Increasing the inspiratory flow, or changing to a mode with variable flow, resolves it. The breaths are already being triggered, so trigger sensitivity isn't the problem, and PEEP or tidal volume changes don't address the flow mismatch.",
-   "reference": "Patient-ventilator asynchrony on ventilator graphics; standard RT texts.",
-   "image": {
-    "file": "images/RT-S005_pressure.png",
-    "type": "Pressure-time scalar",
-    "alt": "Pressure-time scalar: baseline 8 cm H2O; each breath rises to about 15, dips concavely to about 11, then climbs to a peak near 27 cm H2O.",
-    "width": 1300,
-    "height": 442
-   },
-   "status": "draft",
-   "version": 1,
-   "batch": 1,
-   "infoScales": []
-  },
-  {
-   "questionId": "RT-0007",
-   "legacyId": "RT-S007",
-   "exam": "RT",
-   "domain": "I",
-   "section": "I-D",
-   "sectionName": "Evaluate Procedure Results",
-   "topic": "Alveolar-arterial oxygen gradient",
-   "cognitiveLevel": "Application",
-   "portion": "Breadth",
-   "patientCondition": null,
-   "judgmentType": null,
-   "setting": "In a hospital",
-   "patientAge": "Adult",
-   "ethics": false,
-   "itemFormat": "SBA-Numeric",
-   "stem": "A 58-year-old is breathing room air at sea level (PB 760 mm Hg). ABG analysis reveals:",
-   "stemTable": [
-    [
-     "pH",
-     "7.44"
-    ],
-    [
-     "PaCO2",
-     "38 mm Hg"
-    ],
-    [
-     "PaO2",
-     "58 mm Hg"
-    ],
-    [
-     "HCO3-",
-     "26 mEq/L"
-    ],
-    [
-     "BE",
-     "+2 mEq/L"
-    ],
-    [
-     "SaO2 (calc)",
-     "91%"
-    ]
-   ],
-   "stemAfterTable": "Which of the following is closest to the patient's P(A-a)O2?",
-   "options": [
-    "12 mm Hg",
-    "24 mm Hg",
-    "44 mm Hg",
-    "92 mm Hg"
-   ],
-   "correctAnswer": "C",
-   "rationale": "PAO2 = FIO2 x (PB - 47) - PaCO2 / 0.8 = 0.21 x 713 - 38/0.8 = 149.7 - 47.5 = about 102 mm Hg. P(A-a)O2 = 102 - 58 = about 44 mm Hg. That is well above normal for this age (roughly 10-20 mm Hg on room air), so the hypoxemia comes from V/Q mismatch, shunt, or a diffusion problem rather than hypoventilation alone; the normal PaCO2 also argues against hypoventilation.",
-   "reference": "Alveolar air equation; standard RT texts.",
-   "image": null,
-   "status": "draft",
-   "version": 1,
-   "batch": 1,
-   "infoScales": []
-  },
-  {
-   "questionId": "RT-0008",
-   "legacyId": "RT-S008",
-   "exam": "RT",
-   "domain": "III",
-   "section": "III-E",
-   "sectionName": "Make or Recommend Changes to the Respiratory Care Plan",
-   "topic": "Pediatric asthma - rising PaCO2",
-   "cognitiveLevel": "Analysis",
-   "portion": "Depth",
-   "patientCondition": "Children - Pediatric",
-   "judgmentType": "Decision Making",
-   "setting": "In a hospital",
-   "patientAge": "Pediatric",
-   "ethics": false,
-   "itemFormat": "SBA",
-   "stem": "A 7-year-old with asthma has received three albuterol/ipratropium treatments and oral corticosteroids in the ED. The child is speaking in single words, has suprasternal retractions, and breath sounds are diminished bilaterally. Physiologic data while receiving O2 by 40% air-entrainment mask are:",
-   "stemTable": [
-    [
-     "HR",
-     "148/min"
-    ],
-    [
-     "RR",
-     "42/min"
-    ],
-    [
-     "BP",
-     "108/66 mm Hg"
-    ],
-    [
-     "SpO2",
-     "90%"
-    ],
-    [
-     "pH",
-     "7.35"
-    ],
-    [
-     "PaCO2",
-     "45 mm Hg"
-    ],
-    [
-     "PaO2",
-     "62 mm Hg"
-    ],
-    [
-     "HCO3-",
-     "24 mEq/L"
-    ],
-    [
-     "BE",
-     "-1 mEq/L"
-    ],
-    [
-     "SaO2 (calc)",
-     "90%"
-    ]
-   ],
-   "stemAfterTable": "Which of the following should the respiratory therapist recommend?",
-   "options": [
-    "Continue current therapy and repeat the ABG in 2 hours.",
-    "Discharge home with an oral corticosteroid burst.",
-    "Administer sodium bicarbonate IV.",
-    "Escalate care with ICU consultation and preparation for ventilatory support."
-   ],
-   "correctAnswer": "D",
-   "rationale": "In a child working this hard to breathe, PaCO2 should be low from hyperventilation. A 'normal' PaCO2 of 45 mm Hg with diminished breath sounds and single-word speech signals fatigue and impending respiratory failure, not improvement. Care should be escalated now (ICU consult, adjuncts such as IV magnesium per protocol, and readiness for ventilatory support). Waiting two hours or discharging is unsafe, and bicarbonate has no role because there is no metabolic acidosis.",
-   "reference": "GINA / NAEPP guidance on severe and life-threatening asthma exacerbations.",
-   "image": null,
-   "status": "draft",
-   "version": 1,
-   "batch": 1,
-   "infoScales": []
-  },
-  {
-   "questionId": "RT-0009",
-   "legacyId": "RT-S009",
-   "exam": "RT",
-   "domain": "I",
-   "section": "I-C",
-   "sectionName": "Perform Procedures to Gather Clinical Information",
-   "topic": "Air bubble in ABG sample",
-   "cognitiveLevel": "Recall",
-   "portion": "Breadth",
-   "patientCondition": null,
-   "judgmentType": null,
-   "setting": "In a hospital",
-   "patientAge": "Adult",
-   "ethics": false,
-   "itemFormat": "SBA",
-   "stem": "An arterial blood sample from a patient breathing room air (actual PaO2 about 70 mm Hg) contains a large air bubble that was not expelled before analysis. Which of the following changes should be expected in the reported results?",
-   "stemTable": [],
-   "stemAfterTable": "",
-   "options": [
-    "PaO2 increased and PaCO2 decreased",
-    "PaO2 decreased and PaCO2 increased",
-    "PaO2 and PaCO2 both increased",
-    "No significant change if analyzed within 30 minutes"
-   ],
-   "correctAnswer": "A",
-   "rationale": "Room air has a PO2 of about 150 mm Hg and almost no CO2. Gases in the bubble equilibrate with the blood, pulling PaO2 toward about 150 mm Hg (up, in this case) and lowering PaCO2. The error starts at once, so prompt analysis doesn't prevent it; the bubble must be expelled immediately after collection.",
-   "reference": "AARC Clinical Practice Guideline: Blood Gas Analysis and Hemoximetry.",
-   "image": null,
-   "status": "draft",
-   "version": 1,
-   "batch": 1,
-   "infoScales": []
-  },
-  {
-   "questionId": "RT-0010",
-   "legacyId": "RT-S010",
-   "exam": "RT",
-   "domain": "III",
-   "section": "III-E",
-   "sectionName": "Make or Recommend Changes to the Respiratory Care Plan",
-   "topic": "Hyperkalemia - ECG changes",
-   "cognitiveLevel": "Application",
-   "portion": "Depth",
-   "patientCondition": "Adult - Medical: other",
-   "judgmentType": "Decision Making",
-   "setting": "In a hospital",
-   "patientAge": "Adult",
-   "ethics": false,
-   "itemFormat": "SBA",
-   "stem": "An adult with end-stage renal disease missed two scheduled dialysis sessions and reports generalized weakness. Laboratory results are:",
-   "stemTable": [
-    [
-     "K+",
-     "7.1 mEq/L"
-    ],
-    [
-     "Na+",
-     "136 mEq/L"
-    ],
-    [
-     "Cl-",
-     "101 mEq/L"
-    ],
-    [
-     "HCO3-",
-     "18 mEq/L"
-    ],
-    [
-     "BUN",
-     "88 mg/dL"
-    ],
-    [
-     "Creatinine",
-     "9.4 mg/dL"
-    ],
-    [
-     "Glucose",
-     "110 mg/dL"
-    ]
-   ],
-   "stemAfterTable": "The rhythm strip is shown. Which of the following should be recommended FIRST?",
-   "options": [
-    "Oral sodium polystyrene sulfonate",
-    "Emergent hemodialysis",
-    "IV calcium gluconate",
-    "Nebulized albuterol"
-   ],
-   "correctAnswer": "C",
-   "rationale": "Tall, narrow, peaked T waves with flattened P waves are classic ECG signs of hyperkalemia, and a potassium of 7.1 mEq/L with ECG changes is an emergency. IV calcium is given first because it stabilizes the cardiac membrane within minutes. Albuterol and insulin shift potassium into cells and dialysis removes it, but they act more slowly and come after calcium. Oral binders take hours.",
-   "reference": "AHA ACLS guidance on life-threatening electrolyte abnormalities.",
-   "image": {
-    "file": "images/RT-S010_ecg.png",
-    "type": "Rhythm strip",
-    "alt": "Lead II rhythm strip, 6 seconds: regular rhythm about 78 per minute with tall, narrow, peaked T waves taller than the QRS and small flattened P waves.",
-    "width": 1560,
-    "height": 390
-   },
-   "status": "draft",
-   "version": 1,
-   "batch": 1,
-   "infoScales": []
+   "infoScales": [],
+   "evidence": null
   },
   {
    "questionId": "RT-0037",
@@ -847,7 +1038,8 @@
    "status": "draft",
    "version": 1,
    "batch": 1,
-   "infoScales": []
+   "infoScales": [],
+   "evidence": null
   },
   {
    "questionId": "RT-0042",
@@ -887,7 +1079,34 @@
    "status": "draft",
    "version": 1,
    "batch": 1,
-   "infoScales": []
+   "infoScales": [],
+   "evidence": {
+    "color": "#FFD43B",
+    "halo": "rgba(0,0,0,.6)",
+    "label": "graph",
+    "marks": [
+     {
+      "n": 1,
+      "kind": "ellipse",
+      "cx": 840,
+      "cy": 208,
+      "rx": 32,
+      "ry": 122,
+      "note": "End-tidal CO2 drops from about 37 mm Hg straight to zero in a single breath."
+     },
+     {
+      "n": 2,
+      "kind": "ellipse",
+      "cx": 1062,
+      "cy": 318,
+      "rx": 200,
+      "ry": 24,
+      "badge": "n",
+      "note": "After that the line stays flat at zero. No exhaled CO2 is reaching the sensor."
+     }
+    ],
+    "takeaway": "A sudden loss of the waveform points to extubation, disconnection, or complete obstruction. Check the ETT and circuit first: answer B."
+   }
   },
   {
    "questionId": "RT-0058",
@@ -921,7 +1140,8 @@
    "status": "draft",
    "version": 1,
    "batch": 1,
-   "infoScales": []
+   "infoScales": [],
+   "evidence": null
   },
   {
    "questionId": "RT-0100",
@@ -988,7 +1208,8 @@
    "status": "draft",
    "version": 1,
    "batch": 1,
-   "infoScales": []
+   "infoScales": [],
+   "evidence": null
   },
   {
    "questionId": "RT-0107",
@@ -1022,7 +1243,8 @@
    "status": "draft",
    "version": 1,
    "batch": 1,
-   "infoScales": []
+   "infoScales": [],
+   "evidence": null
   },
   {
    "questionId": "RT-0144",
@@ -1069,7 +1291,8 @@
    "status": "draft",
    "version": 1,
    "batch": 1,
-   "infoScales": []
+   "infoScales": [],
+   "evidence": null
   }
  ]
 }

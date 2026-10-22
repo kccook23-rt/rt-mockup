@@ -70,12 +70,59 @@ window.SCALES = {
 
 /* Shown only after the final answer (team decision), so a card never gives the answer away. */
 function scaleButtons(q, c) {
-  if (!c.done || !q.scales || !q.scales.length) return "";
-  return `<div class="scalerow">${q.scales.filter((k) => SCALES[k]).map((k) =>
-    `<button type="button" class="scalebtn" data-act="scale" data-k="${k}">${ICON.info}<span>${SCALES[k].title}</span></button>`).join("")}</div>`;
+  if (!c.done) return "";
+  const btns = (q.scales || []).filter((k) => SCALES[k]).map((k) =>
+    `<button type="button" class="scalebtn" data-act="scale" data-k="${k}">${ICON.info}<span>${SCALES[k].title}</span></button>`);
+  if (q.ev) btns.unshift(`<button type="button" class="scalebtn" data-act="scale" data-k="__ev">${ICON.info}<span>Show the evidence on the ${q.ev.label}</span></button>`);
+  return btns.length ? `<div class="scalerow">${btns.join("")}</div>` : "";
+}
+
+/* Circles and numbered badges drawn over the image. Coordinates are image pixels,
+   so the same overlay works at any display size (question card or full-screen viewer). */
+function evOverlay(q, box) {
+  const ev = q.ev, W = q.w, H = q.h, isEcg = ev.label === "EKG";
+  const x0 = box ? box.x : 0, x1 = box ? box.x + box.w : W;
+  const stroke = (el) => `${el.replace("/>", ` stroke="${ev.halo}" stroke-width="7" fill="none" vector-effect="non-scaling-stroke"/>`)}${el.replace("/>", ` stroke="${ev.color}" stroke-width="3.5" fill="none" vector-effect="non-scaling-stroke"/>`)}`;
+  // Each badge sits just outside its mark: anchor point on the mark + a CSS shift away from it.
+  const SHIFT = { ne: "translate(3px, calc(-100% - 3px))", nw: "translate(calc(-100% - 3px), calc(-100% - 3px))",
+    se: "translate(3px, 3px)", sw: "translate(calc(-100% - 3px), 3px)", n: "translate(-50%, calc(-100% - 4px))", s: "translate(-50%, 4px)" };
+  let svg = "", badges = "";
+  for (const m of ev.marks) {
+    let ax, ay, dir;
+    if (m.kind === "span") {
+      const t = H * 0.04;
+      svg += stroke(`<path d="M${m.x1} ${m.y - t}V${m.y + t}M${m.x1} ${m.y}H${m.x2}M${m.x2} ${m.y - t}V${m.y + t}"/>`);
+      dir = m.badge || "s"; ax = (m.x1 + m.x2) / 2; ay = dir === "n" ? m.y - t : m.y + t;
+    } else {
+      svg += stroke(`<ellipse cx="${m.cx}" cy="${m.cy}" rx="${m.rx}" ry="${m.ry}"/>`);
+      dir = m.badge || ((m.cx + m.rx * 0.71 - x0) / (x1 - x0) > 0.88 ? "nw" : "ne");
+      const k = 0.71;
+      ax = dir === "n" || dir === "s" ? m.cx : dir.endsWith("e") ? m.cx + m.rx * k : m.cx - m.rx * k;
+      ay = dir === "n" ? m.cy - m.ry : dir === "s" ? m.cy + m.ry : dir.startsWith("n") ? m.cy - m.ry * k : m.cy + m.ry * k;
+    }
+    if (m.n) badges += `<span class="evbadge ${isEcg ? "ecg" : ""}" style="left:${ax / W * 100}%;top:${ay / H * 100}%;transform:${SHIFT[dir]};background:${ev.color}" aria-hidden="true">${m.n}</span>`;
+  }
+  return `<svg class="evsvg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true">${svg}</svg>${badges}`;
+}
+
+function evidenceSheet() {
+  const q = Q(), ev = q.ev; if (!ev) return "";
+  const isEcg = ev.label === "EKG";
+  const notes = ev.marks.filter((m) => m.n && m.note);
+  return `<div class="scrim"><div class="dialog scaledlg" role="dialog" aria-modal="true" aria-labelledby="scT">
+    <div class="schead"><h2 id="scT">Evidence on the ${ev.label}</h2><button type="button" class="vb" data-act="scaleclose" aria-label="Close">${ICON.x}</button></div>
+    <p class="sub">The circled areas are what make ${q.ans} the correct answer.</p>
+    <figure><button type="button" class="imgbtn evimg" data-act="evview" aria-label="Enlarge the ${ev.label} with the evidence circled">${ev.view
+      ? `<span class="evcrop" style="aspect-ratio:${ev.view.w}/${q.h}"><span class="evwrap" style="width:${q.w / ev.view.w * 100}%;left:${-ev.view.x / ev.view.w * 100}%"><img src="${q.img}" alt="${esc(q.alt)}">${evOverlay(q, ev.view)}</span></span>`
+      : `<span class="evwrap"><img src="${q.img}" alt="${esc(q.alt)}">${evOverlay(q)}</span>`}<span class="ex" aria-hidden="true">${ICON.expand}</span></button>
+    <figcaption>${ev.view ? `${esc(q.cap.toUpperCase())} · ZOOMED IN · TAP TO SEE THE WHOLE STRIP` : `${esc(q.cap.toUpperCase())} · TAP TO ENLARGE`}</figcaption></figure>
+    <ol class="evlist">${notes.map((m) => `<li><span class="evn ${isEcg ? "ecg" : ""}" style="background:${ev.color}">${m.n}</span><span>${esc(m.note)}</span></li>`).join("")}</ol>
+    <p class="scnote">${esc(ev.takeaway)}</p>
+    <button type="button" class="btn" data-act="scaleclose" style="width:100%">Back to the question</button></div></div>`;
 }
 
 function scaleSheet() {
+  if (S.scale === "__ev") return evidenceSheet();
   const s = SCALES[S.scale]; if (!s) return "";
   return `<div class="scrim"><div class="dialog scaledlg" role="dialog" aria-modal="true" aria-labelledby="scT">
     <div class="schead"><h2 id="scT">${s.title}</h2><button type="button" class="vb" data-act="scaleclose" aria-label="Close">${ICON.x}</button></div>

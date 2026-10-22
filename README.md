@@ -2,6 +2,8 @@
 
 Live: https://kccook23-rt.github.io/rt-mockup/
 
+**This is the team's mock-up.** New mock-up features go here (not in one-off artifacts), so everyone on Discord sees the same version at the link above.
+
 Clickable design mock-up of the CRT/RRT exam-prep app. Not production code: the real app will be built in Flutter + Firebase, using this as the reference for look and behavior.
 
 ## Who works on what
@@ -10,7 +12,8 @@ Clickable design mock-up of the CRT/RRT exam-prep app. Not production code: the 
 |---|---|---|
 | `js/app.js` | App shell, question pop-up, image viewer, settings, intro card, report-a-problem | Ken + Claude |
 | `js/stats.js` | Stats page and "Build a practice set" | **Noelle** |
-| `js/scales.js` | Scale reference cards (APGAR, GCS, GOLD, etc.). The info button appears only after the final answer. A question lists its cards in `infoScales`. | Ken + Claude |
+| `js/scales.js` | Info-button cards, shown only after the final answer. Scale reference cards (APGAR, GCS, GOLD, etc.): a question lists them in `infoScales`. Evidence cards for graphs and EKGs: circles drawn from the question's `evidence` field (pixel coordinates on the image, plus a note per circle). | Ken + Claude |
+| `css/evidence.css` | Styles for the evidence cards | Ken + Claude |
 | `js/progress.js` | Review list and per-question progress storage (used by both) | Shared: post in Discord before changing |
 | `css/app.css` | Colors, fonts, layout | Shared: post in Discord before changing |
 | `data/questions.json` | 20-question public sample, same fields as the Firebase question document | Ken + Claude |

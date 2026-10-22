@@ -10,7 +10,8 @@ function adapt(d) {
     img: d.image ? ((window.IMG_DATA && window.IMG_DATA[d.image.file]) || d.image.file) : null, cap: d.image ? IMG_KIND_SHORT(d.image.type) : "", alt: d.image ? d.image.alt : "",
     w: d.image ? d.image.width : 0, h: d.image ? d.image.height : 0, status: d.status,
     rank: d.vetting ? d.vetting.rank : null, score: d.vetting ? d.vetting.claudeScore : null, concern: d.vetting ? d.vetting.claudeConcern : "", conf: d.vetting ? d.vetting.confidence : null,
-    scales: d.infoScales || []
+    scales: d.infoScales || [],
+    ev: d.image && d.evidence ? d.evidence : null
   };
 }
 const L4 = ["A","B","C","D"];
@@ -19,7 +20,7 @@ const ZOOMS = [1, 1.5, 2, 3];
 
 const freshRun = (set) => set.map(() => ({ out: {}, sel: null, done: false, unsure: false, note: null }));
 const S = { page: "quiz", mode: "study", requireOut: false, intro: !window.VET_MODE && !seenIntro(), settings: false, set: [], qi: 0, run: [], results: false, reviewing: false,
-  started: Date.now(), finishedMs: 0, fb: null, reason: null, reported: {}, view: null, scale: null, zoom: 1, rot: true,
+  started: Date.now(), finishedMs: 0, fb: null, reason: null, reported: {}, view: null, viewEv: false, scale: null, zoom: 1, rot: true,
   build: { src: "all", secs: {}, mode: "study", count: "all" }, loadError: null };
 const Q = () => QS[S.set[S.qi]];
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -210,12 +211,14 @@ function renderViewer() {
   const box = S.rot ? `width:${H}px;height:${W}px` : `width:${W}px;height:${H}px`;
   const img = S.rot ? `position:absolute;left:0;top:0;width:${W}px;height:${H}px;transform-origin:0 0;transform:translate(${H}px,0) rotate(90deg)` : `display:block;width:${W}px;height:${H}px`;
   const hint = S.zoom === 1 ? (S.rot ? "Turn your phone sideways to read it. Zoom in for detail." : "Zoom in for detail, then drag or swipe to move around.") : "Drag or swipe to move around the image.";
-  root.innerHTML = `<div class="viewer" role="dialog" aria-modal="true" aria-label="${esc(q.cap)}, enlarged">
+  root.innerHTML = `<div class="viewer" role="dialog" aria-modal="true" aria-label="${esc(q.cap)}${S.viewEv ? " with evidence circled" : ""}, enlarged">
     <div class="vbar"><button type="button" class="vb" data-act="vclose" aria-label="Close image">${ICON.x}</button><span class="ttl"></span>
     <button type="button" class="vb" data-act="zout" aria-label="Zoom out" ${zi === 0 ? "disabled" : ""}>${ICON.minus}</button><span class="zl" aria-live="polite">${S.zoom === 1 ? "Fit" : S.zoom + "×"}</span>
     <button type="button" class="vb" data-act="zin" aria-label="Zoom in" ${zi === ZOOMS.length - 1 ? "disabled" : ""}>${ICON.plus}</button>
     <button type="button" class="vb" data-act="rot" aria-pressed="${S.rot}" aria-label="Rotate image">${ICON.rotate}<span>Rotate</span></button></div>
-    <div class="vscroll" id="vscroll"><div class="vbox" style="${box}"><img src="${S.view}" alt="${esc(q.alt)}" style="${img}" draggable="false"></div></div>
+    <div class="vscroll" id="vscroll"><div class="vbox" style="${box}">${S.viewEv && q.ev
+      ? `<div class="evwrap" style="${img}"><img src="${S.view}" alt="${esc(q.alt)}" style="width:100%;height:100%" draggable="false">${evOverlay(q)}</div>`
+      : `<img src="${S.view}" alt="${esc(q.alt)}" style="${img}" draggable="false">`}</div></div>
     <p class="vhint">${hint}</p></div>`;
 }
 
@@ -272,7 +275,7 @@ document.addEventListener("click", (e) => {
       else { S.results = true; S.finishedMs = Date.now() - S.started; }
     }
   }
-  else if (a === "next") { if (S.qi === S.set.length - 1) newRun(); else S.qi += 1; const ct = document.getElementById("content"); if (ct) ct.scrollTop = 0; S.fb = null; S.reason = null; }
+  else if (a === "next") { S.scale = null; if (S.qi === S.set.length - 1) newRun(); else S.qi += 1; const ct = document.getElementById("content"); if (ct) ct.scrollTop = 0; S.fb = null; S.reason = null; }
   else if (a === "review") { S.qi = Number(b.dataset.i); S.reviewing = true; }
   else if (a === "backresults") { S.reviewing = false; S.fb = null; }
   else if (a === "restart") newRun();
@@ -288,8 +291,9 @@ document.addEventListener("click", (e) => {
   else if (a === "mode") { if (S.mode !== b.dataset.m) { S.mode = b.dataset.m; S.build.mode = S.mode; newRun(); } }
   else if (a === "intro") { S.intro = true; S.settings = false; }
   else if (a === "introclose") { S.intro = false; markIntro(); }
-  else if (a === "view") { S.view = Q().img; S.zoom = 1; S.rot = true; }
-  else if (a === "vclose") { S.view = null; }
+  else if (a === "view") { S.view = Q().img; S.viewEv = false; S.zoom = 1; S.rot = true; }
+  else if (a === "evview") { S.view = Q().img; S.viewEv = true; S.zoom = 1; S.rot = true; }
+  else if (a === "vclose") { S.view = null; S.viewEv = false; }
   else if (a === "scale") { S.scale = b.dataset.k; }
   else if (a === "scaleclose") { S.scale = null; }
   else if (a === "zin") { const i = ZOOMS.indexOf(S.zoom); if (i < ZOOMS.length - 1) S.zoom = ZOOMS[i + 1]; }
@@ -297,11 +301,11 @@ document.addEventListener("click", (e) => {
   else if (a === "rot") { S.rot = !S.rot; S.zoom = 1; }
   render();
   if ((a === "final" && S.mode === "study") || a === "review") scrollToResult();
-  if (a === "view" || a === "rot") { const v = document.querySelector('.viewer [data-act="vclose"]'); if (v) v.focus(); }
+  if (a === "view" || a === "evview" || a === "rot") { const v = document.querySelector('.viewer [data-act="vclose"]'); if (v) v.focus(); }
 });
 document.addEventListener("keydown", (e) => {
   if (e.key !== "Escape") return;
-  if (S.view) S.view = null; else if (S.scale) S.scale = null; else if (S.fb) S.fb = null; else if (S.settings) S.settings = false; else if (S.intro) { S.intro = false; markIntro(); } else return;
+  if (S.view) { S.view = null; S.viewEv = false; } else if (S.scale) S.scale = null; else if (S.fb) S.fb = null; else if (S.settings) S.settings = false; else if (S.intro) { S.intro = false; markIntro(); } else return;
   render();
 });
 
