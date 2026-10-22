@@ -5,6 +5,258 @@
  "note": "Public sample of draft questions. The full bank is private.",
  "questions": [
   {
+   "questionId": "RT-0046",
+   "legacyId": null,
+   "exam": "RT",
+   "domain": "I",
+   "section": "I-D",
+   "sectionName": "Evaluate Procedure Results",
+   "topic": "P/F ratio and ARDS severity",
+   "cognitiveLevel": "Application",
+   "portion": "Depth",
+   "patientCondition": "Adult - Medical: ARDS",
+   "judgmentType": "Information Gathering",
+   "setting": "In a hospital",
+   "patientAge": "Adult",
+   "ethics": false,
+   "itemFormat": "SBA",
+   "stem": "An adult with pneumonia is receiving VC, A/C ventilation with an FIO2 of 0.60 and PEEP of 10 cm H2O. A chest radiograph shows bilateral opacities not explained by heart failure. ABG analysis reveals:",
+   "stemTable": [
+    [
+     "pH",
+     "7.34"
+    ],
+    [
+     "PaCO2",
+     "44 mm Hg"
+    ],
+    [
+     "PaO2",
+     "72 mm Hg"
+    ],
+    [
+     "HCO3-",
+     "23 mEq/L"
+    ],
+    [
+     "BE",
+     "-2 mEq/L"
+    ],
+    [
+     "SaO2 (calc)",
+     "93%"
+    ]
+   ],
+   "stemAfterTable": "According to the Berlin definition, the patient has",
+   "options": [
+    "severe ARDS.",
+    "moderate ARDS.",
+    "findings that do not meet ARDS criteria.",
+    "mild ARDS."
+   ],
+   "correctAnswer": "B",
+   "rationale": "PaO2/FIO2 = 72 / 0.60 = 120. With PEEP of at least 5 cm H2O, a ratio above 100 and up to 200 is moderate ARDS; above 200 to 300 is mild, and 100 or less is severe.",
+   "reference": "ARDS Definition Task Force (Berlin), JAMA 2012.",
+   "image": null,
+   "status": "draft",
+   "version": 1,
+   "batch": 1,
+   "infoScales": [
+    "berlin"
+   ]
+  },
+  {
+   "questionId": "RT-0160",
+   "legacyId": null,
+   "exam": "RT",
+   "domain": "III",
+   "section": "III-E",
+   "sectionName": "Make or Recommend Changes to the Respiratory Care Plan",
+   "topic": "Analgesia first for agitation",
+   "cognitiveLevel": "Application",
+   "portion": "Depth",
+   "patientCondition": "Adult - Pre- and Post-Operative Care",
+   "judgmentType": "Decision Making",
+   "setting": "In a hospital",
+   "patientAge": "Adult",
+   "ethics": false,
+   "itemFormat": "SBA",
+   "stem": "An intubated adult is agitated after a laparotomy, with a RASS of +2 and a high behavioral pain score. SpO2 is 97%, and the ventilator is synchronous except during agitation. Which of the following should be recommended FIRST?",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "An increase in PEEP",
+    "A neuromuscular blocking agent",
+    "An analgesic",
+    "Soft wrist restraints alone"
+   ],
+   "correctAnswer": "C",
+   "rationale": "Pain is a common cause of agitation in ventilated surgical patients. Guidelines recommend treating pain first (analgesia-first sedation). Paralysis hides distress, and restraints alone do not treat the cause.",
+   "reference": "SCCM PADIS guideline, 2018.",
+   "image": null,
+   "status": "draft",
+   "version": 1,
+   "batch": 1,
+   "infoScales": [
+    "rass"
+   ]
+  },
+  {
+   "questionId": "RT-0024",
+   "legacyId": null,
+   "exam": "RT",
+   "domain": "I",
+   "section": "I-B",
+   "sectionName": "Perform Clinical Assessment",
+   "topic": "APGAR score calculation",
+   "cognitiveLevel": "Application",
+   "portion": "Breadth",
+   "patientCondition": null,
+   "judgmentType": null,
+   "setting": "In a hospital",
+   "patientAge": "Neonatal",
+   "ethics": false,
+   "itemFormat": "SBA-Numeric",
+   "stem": "At 1 minute after birth, a term neonate has the following findings:",
+   "stemTable": [
+    [
+     "Heart rate",
+     "90/min"
+    ],
+    [
+     "Respiratory effort",
+     "Slow, irregular"
+    ],
+    [
+     "Muscle tone",
+     "Some flexion of extremities"
+    ],
+    [
+     "Reflex irritability",
+     "Grimace"
+    ],
+    [
+     "Color",
+     "Body pink, extremities blue"
+    ]
+   ],
+   "stemAfterTable": "What is the APGAR score?",
+   "options": [
+    "7",
+    "5",
+    "4",
+    "3"
+   ],
+   "correctAnswer": "B",
+   "rationale": "Each item scores 0 to 2. Heart rate below 100/min scores 1, slow irregular breathing 1, some flexion 1, grimace 1, and acrocyanosis 1, for a total of 5.",
+   "reference": "AAP/ACOG, The Apgar Score.",
+   "image": null,
+   "status": "draft",
+   "version": 1,
+   "batch": 1,
+   "infoScales": [
+    "apgar"
+   ]
+  },
+  {
+   "questionId": "RT-0026",
+   "legacyId": null,
+   "exam": "RT",
+   "domain": "I",
+   "section": "I-B",
+   "sectionName": "Perform Clinical Assessment",
+   "topic": "Low GCS after head injury",
+   "cognitiveLevel": "Analysis",
+   "portion": "Depth",
+   "patientCondition": "Adult - Trauma",
+   "judgmentType": "Decision Making",
+   "setting": "In a hospital",
+   "patientAge": "Adult",
+   "ethics": false,
+   "itemFormat": "SBA",
+   "stem": "An adult is brought to the ED after a fall from a ladder. The patient opens the eyes only to pain, makes incomprehensible sounds, and withdraws from pain. Physiologic data while receiving O2 by NRB mask are:",
+   "stemTable": [
+    [
+     "HR",
+     "58/min"
+    ],
+    [
+     "RR",
+     "10/min"
+    ],
+    [
+     "BP",
+     "168/92 mm Hg"
+    ],
+    [
+     "SpO2",
+     "93%"
+    ]
+   ],
+   "stemAfterTable": "Which of the following should the respiratory therapist recommend?",
+   "options": [
+    "O2 by nasal cannula at 4 L/min",
+    "Bilevel PAP by full-face mask",
+    "Endotracheal intubation with cervical spine precautions",
+    "Insertion of a nasopharyngeal airway"
+   ],
+   "correctAnswer": "C",
+   "rationale": "The GCS is 8 (E2, V2, M4), so the patient cannot reliably protect the airway. Bradycardia, hypertension, and slow breathing suggest rising intracranial pressure. Intubation with in-line stabilization is indicated. NIV is unsafe with a depressed level of consciousness, and a nasal airway is avoided with possible basilar skull fracture.",
+   "reference": "Brain Trauma Foundation guidelines; ATLS.",
+   "image": null,
+   "status": "draft",
+   "version": 1,
+   "batch": 1,
+   "infoScales": [
+    "gcs"
+   ]
+  },
+  {
+   "questionId": "RT-0169",
+   "legacyId": null,
+   "exam": "RT",
+   "domain": "III",
+   "section": "III-F",
+   "sectionName": "Use Evidence-Based Practice",
+   "topic": "GOLD spirometric grade",
+   "cognitiveLevel": "Application",
+   "portion": "Depth",
+   "patientCondition": "Adult - Chronic Lung Disease: outpatient management",
+   "judgmentType": "Information Gathering",
+   "setting": "Outside a hospital",
+   "patientAge": "Adult",
+   "ethics": false,
+   "itemFormat": "SBA",
+   "stem": "Postbronchodilator spirometry for an adult with COPD reveals:",
+   "stemTable": [
+    [
+     "FEV1/FVC",
+     "0.58"
+    ],
+    [
+     "FEV1",
+     "45% predicted"
+    ]
+   ],
+   "stemAfterTable": "This places the patient in which GOLD spirometric grade?",
+   "options": [
+    "GOLD 1",
+    "GOLD 4",
+    "GOLD 2",
+    "GOLD 3"
+   ],
+   "correctAnswer": "D",
+   "rationale": "With FEV1/FVC below 0.70, grades are set by FEV1 percent predicted: 80% or more is GOLD 1, 50% to 79% GOLD 2, 30% to 49% GOLD 3, and below 30% GOLD 4.",
+   "reference": "GOLD report.",
+   "image": null,
+   "status": "draft",
+   "version": 1,
+   "batch": 1,
+   "infoScales": [
+    "gold"
+   ]
+  },
+  {
    "questionId": "RT-0001",
    "legacyId": "RT-S001",
    "exam": "RT",
@@ -302,67 +554,6 @@
    "infoScales": []
   },
   {
-   "questionId": "RT-0046",
-   "legacyId": null,
-   "exam": "RT",
-   "domain": "I",
-   "section": "I-D",
-   "sectionName": "Evaluate Procedure Results",
-   "topic": "P/F ratio and ARDS severity",
-   "cognitiveLevel": "Application",
-   "portion": "Depth",
-   "patientCondition": "Adult - Medical: ARDS",
-   "judgmentType": "Information Gathering",
-   "setting": "In a hospital",
-   "patientAge": "Adult",
-   "ethics": false,
-   "itemFormat": "SBA",
-   "stem": "An adult with pneumonia is receiving VC, A/C ventilation with an FIO2 of 0.60 and PEEP of 10 cm H2O. A chest radiograph shows bilateral opacities not explained by heart failure. ABG analysis reveals:",
-   "stemTable": [
-    [
-     "pH",
-     "7.34"
-    ],
-    [
-     "PaCO2",
-     "44 mm Hg"
-    ],
-    [
-     "PaO2",
-     "72 mm Hg"
-    ],
-    [
-     "HCO3-",
-     "23 mEq/L"
-    ],
-    [
-     "BE",
-     "-2 mEq/L"
-    ],
-    [
-     "SaO2 (calc)",
-     "93%"
-    ]
-   ],
-   "stemAfterTable": "According to the Berlin definition, the patient has",
-   "options": [
-    "severe ARDS.",
-    "moderate ARDS.",
-    "findings that do not meet ARDS criteria.",
-    "mild ARDS."
-   ],
-   "correctAnswer": "B",
-   "rationale": "PaO2/FIO2 = 72 / 0.60 = 120. With PEEP of at least 5 cm H2O, a ratio above 100 and up to 200 is moderate ARDS; above 200 to 300 is mild, and 100 or less is severe.",
-   "reference": "ARDS Definition Task Force (Berlin), JAMA 2012.",
-   "image": null,
-   "status": "draft",
-   "version": 1,
-   "batch": 1,
-   "infoScales": [
-    "berlin"
-   ]
-  },
-  {
    "questionId": "RT-0007",
    "legacyId": "RT-S007",
    "exam": "RT",
@@ -600,99 +791,6 @@
    "infoScales": []
   },
   {
-   "questionId": "RT-0160",
-   "legacyId": null,
-   "exam": "RT",
-   "domain": "III",
-   "section": "III-E",
-   "sectionName": "Make or Recommend Changes to the Respiratory Care Plan",
-   "topic": "Analgesia first for agitation",
-   "cognitiveLevel": "Application",
-   "portion": "Depth",
-   "patientCondition": "Adult - Pre- and Post-Operative Care",
-   "judgmentType": "Decision Making",
-   "setting": "In a hospital",
-   "patientAge": "Adult",
-   "ethics": false,
-   "itemFormat": "SBA",
-   "stem": "An intubated adult is agitated after a laparotomy, with a RASS of +2 and a high behavioral pain score. SpO2 is 97%, and the ventilator is synchronous except during agitation. Which of the following should be recommended FIRST?",
-   "stemTable": [],
-   "stemAfterTable": "",
-   "options": [
-    "An increase in PEEP",
-    "A neuromuscular blocking agent",
-    "An analgesic",
-    "Soft wrist restraints alone"
-   ],
-   "correctAnswer": "C",
-   "rationale": "Pain is a common cause of agitation in ventilated surgical patients. Guidelines recommend treating pain first (analgesia-first sedation). Paralysis hides distress, and restraints alone do not treat the cause.",
-   "reference": "SCCM PADIS guideline, 2018.",
-   "image": null,
-   "status": "draft",
-   "version": 1,
-   "batch": 1,
-   "infoScales": [
-    "rass"
-   ]
-  },
-  {
-   "questionId": "RT-0024",
-   "legacyId": null,
-   "exam": "RT",
-   "domain": "I",
-   "section": "I-B",
-   "sectionName": "Perform Clinical Assessment",
-   "topic": "APGAR score calculation",
-   "cognitiveLevel": "Application",
-   "portion": "Breadth",
-   "patientCondition": null,
-   "judgmentType": null,
-   "setting": "In a hospital",
-   "patientAge": "Neonatal",
-   "ethics": false,
-   "itemFormat": "SBA-Numeric",
-   "stem": "At 1 minute after birth, a term neonate has the following findings:",
-   "stemTable": [
-    [
-     "Heart rate",
-     "90/min"
-    ],
-    [
-     "Respiratory effort",
-     "Slow, irregular"
-    ],
-    [
-     "Muscle tone",
-     "Some flexion of extremities"
-    ],
-    [
-     "Reflex irritability",
-     "Grimace"
-    ],
-    [
-     "Color",
-     "Body pink, extremities blue"
-    ]
-   ],
-   "stemAfterTable": "What is the APGAR score?",
-   "options": [
-    "7",
-    "5",
-    "4",
-    "3"
-   ],
-   "correctAnswer": "B",
-   "rationale": "Each item scores 0 to 2. Heart rate below 100/min scores 1, slow irregular breathing 1, some flexion 1, grimace 1, and acrocyanosis 1, for a total of 5.",
-   "reference": "AAP/ACOG, The Apgar Score.",
-   "image": null,
-   "status": "draft",
-   "version": 1,
-   "batch": 1,
-   "infoScales": [
-    "apgar"
-   ]
-  },
-  {
    "questionId": "RT-0037",
    "legacyId": null,
    "exam": "RT",
@@ -790,59 +888,6 @@
    "version": 1,
    "batch": 1,
    "infoScales": []
-  },
-  {
-   "questionId": "RT-0026",
-   "legacyId": null,
-   "exam": "RT",
-   "domain": "I",
-   "section": "I-B",
-   "sectionName": "Perform Clinical Assessment",
-   "topic": "Low GCS after head injury",
-   "cognitiveLevel": "Analysis",
-   "portion": "Depth",
-   "patientCondition": "Adult - Trauma",
-   "judgmentType": "Decision Making",
-   "setting": "In a hospital",
-   "patientAge": "Adult",
-   "ethics": false,
-   "itemFormat": "SBA",
-   "stem": "An adult is brought to the ED after a fall from a ladder. The patient opens the eyes only to pain, makes incomprehensible sounds, and withdraws from pain. Physiologic data while receiving O2 by NRB mask are:",
-   "stemTable": [
-    [
-     "HR",
-     "58/min"
-    ],
-    [
-     "RR",
-     "10/min"
-    ],
-    [
-     "BP",
-     "168/92 mm Hg"
-    ],
-    [
-     "SpO2",
-     "93%"
-    ]
-   ],
-   "stemAfterTable": "Which of the following should the respiratory therapist recommend?",
-   "options": [
-    "O2 by nasal cannula at 4 L/min",
-    "Bilevel PAP by full-face mask",
-    "Endotracheal intubation with cervical spine precautions",
-    "Insertion of a nasopharyngeal airway"
-   ],
-   "correctAnswer": "C",
-   "rationale": "The GCS is 8 (E2, V2, M4), so the patient cannot reliably protect the airway. Bradycardia, hypertension, and slow breathing suggest rising intracranial pressure. Intubation with in-line stabilization is indicated. NIV is unsafe with a depressed level of consciousness, and a nasal airway is avoided with possible basilar skull fracture.",
-   "reference": "Brain Trauma Foundation guidelines; ATLS.",
-   "image": null,
-   "status": "draft",
-   "version": 1,
-   "batch": 1,
-   "infoScales": [
-    "gcs"
-   ]
   },
   {
    "questionId": "RT-0058",
@@ -978,51 +1023,6 @@
    "version": 1,
    "batch": 1,
    "infoScales": []
-  },
-  {
-   "questionId": "RT-0169",
-   "legacyId": null,
-   "exam": "RT",
-   "domain": "III",
-   "section": "III-F",
-   "sectionName": "Use Evidence-Based Practice",
-   "topic": "GOLD spirometric grade",
-   "cognitiveLevel": "Application",
-   "portion": "Depth",
-   "patientCondition": "Adult - Chronic Lung Disease: outpatient management",
-   "judgmentType": "Information Gathering",
-   "setting": "Outside a hospital",
-   "patientAge": "Adult",
-   "ethics": false,
-   "itemFormat": "SBA",
-   "stem": "Postbronchodilator spirometry for an adult with COPD reveals:",
-   "stemTable": [
-    [
-     "FEV1/FVC",
-     "0.58"
-    ],
-    [
-     "FEV1",
-     "45% predicted"
-    ]
-   ],
-   "stemAfterTable": "This places the patient in which GOLD spirometric grade?",
-   "options": [
-    "GOLD 1",
-    "GOLD 4",
-    "GOLD 2",
-    "GOLD 3"
-   ],
-   "correctAnswer": "D",
-   "rationale": "With FEV1/FVC below 0.70, grades are set by FEV1 percent predicted: 80% or more is GOLD 1, 50% to 79% GOLD 2, 30% to 49% GOLD 3, and below 30% GOLD 4.",
-   "reference": "GOLD report.",
-   "image": null,
-   "status": "draft",
-   "version": 1,
-   "batch": 1,
-   "infoScales": [
-    "gold"
-   ]
   },
   {
    "questionId": "RT-0144",
