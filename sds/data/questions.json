@@ -1,0 +1,812 @@
+{
+ "version": 1,
+ "status": "draft",
+ "exam": "SDS",
+ "count": 20,
+ "note": "Public sample of draft SDS questions. The full bank is private.",
+ "questions": [
+  {
+   "questionId": "SDS-0099",
+   "exam": "SDS",
+   "domain": "III",
+   "domainName": "Study Analysis",
+   "section": "III-C",
+   "sectionName": "Sleep Event Identification",
+   "topic": "Hypopnea meeting 4% rule",
+   "cognitiveLevel": "Application",
+   "patientAge": "Adult",
+   "setting": "In-laboratory",
+   "tracheostomy": false,
+   "stem": "Using the CMS (4%) hypopnea rule, the event in the 60-second tracing shown should be scored as",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "a RERA.",
+    "a hypopnea.",
+    "no event.",
+    "an obstructive apnea."
+   ],
+   "correctAnswer": "B",
+   "rationale": "Nasal pressure falls by more than 30% for more than 10 seconds, and SpO2 drops 5 points, from 95% to 90%. Both requirements of the 4% rule are met. Flow did not fall by 90%, so it is not an apnea, and a RERA has no qualifying desaturation.",
+   "reference": "AASM Scoring Manual v3, adult respiratory rules (hypopnea rule 1B); CMS NCD 240.4.",
+   "image": {
+    "file": "images/III_hypopnea.png",
+    "type": "PSG tracing",
+    "alt": "Sixty-second tracing: nasal pressure drops by about half for about 18 seconds while effort continues, followed by an arousal and an SpO2 fall from 95 to 90.",
+    "width": 1320,
+    "height": 585
+   },
+   "infoScales": [
+    "hypopnea"
+   ],
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "SDS-0096",
+   "exam": "SDS",
+   "domain": "III",
+   "domainName": "Study Analysis",
+   "section": "III-C",
+   "sectionName": "Sleep Event Identification",
+   "topic": "Obstructive apnea tracing",
+   "cognitiveLevel": "Application",
+   "patientAge": "Adult",
+   "setting": "In-laboratory",
+   "tracheostomy": false,
+   "stem": "The 60-second tracing shown is recorded during a diagnostic PSG of an adult. The event should be scored as",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "a mixed apnea.",
+    "an obstructive apnea.",
+    "a central apnea.",
+    "a hypopnea."
+   ],
+   "correctAnswer": "B",
+   "rationale": "Thermal airflow drops by 90% or more for more than 10 seconds, and respiratory effort continues throughout the event, with paradoxical chest and abdominal movement. That defines an obstructive apnea. A central apnea has no effort, a mixed apnea starts without effort, and a hypopnea has a smaller (30% or more) drop in flow.",
+   "reference": "AASM Scoring Manual v3, adult respiratory rules (apneas).",
+   "image": {
+    "file": "images/III_osa.png",
+    "type": "PSG tracing",
+    "alt": "Sixty-second tracing: thermal airflow and nasal pressure become nearly flat for about 22 seconds while thoracic and abdominal effort continue out of phase, followed by recovery breaths, snoring, an arousal, and an SpO2 drop from 95 to 88.",
+    "width": 1320,
+    "height": 585
+   },
+   "infoScales": [
+    "resp_adult"
+   ],
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "SDS-0089",
+   "exam": "SDS",
+   "domain": "III",
+   "domainName": "Study Analysis",
+   "section": "III-B",
+   "sectionName": "Sleep Staging",
+   "topic": "Stage N2",
+   "cognitiveLevel": "Application",
+   "patientAge": "Adult",
+   "setting": "In-laboratory",
+   "tracheostomy": false,
+   "stem": "The epoch shown is from an adult patient. It should be scored as stage",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "R.",
+    "N3.",
+    "N2.",
+    "N1."
+   ],
+   "correctAnswer": "C",
+   "rationale": "The epoch contains sleep spindles (brief 11 to 16 Hz bursts, maximal centrally) and a K-complex (a sharp negative wave followed by a positive wave lasting 0.5 seconds or more, maximal frontally). Either feature in the first half of the epoch, without an arousal, defines N2. Slow-wave activity is well under 20% of the epoch.",
+   "reference": "AASM Scoring Manual v3, adult sleep staging rules (stage N2).",
+   "image": {
+    "file": "images/III_stage_N2.png",
+    "type": "PSG epoch",
+    "alt": "Epoch with mixed-frequency EEG, two brief bursts of 12 to 14 Hz activity in the central channels, one large negative-then-positive wave lasting about a second, and no eye movements.",
+    "width": 1320,
+    "height": 585
+   },
+   "infoScales": [
+    "staging"
+   ],
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "SDS-0063",
+   "exam": "SDS",
+   "domain": "II",
+   "domainName": "Sleep Disorders Testing",
+   "section": "II-B",
+   "sectionName": "Therapeutic Interventions During Testing",
+   "topic": "Ventricular tachycardia strip",
+   "cognitiveLevel": "Application",
+   "patientAge": "Adult",
+   "setting": "In-laboratory",
+   "tracheostomy": false,
+   "stem": "During a PSG, a sleep disorders specialist observes the rhythm shown. The patient is asleep and SpO2 is 94%. The specialist should",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "increase the ECG sensitivity to confirm it.",
+    "check the patient and notify the physician per protocol.",
+    "document the rhythm and continue the study.",
+    "deliver a precordial thump."
+   ],
+   "correctAnswer": "B",
+   "rationale": "The strip shows a run of wide-complex tachycardia, a nonsustained ventricular tachycardia. Even though it stopped, it is a potentially dangerous arrhythmia: the specialist should check the patient's responsiveness and notify the physician per protocol, with the crash cart available. A precordial thump is not recommended, and simply documenting it is not enough.",
+   "reference": "AASM Scoring Manual v3, cardiac rules; AHA ACLS guidance.",
+   "image": {
+    "file": "images/II_vt.png",
+    "type": "Rhythm strip",
+    "alt": "Ten-second rhythm strip: normal beats at about 78 per minute, then a run of wide, fast, uniform complexes at about 180 per minute lasting 4 seconds, then normal beats again.",
+    "width": 1155,
+    "height": 253
+   },
+   "infoScales": [
+    "cardiac"
+   ],
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "SDS-0024",
+   "exam": "SDS",
+   "domain": "I",
+   "domainName": "Pre-Testing",
+   "section": "I-B",
+   "sectionName": "Study Preparations",
+   "topic": "Impedance table - fix electrode",
+   "cognitiveLevel": "Application",
+   "patientAge": "Adult",
+   "setting": "In-laboratory",
+   "tracheostomy": false,
+   "stem": "Before lights out, a sleep disorders specialist records the following electrode impedances:",
+   "stemTable": [
+    [
+     "F4",
+     "3 kΩ"
+    ],
+    [
+     "C4",
+     "4 kΩ"
+    ],
+    [
+     "O2",
+     "11 kΩ"
+    ],
+    [
+     "M1",
+     "2 kΩ"
+    ],
+    [
+     "E1",
+     "4 kΩ"
+    ],
+    [
+     "E2",
+     "3 kΩ"
+    ],
+    [
+     "Chin 1",
+     "6 kΩ"
+    ]
+   ],
+   "stemAfterTable": "Which of the following should the specialist do NEXT?",
+   "options": [
+    "Change the reference to M2 for all EEG channels",
+    "Reapply the O2 electrode",
+    "Reapply all chin electrodes",
+    "Begin the study, because all values are acceptable"
+   ],
+   "correctAnswer": "B",
+   "rationale": "EEG electrodes should be 5 kΩ or less, so O2 at 11 kΩ must be prepped and reapplied. Chin EMG up to 10 kΩ is acceptable, and the other EEG and EOG values are within range. Changing references does not fix a high-impedance active electrode.",
+   "reference": "AASM Scoring Manual v3, technical and digital specifications.",
+   "image": null,
+   "infoScales": [
+    "tech"
+   ],
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "SDS-0135",
+   "exam": "SDS",
+   "domain": "III",
+   "domainName": "Study Analysis",
+   "section": "III-D",
+   "sectionName": "Sleep Event Reporting",
+   "topic": "AHI calculation",
+   "cognitiveLevel": "Application",
+   "patientAge": "Adult",
+   "setting": "In-laboratory",
+   "tracheostomy": false,
+   "stem": "A diagnostic PSG reports the following:",
+   "stemTable": [
+    [
+     "Total sleep time",
+     "360 min"
+    ],
+    [
+     "Obstructive apneas",
+     "48"
+    ],
+    [
+     "Central apneas",
+     "6"
+    ],
+    [
+     "Mixed apneas",
+     "4"
+    ],
+    [
+     "Hypopneas",
+     "62"
+    ],
+    [
+     "RERAs",
+     "30"
+    ]
+   ],
+   "stemAfterTable": "What is the AHI?",
+   "options": [
+    "10 events/hr",
+    "15 events/hr",
+    "20 events/hr",
+    "25 events/hr"
+   ],
+   "correctAnswer": "C",
+   "rationale": "AHI equals all apneas plus hypopneas divided by hours of sleep: (48 + 6 + 4 + 62) / 6 hours = 120 / 6 = 20 events per hour. RERAs are added only for the RDI, which would be 25.",
+   "reference": "AASM Scoring Manual v3, parameters to be reported.",
+   "image": null,
+   "infoScales": [
+    "stats"
+   ],
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "SDS-0104",
+   "exam": "SDS",
+   "domain": "III",
+   "domainName": "Study Analysis",
+   "section": "III-C",
+   "sectionName": "Sleep Event Identification",
+   "topic": "Periodic leg movements tracing",
+   "cognitiveLevel": "Application",
+   "patientAge": "Adult",
+   "setting": "In-laboratory",
+   "tracheostomy": false,
+   "stem": "The 90-second tracing shown is from an adult during N2 sleep, and the pattern continues for 20 minutes. The leg activity should be scored as",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "respiratory-related leg movements.",
+    "periodic limb movements of sleep.",
+    "excessive fragmentary myoclonus.",
+    "bruxism."
+   ],
+   "correctAnswer": "B",
+   "rationale": "Each leg movement lasts 0.5 to 10 seconds, and the movements repeat about every 22 seconds, within the 5- to 90-second interval, in a series of 4 or more. Breathing is regular, so they are not related to respiratory events. Fragmentary myoclonus consists of much shorter twitches, usually under 150 ms.",
+   "reference": "AASM Scoring Manual v3, movement rules (PLMS).",
+   "image": {
+    "file": "images/III_plm.png",
+    "type": "PSG tracing",
+    "alt": "Ninety-second tracing during N2: four bursts in the left leg EMG lasting about 1.5 seconds each, occurring about every 22 seconds, two followed by brief arousals; breathing is regular with no respiratory events.",
+    "width": 1320,
+    "height": 539
+   },
+   "infoScales": [
+    "plm"
+   ],
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "SDS-0001",
+   "exam": "SDS",
+   "domain": "I",
+   "domainName": "Pre-Testing",
+   "section": "I-A",
+   "sectionName": "Identification and Care of At-Risk Individuals",
+   "topic": "STOP-BANG risk factors",
+   "cognitiveLevel": "Recall",
+   "patientAge": "Adult",
+   "setting": "Home or clinic",
+   "tracheostomy": false,
+   "stem": "A patient completing the STOP-BANG questionnaire reports loud snoring and daytime tiredness, is 44 years old, has a BMI of 31 kg/m2, and has a neck circumference of 38 cm. Which additional finding would place the patient in the high-risk category for OSA?",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "Treated hypertension",
+    "Age of 44 years",
+    "A BMI of 31 kg/m2",
+    "Occasional insomnia"
+   ],
+   "correctAnswer": "A",
+   "rationale": "The patient already scores 2 (snoring and tiredness). High risk starts at 3 or more. Hypertension, including treated hypertension, adds 1 point. Age counts only over 50 years and BMI only over 35 kg/m2, and insomnia is not a STOP-BANG item.",
+   "reference": "Chung F, et al. STOP-Bang questionnaire. Chest. 2016;149(3):631-638.",
+   "image": null,
+   "infoScales": [
+    "stopbang"
+   ],
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "SDS-0075",
+   "exam": "SDS",
+   "domain": "II",
+   "domainName": "Sleep Disorders Testing",
+   "section": "II-B",
+   "sectionName": "Therapeutic Interventions During Testing",
+   "topic": "CPAP titration table - choose pressure",
+   "cognitiveLevel": "Analysis",
+   "patientAge": "Adult",
+   "setting": "In-laboratory",
+   "tracheostomy": false,
+   "stem": "The following data are obtained during a CPAP titration:",
+   "stemTable": [
+    [
+     "6 cm H2O",
+     "AHI 41, supine NREM, no REM"
+    ],
+    [
+     "8 cm H2O",
+     "AHI 18, supine NREM, no REM"
+    ],
+    [
+     "10 cm H2O",
+     "AHI 6, supine NREM, 4 min REM"
+    ],
+    [
+     "12 cm H2O",
+     "AHI 2, supine, 22 min REM, few arousals"
+    ],
+    [
+     "14 cm H2O",
+     "AHI 9, central apneas 6/hr, frequent arousals"
+    ]
+   ],
+   "stemAfterTable": "Which pressure should be recommended?",
+   "options": [
+    "8 cm H2O",
+    "10 cm H2O",
+    "12 cm H2O",
+    "14 cm H2O"
+   ],
+   "correctAnswer": "C",
+   "rationale": "At 12 cm H2O, the AHI is below 5 during supine REM sleep without frequent arousals, which meets the optimal standard. At 10 cm H2O, REM time is too short to be sure, and at 14 cm H2O the arousals and emerging central apneas suggest the pressure is too high.",
+   "reference": "Kushida CA, et al. AASM PAP titration guideline (2008).",
+   "image": null,
+   "infoScales": [
+    "titration"
+   ],
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "SDS-0112",
+   "exam": "SDS",
+   "domain": "III",
+   "domainName": "Study Analysis",
+   "section": "III-C",
+   "sectionName": "Sleep Event Identification",
+   "topic": "Pediatric central apnea",
+   "cognitiveLevel": "Application",
+   "patientAge": "Pediatric (7-17)",
+   "setting": "In-laboratory",
+   "tracheostomy": false,
+   "stem": "The epoch shown is from a 10-year-old during a diagnostic PSG. The baseline respiratory rate is 22/min. The event should be scored as",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "a central apnea.",
+    "no event, because it lasts less than 20 seconds.",
+    "periodic breathing.",
+    "an obstructive apnea."
+   ],
+   "correctAnswer": "A",
+   "rationale": "In children, a central apnea is scored if effort is absent and the event lasts 20 seconds or more, or lasts at least 2 missed breaths and is associated with an arousal or a 3% or greater desaturation. At 22 breaths per minute, 8 seconds is about 3 breaths, and there is a 4% desaturation. Periodic breathing requires 3 or more central pauses separated by 20 seconds or less of normal breathing.",
+   "reference": "AASM Scoring Manual v3, pediatric respiratory rules (central apnea).",
+   "image": {
+    "file": "images/III_peds_central.png",
+    "type": "PSG epoch",
+    "alt": "Epoch from a child breathing about 22 times per minute: airflow and both effort belts go flat for about 8 seconds, followed by an SpO2 fall of about 4 points.",
+    "width": 1320,
+    "height": 492
+   },
+   "infoScales": [
+    "peds_resp"
+   ],
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "SDS-0002",
+   "exam": "SDS",
+   "domain": "I",
+   "domainName": "Pre-Testing",
+   "section": "I-A",
+   "sectionName": "Identification and Care of At-Risk Individuals",
+   "topic": "Epworth score interpretation",
+   "cognitiveLevel": "Recall",
+   "patientAge": "Adult",
+   "setting": "Home or clinic",
+   "tracheostomy": false,
+   "stem": "An adult referred for evaluation of sleepiness has an Epworth Sleepiness Scale (ESS) score of 15. This score indicates",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "a normal level of daytime sleepiness.",
+    "insomnia disorder.",
+    "obstructive sleep apnea.",
+    "excessive daytime sleepiness."
+   ],
+   "correctAnswer": "D",
+   "rationale": "The ESS ranges from 0 to 24, and scores above 10 indicate excessive daytime sleepiness. The ESS measures sleepiness only; it cannot diagnose OSA or insomnia.",
+   "reference": "Johns MW. A new method for measuring daytime sleepiness: the Epworth Sleepiness Scale. Sleep. 1991;14(6):540-545.",
+   "image": null,
+   "infoScales": [
+    "ess"
+   ],
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "SDS-0183",
+   "exam": "SDS",
+   "domain": "V",
+   "domainName": "Treatment Plan",
+   "section": "V-C",
+   "sectionName": "Treatment Plan Evaluation",
+   "topic": "Download - nonadherence",
+   "cognitiveLevel": "Application",
+   "patientAge": "Adult",
+   "setting": "Home or clinic",
+   "tracheostomy": false,
+   "stem": "A patient returns 30 days after starting CPAP. The download shown is reviewed. The patient says the mask hurts the bridge of the nose. Which of the following should the specialist do?",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "Refit the interface and address the discomfort, then recheck adherence",
+    "Switch to bilevel PAP",
+    "Increase the pressure",
+    "Document success and schedule a 1-year visit"
+   ],
+   "correctAnswer": "A",
+   "rationale": "Adherence started well but fell to many nights with no use or less than 4 hours, and the patient reports mask pain. Efficacy (residual AHI) and leak are fine, so the problem is comfort. Refitting and addressing the discomfort is the first step. The pressure is effective, and the current use does not meet the 4-hours-on-70%-of-nights target.",
+   "reference": "PAP adherence management practice; CMS adherence criteria.",
+   "image": {
+    "file": "images/V_dl_nonadherent.png",
+    "type": "PAP download report",
+    "alt": "30-day CPAP report: good use for the first 12 days, then many nights with no use or under 4 hours; residual AHI low; leak low.",
+    "width": 1011,
+    "height": 533
+   },
+   "infoScales": [
+    "cms"
+   ],
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "SDS-0142",
+   "exam": "SDS",
+   "domain": "III",
+   "domainName": "Study Analysis",
+   "section": "III-D",
+   "sectionName": "Sleep Event Reporting",
+   "topic": "MSLT mean latency and SOREMPs",
+   "cognitiveLevel": "Application",
+   "patientAge": "Adult",
+   "setting": "In-laboratory",
+   "tracheostomy": false,
+   "stem": "The MSLT results shown are recorded for a 24-year-old. What should be reported for mean sleep latency and number of SOREMPs?",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "3.75 minutes and 3 SOREMPs",
+    "3.75 minutes and 2 SOREMPs",
+    "7.0 minutes and 3 SOREMPs",
+    "7.0 minutes and 4 SOREMPs"
+   ],
+   "correctAnswer": "C",
+   "rationale": "A nap with no sleep is assigned a latency of 20 minutes, so the mean is (3.5 + 2.0 + 4.5 + 20 + 5.0) / 5 = 35 / 5 = 7.0 minutes. A SOREMP is REM within 15 minutes of sleep onset; naps 1, 3, and 5 qualify, for 3 SOREMPs.",
+   "reference": "AASM Scoring Manual v3, MSLT reporting; Krahn LE, et al. AASM MSLT/MWT protocols (2021).",
+   "image": {
+    "file": "images/III_mslt.png",
+    "type": "MSLT table",
+    "alt": "MSLT summary table (REM latency measured from sleep onset): nap 1 latency 3.5 min with REM at 6 min; nap 2 latency 2 min, no REM; nap 3 latency 4.5 min with REM at 9.5 min; nap 4 no sleep; nap 5 latency 5 min with REM at 12 min.",
+    "width": 842,
+    "height": 321
+   },
+   "infoScales": [],
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "SDS-0006",
+   "exam": "SDS",
+   "domain": "I",
+   "domainName": "Pre-Testing",
+   "section": "I-A",
+   "sectionName": "Identification and Care of At-Risk Individuals",
+   "topic": "Sleep diary suggests delayed phase",
+   "cognitiveLevel": "Application",
+   "patientAge": "Adult",
+   "setting": "Home or clinic",
+   "tracheostomy": false,
+   "stem": "A 22-year-old college student reports difficulty falling asleep and trouble waking for morning classes. The patient's two-week sleep diary is shown. These findings are most consistent with",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "irregular sleep-wake rhythm disorder.",
+    "delayed sleep-wake phase disorder.",
+    "obstructive sleep apnea.",
+    "advanced sleep-wake phase disorder."
+   ],
+   "correctAnswer": "B",
+   "rationale": "Sleep onset is consistently late (about 2:30 to 3 AM) no matter when the student goes to bed, with sleep extending to late morning when allowed on weekends. A stable but late sleep period is typical of delayed sleep-wake phase disorder, which is common in adolescents and young adults. Advanced phase shows early sleep and early waking, and an irregular rhythm shows scattered sleep bouts.",
+   "reference": "ICSD-3-TR (2023), circadian rhythm sleep-wake disorders.",
+   "image": {
+    "file": "images/I_diary_dspd.png",
+    "type": "Sleep diary",
+    "alt": "Sleep diary over 14 days showing bedtime around 11 PM but sleep onset about 2:30 to 3 AM every night, waking at 7 AM on school days and about 11 AM on weekends.",
+    "width": 1155,
+    "height": 767
+   },
+   "infoScales": [
+    "circadian"
+   ],
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "SDS-0037",
+   "exam": "SDS",
+   "domain": "II",
+   "domainName": "Sleep Disorders Testing",
+   "section": "II-A",
+   "sectionName": "Signal Maintenance During Testing",
+   "topic": "Sweat artifact correction",
+   "cognitiveLevel": "Application",
+   "patientAge": "Adult",
+   "setting": "In-laboratory",
+   "tracheostomy": false,
+   "stem": "At 2:00 AM, a sleep disorders specialist observes the epoch shown. The room thermostat reads 79°F (26°C), and the patient is under two blankets. The specialist should",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "lower the room temperature and remove a blanket.",
+    "turn on the 60-Hz notch filter.",
+    "reapply all EEG electrodes.",
+    "change the low-frequency filter on all channels to 10 Hz."
+   ],
+   "correctAnswer": "A",
+   "rationale": "Slow, rolling baseline sway in several EEG and EOG channels at once, in a warm room, is typical of sweat artifact. Cooling the patient removes the cause. Raising the low-frequency filter to 10 Hz would erase real slow waves and distort staging, reapplying every electrode is unnecessary, and the notch filter addresses 60-Hz interference.",
+   "reference": "AASM Scoring Manual v3, technical specifications (artifact notes).",
+   "image": {
+    "file": "images/II_sweat.png",
+    "type": "PSG epoch",
+    "alt": "N2 epoch in which all EEG and EOG channels drift up and down together in a slow, large, wavy baseline about every 4 seconds.",
+    "width": 1320,
+    "height": 677
+   },
+   "infoScales": [],
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "SDS-0050",
+   "exam": "SDS",
+   "domain": "II",
+   "domainName": "Sleep Disorders Testing",
+   "section": "II-B",
+   "sectionName": "Therapeutic Interventions During Testing",
+   "topic": "Minimum oxygen to keep saturation",
+   "cognitiveLevel": "Application",
+   "patientAge": "Adult",
+   "setting": "In-laboratory",
+   "tracheostomy": false,
+   "stem": "A patient on CPAP 10 cm H2O has no residual events, and supplemental oxygen is titrated with the following results:",
+   "stemTable": [
+    [
+     "Room air",
+     "SpO2 86%"
+    ],
+    [
+     "1 L/min",
+     "SpO2 88%"
+    ],
+    [
+     "2 L/min",
+     "SpO2 91%"
+    ],
+    [
+     "3 L/min",
+     "SpO2 94%"
+    ],
+    [
+     "4 L/min",
+     "SpO2 97%"
+    ]
+   ],
+   "stemAfterTable": "What is the lowest oxygen flow that meets a target SpO2 of 90% or higher?",
+   "options": [
+    "1 L/min",
+    "2 L/min",
+    "3 L/min",
+    "4 L/min"
+   ],
+   "correctAnswer": "B",
+   "rationale": "2 L/min is the lowest flow that keeps SpO2 at 90% or higher. Using more oxygen than needed adds cost and, in some patients, risks hypercapnia.",
+   "reference": "Kushida CA, et al. AASM PAP titration guideline (2008).",
+   "image": null,
+   "infoScales": [],
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "SDS-0062",
+   "exam": "SDS",
+   "domain": "II",
+   "domainName": "Sleep Disorders Testing",
+   "section": "II-B",
+   "sectionName": "Therapeutic Interventions During Testing",
+   "topic": "Signs of stroke during study",
+   "cognitiveLevel": "Application",
+   "patientAge": "Adult",
+   "setting": "In-laboratory",
+   "tracheostomy": false,
+   "stem": "A 70-year-old wakes during a PSG to use the restroom. The specialist notices slurred speech and drooping of the right side of the face that were not present at setup. The specialist should FIRST",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "call the patient's family to ask whether this is normal.",
+    "give aspirin.",
+    "activate emergency medical services and note the time symptoms were first seen.",
+    "help the patient back to bed and continue the study."
+   ],
+   "correctAnswer": "C",
+   "rationale": "Sudden facial droop and slurred speech are warning signs of stroke. Rapid treatment depends on the time of onset, so emergency services should be activated immediately and the time of first observation documented. Continuing the study or giving medication without an order is inappropriate.",
+   "reference": "American Stroke Association BE FAST guidance; sleep center emergency policies.",
+   "image": null,
+   "infoScales": [],
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "SDS-0187",
+   "exam": "SDS",
+   "domain": "V",
+   "domainName": "Treatment Plan",
+   "section": "V-C",
+   "sectionName": "Treatment Plan Evaluation",
+   "topic": "Download adherence data in text",
+   "cognitiveLevel": "Analysis",
+   "patientAge": "Adult",
+   "setting": "Home or clinic",
+   "tracheostomy": false,
+   "stem": "A patient's 30-day CPAP download shows:",
+   "stemTable": [
+    [
+     "Days used",
+     "27 of 30"
+    ],
+    [
+     "Days used 4 hours or more",
+     "19 of 30 (63%)"
+    ],
+    [
+     "Average use (days used)",
+     "4 hr 12 min"
+    ],
+    [
+     "Residual AHI",
+     "2.8 events/hr"
+    ],
+    [
+     "Median leak",
+     "12 L/min"
+    ]
+   ],
+   "stemAfterTable": "Which of the following best describes these results?",
+   "options": [
+    "Ineffective therapy with high residual AHI",
+    "Effective therapy that does not yet meet the 70% adherence target",
+    "Full adherence and efficacy",
+    "Excessive leak requiring a new mask"
+   ],
+   "correctAnswer": "B",
+   "rationale": "Residual AHI and leak show effective therapy, but only 63% of nights reached 4 hours, below the common 70% target. The plan should focus on barriers to longer use.",
+   "reference": "CMS adherence criteria; ATS CPAP data research statement (2013).",
+   "image": null,
+   "infoScales": [],
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "SDS-0162",
+   "exam": "SDS",
+   "domain": "V",
+   "domainName": "Treatment Plan",
+   "section": "V-A",
+   "sectionName": "Treatment Plan Development",
+   "topic": "Mask for mouth breather",
+   "cognitiveLevel": "Application",
+   "patientAge": "Adult",
+   "setting": "Home or clinic",
+   "tracheostomy": false,
+   "stem": "A patient starting CPAP for severe OSA says she breathes through her mouth most nights because of chronic nasal congestion. The best initial interface is",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "a nasal mask.",
+    "nasal pillows.",
+    "a full face mask.",
+    "a nasal mask with no chin strap."
+   ],
+   "correctAnswer": "C",
+   "rationale": "A full face mask covers both the nose and mouth, preventing mouth leak and reducing dryness in a patient who mouth-breathes because of nasal congestion. Nasal interfaces would leak through the mouth.",
+   "reference": "PAP interface selection practice texts.",
+   "image": null,
+   "infoScales": [],
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "SDS-0128",
+   "exam": "SDS",
+   "domain": "III",
+   "domainName": "Study Analysis",
+   "section": "III-C",
+   "sectionName": "Sleep Event Identification",
+   "topic": "Parasomnia from N3",
+   "cognitiveLevel": "Application",
+   "patientAge": "Adult",
+   "setting": "In-laboratory",
+   "tracheostomy": false,
+   "stem": "Video shows a patient sitting up in bed, looking confused, and mumbling for 2 minutes. The EEG just before the event shows slow-wave activity in more than 50% of the epoch. This is most consistent with",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "REM sleep behavior disorder.",
+    "a confusional arousal.",
+    "a nocturnal panic attack.",
+    "a nightmare."
+   ],
+   "correctAnswer": "B",
+   "rationale": "Confusional arousals are NREM parasomnias that usually arise from N3, with confused behavior and little recall. RBD and nightmares arise from REM sleep, and panic attacks usually wake the patient fully with clear recall of fear.",
+   "reference": "ICSD-3-TR (NREM parasomnias).",
+   "image": null,
+   "infoScales": [],
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  }
+ ]
+}

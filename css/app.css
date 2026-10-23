@@ -218,3 +218,4 @@ textarea { font-size: 15px; padding: 10px 12px; border: 1.5px solid #AAB4BF; bor
 
 /* Vetting page */
 .vconf{margin:2px 0 8px;font-size:14px;color:#334155}.vconf b{font-size:18px;color:#1F3864;margin-right:4px}.vnote{margin:6px 0 0;font-size:13px;line-height:1.4;color:#475569}
+.qid { white-space: nowrap; }

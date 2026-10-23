@@ -2,8 +2,10 @@
    In the real app these map to users/{uid}/reviewList and users/{uid}/questionProgress in Firestore. */
 function seenIntro() { try { return localStorage.getItem("rtIntroSeen") === "1"; } catch (e) { return false; } }
 function markIntro() { try { localStorage.setItem("rtIntroSeen", "1"); } catch (e) {} }
-function load(k, d) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } }
-function save(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+// Each exam (RRT, SDS, RPSGT) keeps its own review list and stats on the same site.
+const NS = window.APP_LABEL && window.APP_LABEL !== "RRT" ? window.APP_LABEL + ":" : "";
+function load(k, d) { try { const v = localStorage.getItem(NS + k); return v ? JSON.parse(v) : d; } catch (e) { return d; } }
+function save(k, v) { try { localStorage.setItem(NS + k, JSON.stringify(v)); } catch (e) {} }
 const RL = load("rtReviewList", {});   // { questionId: { reason: "missed"|"unsure"|"manual", streak: 0|1, added: ms } }
 const ST = load("rtStats", {});        // { questionId: { attempts, correct, lastCorrect } }
 const REASON_TXT = { missed: "Answered wrong", unsure: "Marked not sure", manual: "Added by you" };

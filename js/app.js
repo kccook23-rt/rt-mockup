@@ -76,7 +76,7 @@ function render() {
   const draftVal = draft ? draft.value : "";
   let h = "";
   const exam = S.mode === "exam";
-  h += `<div class="appbar"><b>RRT</b><span class="mode ${exam ? "exam" : ""}">${exam ? "Exam <span id=\"timer\">" + fmt((S.results ? S.finishedMs : Date.now() - S.started)) + "</span>" : "Study"}</span>
+  h += `<div class="appbar"><b>${window.APP_LABEL || "RRT"}</b><span class="mode ${exam ? "exam" : ""}">${exam ? "Exam <span id=\"timer\">" + fmt((S.results ? S.finishedMs : Date.now() - S.started)) + "</span>" : "Study"}</span>
     <span class="count">${S.page === "stats" ? "Stats" : S.results && !S.reviewing ? "Results" : "Question " + (S.qi + 1) + " of " + S.set.length}</span>
     <button type="button" class="iconbtn" data-act="stats" aria-label="Stats and review list">${ICON.chart}</button>
     <button type="button" class="iconbtn" data-act="settings" aria-label="Settings">${ICON.gear}</button></div>`;
