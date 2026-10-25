@@ -11,6 +11,7 @@ function adapt(d) {
     w: d.image ? d.image.width : 0, h: d.image ? d.image.height : 0, status: d.status,
     rank: d.vetting ? d.vetting.rank : null, score: d.vetting ? d.vetting.claudeScore : null, concern: d.vetting ? d.vetting.claudeConcern : "", conf: d.vetting ? d.vetting.confidence : null,
     scales: d.infoScales || [],
+    secName: d.sectionName || "", domName: d.domainName || "", domain: d.domain || (d.section || "").split("-")[0], lvl: d.cognitiveLevel || "", age: d.patientAge || "",
     ev: d.image && d.evidence ? d.evidence : null
   };
 }
@@ -21,7 +22,7 @@ const ZOOMS = [1, 1.5, 2, 3];
 const freshRun = (set) => set.map(() => ({ out: {}, sel: null, done: false, unsure: false, note: null }));
 const S = { page: window.START_PAGE || "quiz", mode: "study", requireOut: false, intro: !window.VET_MODE && !seenIntro(), settings: false, set: [], qi: 0, run: [], results: false, reviewing: false,
   started: Date.now(), finishedMs: 0, fb: null, reason: null, reported: {}, view: null, viewEv: false, scale: null, zoom: 1, rot: true,
-  build: { src: "all", secs: {}, mode: "study", count: "all" }, loadError: null };
+  build: { src: "all", secs: {}, mode: "study", count: "10", fmt: {}, lvls: {}, ages: {} }, loadError: null };
 const Q = () => QS[S.set[S.qi]];
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const ICON = {

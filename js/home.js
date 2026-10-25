@@ -58,7 +58,7 @@
       stats: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>',
       products: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="3.5"/></svg>',
     };
-    return `<nav class="bnav" aria-label="Main">${it("home", "Home", I.home)}${it("quiz", "Practice", I.quiz)}${it("stats", "Stats", I.stats)}${it("products", "Apps", I.products)}</nav>`;
+    return `<nav class="bnav" aria-label="Main">${it("home", "Home", I.home)}${it("stats", "Practice", I.stats)}${it("quiz", "Questions", I.quiz)}${it("products", "Apps", I.products)}</nav>`;
   }
 
   function home() {
@@ -104,8 +104,8 @@
           <div class="ways">
             <button type="button" class="way" data-act="go" data-v="review"><b>Review list</b><span>${rl ? `${rl} question${rl === 1 ? "" : "s"} to revisit` : "Missed and unsure questions land here"}</span></button>
             <button type="button" class="way" data-act="go" data-v="exam"><b>Exam mode</b><span>Timed, with answers at the end</span></button>
-            <button type="button" class="way" data-act="go" data-v="build"><b>Build a set</b><span>Pick sections and how many</span></button>
-            <button type="button" class="way" data-act="go" data-v="stats"><b>Stats</b><span>See how each section is going</span></button>
+            <button type="button" class="way" data-act="go" data-v="build"><b>Build a set</b><span>Choose sections, question types and mode</span></button>
+            <button type="button" class="way" data-act="go" data-v="new"><b>Not tried yet</b><span>${QS.length - answered} question${QS.length - answered === 1 ? "" : "s"} you haven't seen</span></button>
           </div>
         </section>
         <section class="obsec">
@@ -157,6 +157,8 @@
     return `<div class="ob obstats" style="${themeVars()}">
       ${topbar()}
       <div class="obscroll"><div class="stats">${statsBody()}</div></div>
+      <div class="startbar"><span>${(() => { const m = matching().length; return m ? `${m} match · ${S.build.mode === "exam" ? "Exam" : "Study"} mode` : "Nothing matches yet"; })()}</span>
+        <button type="button" class="obstart" data-act="buildstart" ${matching().length ? "" : "disabled"}>${startLabel()}</button></div>
       ${nav("stats")}
     </div>`;
   }
@@ -169,6 +171,7 @@
       else if (v === "quiz") { S.page = "quiz"; }
       else if (v === "stats" || v === "build") { S.page = "stats"; }
       else if (v === "review") { S.build.src = "review"; S.page = "stats"; }
+      else if (v === "new") { S.build.src = "new"; S.page = "stats"; }
       else if (v === "exam") { S.mode = "exam"; S.build.mode = "exam"; S.set = ALL.slice(); newRun(); S.page = "quiz"; }
       const sc = document.querySelector(".obscroll"); if (sc) sc.scrollTop = 0;
     },
