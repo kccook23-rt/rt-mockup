@@ -28,19 +28,28 @@
 
   const greet = () => { const h = new Date().getHours(); return h < 5 ? "Up late?" : h < 12 ? "Good morning" : h < 17 ? "Good afternoon" : "Good evening"; };
 
-  const OTTER = `<svg class="otter" viewBox="0 0 320 150" aria-hidden="true">
-    <ellipse cx="160" cy="98" rx="118" ry="30" fill="#7A4E2D"/>
-    <path d="M44 96c-22-4-36 4-40 14 14 2 30 0 44-6z" fill="#6A4227"/>
-    <ellipse cx="160" cy="92" rx="88" ry="20" fill="#B98A5E"/>
-    <ellipse cx="248" cy="80" rx="34" ry="30" fill="#7A4E2D"/>
-    <ellipse cx="258" cy="86" rx="22" ry="17" fill="#E9D2B0"/>
-    <circle cx="232" cy="56" r="8" fill="#6A4227"/><circle cx="268" cy="54" r="8" fill="#6A4227"/>
-    <path d="M244 76q5 4 10 0M262 74q5 4 10 0" stroke="#2A1A0E" stroke-width="3" fill="none" stroke-linecap="round"/>
-    <ellipse cx="264" cy="88" rx="6" ry="4.5" fill="#2A1A0E"/>
-    <path d="M264 92q0 6-6 7M264 92q0 6 6 7" stroke="#2A1A0E" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-    <path d="M276 90l22-4M276 94l22 2M252 90l-22-4M252 94l-22 2" stroke="#F5ECDD" stroke-width="1.6" stroke-linecap="round"/>
-  </svg>`;
-  const PAWS = `<svg class="paws" viewBox="0 0 90 40" aria-hidden="true"><ellipse cx="24" cy="22" rx="16" ry="10" fill="#6A4227" transform="rotate(-20 24 22)"/><ellipse cx="62" cy="20" rx="16" ry="10" fill="#6A4227" transform="rotate(15 62 20)"/><path d="M14 18l3 4M20 15l2 5M27 14l1 5M58 13l-1 5M65 14l-2 5M71 17l-3 4" stroke="#4E2F1A" stroke-width="2" stroke-linecap="round"/></svg>`;
+  // Swimming otter drawn to match the Otter Bay loading video (navy back, white face, closed-eye smile).
+  const OTTER = `<svg class="otter" viewBox="0 0 340 130" aria-hidden="true">
+  <g class="o-body">
+    <path d="M140 90c-8 9-6 17 6 20 9 2 16-2 14-8-1-5-9-7-12-12z" fill="#0B1F4F" opacity=".8"/>
+    <path d="M2 87C32 85 64 77 102 61 142 44 186 34 222 38c10 1 18 4 24 9l-24 39z" fill="#0B1F4F" stroke="#fff" stroke-width="2.4" stroke-linejoin="round"/>
+    <path d="M210 88C212 72 222 56 236 47 246 38 262 33 277 37 290 41 300 50 307 57 313 59 316 62 315 66 313 71 302 74 291 76 279 79 270 83 264 88z" fill="#fff"/>
+    <path d="M256 70q8 5 18 3" stroke="#0B1F4F" stroke-width="1.6" fill="none" stroke-linecap="round" opacity=".35"/>
+    <path d="M241 44c-2-6 3-11 8-9 4 1 5 6 2 9" fill="#fff" stroke="#0B1F4F" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M272 50q5.5-5 11 0" stroke="#0B1F4F" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+    <path d="M305 61c3-2 8-1 9 2 1 3-2 6-6 6-3 0-5-3-3-8z" fill="#0B1F4F"/>
+    <path d="M307 69q-1 4-7 5" stroke="#0B1F4F" stroke-width="2.1" fill="none" stroke-linecap="round"/>
+    <path d="M300 70l22 -3M300 72l22 5M298 74l17 10" stroke="#0B1F4F" stroke-width="1.2" stroke-linecap="round" opacity=".9"/>
+    <path d="M258 88c0-7 6-12 13-12 6 0 10 4 9 10" fill="#fff" stroke="#0B1F4F" stroke-width="2" stroke-linecap="round"/>
+    <path d="M266 80l1 4M272 79v4" stroke="#0B1F4F" stroke-width="1.4" stroke-linecap="round"/>
+  </g>
+  <g class="o-wake" fill="none" stroke="#fff" stroke-linecap="round">
+    <path d="M0 89c40-3 90-2 140 0s100 2 150 0c12-1 26-4 34-14" stroke-width="4"/>
+    <path d="M14 96c50-2 110-1 170 1s90 0 120-4" stroke-width="2.4" opacity=".8"/>
+    <path d="M40 104c60-2 120-1 180 1" stroke-width="1.6" opacity=".55"/>
+    <path d="M322 70c5-3 9-8 11-15M326 78c5-1 10-5 13-10" stroke-width="2.2" opacity=".9"/>
+  </g>
+</svg>`;
 
   function weekBars() {
     const out = [], now = new Date();
@@ -81,7 +90,6 @@
                 <p class="tl">${TH.app} practice</p>
                 <p class="tb">${answered ? `${next} new question${next === 1 ? "" : "s"}${rl ? ` and ${rl} from your review list` : ""}` : "Start with 10 questions to see where you stand"}</p>
                 <button type="button" class="obstart" data-act="go" data-v="quiz">${answered ? "Keep going" : "Start practicing"}</button>
-                ${PAWS}
               </div>
               ${OTTER}
             </div>

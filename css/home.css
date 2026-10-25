@@ -13,22 +13,25 @@
 .ob h1 { font-family: "Fredoka", var(--font); font-weight: 600; margin: 0; line-height: 1.15; }
 .ob h2 { font-family: "Fredoka", var(--font); font-weight: 600; font-size: 19px; margin: 0 0 10px; color: var(--bay); }
 
-/* The bay: one illustrated moment. The otter floats on its back holding today's practice. */
+/* The bay: one illustrated moment. The otter from the loading video swims along carrying today's practice on its back. */
 .bay { background: linear-gradient(180deg, var(--bay) 0%, var(--mid) 55%, var(--low) 100%); color: #fff; padding: 8px 18px 0; position: relative; overflow: hidden; }
 .hello { margin: 0; font-size: 15px; color: #BFE5E6; }
 .bay h1 { font-size: 27px; margin-top: 2px; max-width: 15ch; }
-.water { position: relative; margin: 0 -18px 0; height: 262px; }
-.raft { position: absolute; left: 50%; bottom: 22px; width: 330px; height: 262px; transform: translateX(-50%); animation: bob 5s ease-in-out 1; }
-.today { position: absolute; z-index: 2; left: 22px; bottom: 74px; width: 194px; background: #fff; color: var(--ink2); border-radius: 18px; padding: 14px 14px 12px; box-shadow: 0 10px 24px rgba(4, 34, 48, .35); box-sizing: border-box; }
+.water { position: relative; margin: 0 -18px 0; height: 288px; }
+.raft { position: absolute; left: 50%; bottom: 22px; width: 330px; height: 288px; transform: translateX(-50%); animation: bob 5s ease-in-out 1; }
+.today { position: absolute; z-index: 2; left: 10px; bottom: 88px; width: 190px; background: #fff; color: var(--ink2); border-radius: 18px; padding: 14px 14px 12px; box-shadow: 0 10px 24px rgba(4, 34, 48, .35); box-sizing: border-box; }
 .tl { margin: 0; font-size: 13px; font-weight: 700; color: var(--kelp); }
 .tb { margin: 4px 0 12px; font-size: 16px; font-weight: 700; line-height: 1.3; }
 .obstart { width: 100%; min-height: 46px; border: 0; border-radius: 12px; background: var(--buoy); color: var(--accentInk); font: inherit; font-weight: 700; font-size: 16px; cursor: pointer; }
 .obstart:hover { filter: brightness(1.04); }
-.paws { position: absolute; left: 52px; bottom: -18px; width: 84px; height: auto; }
-.otter { position: absolute; z-index: 1; left: 0; bottom: 0; width: 330px; height: auto; }
+.otter { position: absolute; z-index: 1; left: -8px; bottom: 4px; width: 346px; height: auto; overflow: visible; }
+.o-body { animation: swim 3.2s ease-in-out infinite; transform-origin: 70% 70%; }
+.o-wake path + path { stroke-dasharray: 70 7; animation: wake 3s linear infinite; }
+@keyframes swim { 0%, 100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(2px) rotate(-.8deg); } }
+@keyframes wake { to { stroke-dashoffset: 77; } }
 .waves { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 56px; z-index: 3; }
 @keyframes bob { 0%, 100% { transform: translate(-50%, 0) rotate(0); } 50% { transform: translate(-50%, 5px) rotate(-1deg); } }
-@media (prefers-reduced-motion: reduce) { .raft { animation: none; } }
+@media (prefers-reduced-motion: reduce) { .raft, .o-body, .o-wake path + path { animation: none; } }
 
 .obsec { padding: 18px 16px 0; }
 .exams { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
