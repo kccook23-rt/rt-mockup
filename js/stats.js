@@ -1,6 +1,6 @@
 /* Stats page: the practice builder. Owner: Noelle (reorganized with Ken + Claude, Oct 25).
    Uses shared globals from app.js (S, QS, ALL, ICON, esc, newRun) and progress.js (RL, ST, save, REASON_TXT).
-   Flow, top to bottom: a one-line progress summary, then the builder (what to practice -> which sections ->
+   Flow, top to bottom: a one-line progress summary, then the builder (what to practice -> focus by domain, task or topic ->
    more filters -> how many and which mode), then the review list. The Start button is always in reach.
    Add new buttons by giving them data-act="..." and handling them in STATS_ACTIONS below. */
 
@@ -13,13 +13,18 @@ const FORMATS = [["img", "With an image", (q) => !!q.img], ["data", "With a data
 function sourceOK(q) {
   const b = S.build;
   if (b.src === "review") return !!RL[q.id];
-  if (b.src === "missed") return ST[q.id] && ST[q.id].lastCorrect === false;
+  if (b.src === "missed") return ST[q.id] && ST[q.id].correct < ST[q.id].attempts && (!b.lastOnly || ST[q.id].lastCorrect === false);
   if (b.src === "new") return !ST[q.id];
   return true;
 }
 function filterOK(q, skip) {
   const b = S.build, any = (o) => Object.values(o || {}).some(Boolean);
-  if (skip !== "secs" && any(b.secs) && !b.secs[q.sec]) return false;
+  const f = b.focus || "task";
+  if (skip !== "focus") {
+    if (f === "domain" && any(b.doms) && !b.doms[q.domain]) return false;
+    if (f === "task" && any(b.secs) && !b.secs[q.sec]) return false;
+    if (f === "topic" && any(b.tops) && !b.tops[q.tgroup]) return false;
+  }
   if (skip !== "fmt" && any(b.fmt) && !FORMATS.some(([k, , f]) => b.fmt[k] && f(q))) return false;
   if (skip !== "lvls" && any(b.lvls) && !b.lvls[q.lvl]) return false;
   if (skip !== "ages" && any(b.ages) && !b.ages[q.age.startsWith("Pediatric") ? "Pediatric" : q.age]) return false;
@@ -45,23 +50,43 @@ function sectionRows() {
   return Object.values(by).sort((a, b) => a.sec.localeCompare(b.sec, undefined, { numeric: true }));
 }
 
+function groupRows(focus) {
+  const by = {}, key = (q) => (focus === "domain" ? q.domain : focus === "topic" ? q.tgroup || "Other" : q.sec);
+  for (const q of QS) {
+    const k = key(q);
+    const r = by[k] || (by[k] = { key: k, dom: q.domain, name: focus === "task" ? q.secName : focus === "domain" ? domName(q.domain) : "", total: 0, tried: 0, att: 0, cor: 0, match: 0 });
+    r.total++; const st = ST[q.id];
+    if (st) { r.tried++; r.att += st.attempts; r.cor += st.correct; }
+    if (sourceOK(q) && filterOK(q, "focus")) r.match++;
+  }
+  const rows = Object.values(by);
+  return focus === "topic" ? rows.sort((a, b) => b.total - a.total) : rows.sort((a, b) => a.key.localeCompare(b.key, undefined, { numeric: true }));
+}
+
 function statsBody() {
   const b = S.build;
   const att = Object.values(ST).reduce((a, x) => a + x.attempts, 0), cor = Object.values(ST).reduce((a, x) => a + x.correct, 0);
   const tried = QS.filter((q) => ST[q.id]).length, pct = att ? Math.round(cor / att * 100) : 0;
   const rlIds = QS.filter((q) => RL[q.id]);
-  const missed = QS.filter((q) => ST[q.id] && ST[q.id].lastCorrect === false).length;
-  const rows = sectionRows(), scored = rows.filter((r) => r.att);
+  const everMissed = QS.filter((q) => ST[q.id] && ST[q.id].correct < ST[q.id].attempts).length;
+  const focus = b.focus || "task", sel = focus === "domain" ? (b.doms = b.doms || {}) : focus === "topic" ? (b.tops = b.tops || {}) : b.secs;
+  const grows = groupRows(focus), scored = grows.filter((r) => r.att);
   const weak = scored.length > 1 ? scored.reduce((a, r) => (r.cor / r.att < a.cor / a.att ? r : a)) : null;
-  const anySec = Object.values(b.secs).some(Boolean);
-  const nSecs = Object.values(b.secs).filter(Boolean).length;
+  const nFocus = Object.values(sel).filter(Boolean).length;
+  const countWord = b.src === "missed" ? "missed" : b.src === "review" ? "to review" : b.src === "new" ? "new" : "questions";
+  const doms = [...new Set(grows.map((r) => r.dom))];
+  const topicEg = groupRows("topic").slice(0, 2).map((r) => r.key).join(" or ");
+  const row = (r) => { const p = r.att ? Math.round(r.cor / r.att * 100) : null; const on = !!sel[r.key]; return `<button type="button" class="secpick ${on ? "on" : ""}" data-act="gsel" data-v="${esc(r.key)}" aria-pressed="${on}" ${r.match ? "" : "data-empty"}>
+            <span class="box" aria-hidden="true">${on ? ICON.ok : ""}</span>
+            <span class="stext"><b>${focus === "domain" ? `${r.key}. ${esc(r.name)}` : esc(r.key)}${weak && weak.key === r.key ? ` <i class="weaktag">Weakest</i>` : ""}</b>${focus === "task" && r.name ? `<small>${esc(r.name)}</small>` : `<small>${r.tried} of ${r.total} tried${p !== null ? ` · ${p}% correct` : ""}</small>`}
+              <span class="sbar" aria-hidden="true"><i style="width:${p === null ? 0 : Math.max(4, p)}%"></i></span></span>
+            <span class="sval">${r.match}<small>${countWord}</small></span></button>`; };
   const nMore = ["fmt", "lvls", "ages"].reduce((a, k) => a + Object.values(b[k] || {}).filter(Boolean).length, 0);
   const m = matching().length;
 
   const src = (v, label, count, hint) => `<button type="button" class="pick2" data-act="src" data-v="${v}" aria-pressed="${b.src === v}" ${count === 0 && v !== "all" ? "disabled" : ""}>
     <span class="dot" aria-hidden="true"></span><span><b>${label}</b><small>${hint}</small></span><em>${count}</em></button>`;
   const chip = (act, v, label, on, count) => `<button type="button" class="chip" data-act="${act}" data-v="${v}" aria-pressed="${!!on}">${label}${count !== undefined ? `<span class="n">${count}</span>` : ""}</button>`;
-  const doms = [...new Set(rows.map((r) => r.dom))];
   const lvls = ["Recall", "Application", "Analysis"].filter((l) => QS.some((q) => q.lvl === l));
   const ages = ["Adult", "Pediatric", "Neonatal"].filter((a) => QS.some((q) => q.age.startsWith(a)));
 
@@ -74,24 +99,20 @@ function statsBody() {
         ${src("all", "All questions", QS.length, "Everything in the bank")}
         ${src("new", "Not tried yet", QS.length - tried, "Questions you haven't seen")}
         ${src("review", "My review list", rlIds.length, "Missed or marked Not sure")}
-        ${src("missed", "Missed last time", missed, "Your most recent wrong answers")}
+        ${src("missed", "Missed questions", everMissed, "Any question you've gotten wrong")}
+        ${b.src === "missed" ? `<label class="sub2"><input type="checkbox" data-act="lastonly" ${b.lastOnly ? "checked" : ""}> Only ones I got wrong the last time</label>` : ""}
       </div>
     </section>
 
-    <section class="step"><div class="steph"><h2>Sections</h2>${anySec ? `<button type="button" class="link" data-act="secclear">Clear ${nSecs}</button>` : `<span class="hint">All sections</span>`}</div>
-      <p class="hint">Tap sections to focus on them. Bars show your % correct.</p>
-      ${doms.map((d) => {
-        const rs = rows.filter((r) => r.dom === d), on = rs.filter((r) => b.secs[r.sec]).length;
-        const da = rs.reduce((a, r) => a + r.att, 0), dc = rs.reduce((a, r) => a + r.cor, 0);
-        return `<details class="dom" ${on || (weak && rs.includes(weak)) ? "open" : ""}><summary><span class="dname">${d}. ${esc(domName(d)) || "Domain " + d}</span>
-            <span class="dmeta">${on ? `${on} selected` : `${rs.length} sections`}${da ? ` · ${Math.round(dc / da * 100)}%` : ""}</span></summary>
+    <section class="step"><div class="steph"><h2>Focus on</h2>${nFocus ? `<button type="button" class="link" data-act="focusclear">Clear ${nFocus}</button>` : `<span class="hint">Everything</span>`}</div>
+      <div class="seg" role="tablist" aria-label="Group questions by">${[["domain", "Domain"], ["task", "Task"], ["topic", "Topic"]].map(([k, l]) => `<button type="button" role="tab" data-act="focus" data-v="${k}" aria-selected="${focus === k}">${l}</button>`).join("")}</div>
+      <p class="hint">${focus === "domain" ? "The exam's main content areas." : focus === "task" ? "The sections of the exam outline, grouped by domain." : "Subjects such as " + topicEg + "."} Tap to choose. ${countWord === "missed" ? "Numbers show your missed questions." : "Bars show your % correct."}</p>
+      ${focus === "task" ? doms.map((d) => {
+        const rs = grows.filter((r) => r.dom === d), on = rs.filter((r) => b.secs[r.key]).length, dm = rs.reduce((a, r) => a + r.match, 0);
+        return `<details class="dom" ${on || (weak && rs.some((r) => r.key === weak.key)) ? "open" : ""}><summary><span class="dname">${d}. ${esc(domName(d)) || "Domain " + d}</span>
+            <span class="dmeta">${on ? `${on} selected` : `${dm} ${countWord}`}</span></summary>
           <button type="button" class="link small" data-act="domall" data-v="${d}">${on === rs.length ? "Clear this domain" : "Select whole domain"}</button>
-          ${rs.map((r) => { const p = r.att ? Math.round(r.cor / r.att * 100) : null; const sel = !!b.secs[r.sec]; return `<button type="button" class="secpick ${sel ? "on" : ""}" data-act="sec" data-v="${r.sec}" aria-pressed="${sel}">
-            <span class="box" aria-hidden="true">${sel ? ICON.ok : ""}</span>
-            <span class="stext"><b>${r.sec}${weak && weak.sec === r.sec ? ` <i class="weaktag">Weakest</i>` : ""}</b><small>${esc(r.name || "")}</small>
-              <span class="sbar" aria-hidden="true"><i style="width:${p === null ? 0 : Math.max(4, p)}%"></i></span></span>
-            <span class="sval">${p === null ? `<small>${r.total} q</small>` : `${p}%<small>${r.tried}/${r.total}</small>`}</span></button>`; }).join("")}
-        </details>`; }).join("")}
+          ${rs.map(row).join("")}</details>`; }).join("") : `<div class="glist">${grows.map(row).join("")}</div>`}
     </section>
 
     <section class="step"><details class="more" ${nMore ? "open" : ""}><summary><h2>More filters</h2><span class="hint">${nMore ? `${nMore} on` : "Optional"}</span></summary>
@@ -129,8 +150,12 @@ const STATS_ACTIONS = {
   backquiz: () => { S.page = "quiz"; },
   src: (b) => { S.build.src = b.dataset.v; },
   sec: (b) => { const k = b.dataset.v; S.build.secs[k] = !S.build.secs[k]; },
+  focus: (b) => { if (S.build.focus === b.dataset.v) return; S.build.focus = b.dataset.v; S.build.secs = {}; S.build.doms = {}; S.build.tops = {}; },
+  gsel: (b) => { const f = S.build.focus || "task", o = f === "domain" ? (S.build.doms = S.build.doms || {}) : f === "topic" ? (S.build.tops = S.build.tops || {}) : S.build.secs; o[b.dataset.v] = !o[b.dataset.v]; },
+  lastonly: () => { S.build.lastOnly = !S.build.lastOnly; },
+  focusclear: () => { S.build.secs = {}; S.build.doms = {}; S.build.tops = {}; },
   secclear: () => { S.build.secs = {}; },
-  domall: (b) => { const rs = sectionRows().filter((r) => r.dom === b.dataset.v), all = rs.every((r) => S.build.secs[r.sec]); rs.forEach((r) => { S.build.secs[r.sec] = !all; }); },
+  domall: (b) => { const rs = groupRows("task").filter((r) => r.dom === b.dataset.v), all = rs.every((r) => S.build.secs[r.key]); rs.forEach((r) => { S.build.secs[r.key] = !all; }); },
   fmt: (b) => { const k = b.dataset.v; S.build.fmt[k] = !S.build.fmt[k]; },
   lvl: (b) => { const k = b.dataset.v; S.build.lvls[k] = !S.build.lvls[k]; },
   age: (b) => { const k = b.dataset.v; S.build.ages[k] = !S.build.ages[k]; },

@@ -11,7 +11,7 @@ function adapt(d) {
     w: d.image ? d.image.width : 0, h: d.image ? d.image.height : 0, status: d.status,
     rank: d.vetting ? d.vetting.rank : null, score: d.vetting ? d.vetting.claudeScore : null, concern: d.vetting ? d.vetting.claudeConcern : "", conf: d.vetting ? d.vetting.confidence : null,
     scales: d.infoScales || [],
-    secName: d.sectionName || "", domName: d.domainName || "", domain: d.domain || (d.section || "").split("-")[0], lvl: d.cognitiveLevel || "", age: d.patientAge || "",
+    secName: d.sectionName || "", domName: d.domainName || "", domain: d.domain || (d.section || "").split("-")[0], lvl: d.cognitiveLevel || "", age: d.patientAge || "", tgroup: d.topicGroup || "",
     ev: d.image && d.evidence ? d.evidence : null
   };
 }
@@ -156,7 +156,7 @@ function render() {
       <div class="row"><button type="button" class="btn grey" data-act="intro">How this app works</button><button type="button" class="btn" data-act="setclose">Done</button></div></div></div>`;
   }
 
-  if (S.intro) {
+  if (S.intro && !PAGE && S.page === "quiz") {   // "How it works" appears the first time someone opens the questions, not over Home
     h += `<div class="scrim intro"><div class="dialog" role="dialog" aria-modal="true" aria-labelledby="introT">
       <p class="eyebrow">How this app works</p>
       <h2 id="introT">Choose your answer, or rule out the wrong ones first</h2>

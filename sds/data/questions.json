@@ -41,7 +41,8 @@
    ],
    "status": "draft",
    "version": 1,
-   "batch": 1
+   "batch": 1,
+   "topicGroup": "Respiratory events"
   },
   {
    "questionId": "SDS-0096",
@@ -79,7 +80,8 @@
    ],
    "status": "draft",
    "version": 1,
-   "batch": 1
+   "batch": 1,
+   "topicGroup": "Respiratory events"
   },
   {
    "questionId": "SDS-0089",
@@ -117,7 +119,8 @@
    ],
    "status": "draft",
    "version": 1,
-   "batch": 1
+   "batch": 1,
+   "topicGroup": "Sleep staging"
   },
   {
    "questionId": "SDS-0063",
@@ -155,7 +158,8 @@
    ],
    "status": "draft",
    "version": 1,
-   "batch": 1
+   "batch": 1,
+   "topicGroup": "Cardiac events"
   },
   {
    "questionId": "SDS-0024",
@@ -216,7 +220,8 @@
    ],
    "status": "draft",
    "version": 1,
-   "batch": 1
+   "batch": 1,
+   "topicGroup": "Artifacts and signal quality"
   },
   {
    "questionId": "SDS-0135",
@@ -273,7 +278,8 @@
    ],
    "status": "draft",
    "version": 1,
-   "batch": 1
+   "batch": 1,
+   "topicGroup": "Reports and calculations"
   },
   {
    "questionId": "SDS-0104",
@@ -311,7 +317,8 @@
    ],
    "status": "draft",
    "version": 1,
-   "batch": 1
+   "batch": 1,
+   "topicGroup": "Movements and parasomnias"
   },
   {
    "questionId": "SDS-0001",
@@ -343,7 +350,8 @@
    ],
    "status": "draft",
    "version": 1,
-   "batch": 1
+   "batch": 1,
+   "topicGroup": "Screening and test selection"
   },
   {
    "questionId": "SDS-0075",
@@ -396,7 +404,8 @@
    ],
    "status": "draft",
    "version": 1,
-   "batch": 1
+   "batch": 1,
+   "topicGroup": "PAP titration"
   },
   {
    "questionId": "SDS-0112",
@@ -434,7 +443,8 @@
    ],
    "status": "draft",
    "version": 1,
-   "batch": 1
+   "batch": 1,
+   "topicGroup": "Respiratory events"
   },
   {
    "questionId": "SDS-0002",
@@ -466,7 +476,8 @@
    ],
    "status": "draft",
    "version": 1,
-   "batch": 1
+   "batch": 1,
+   "topicGroup": "Circadian, insomnia and hypersomnia"
   },
   {
    "questionId": "SDS-0183",
@@ -504,7 +515,8 @@
    ],
    "status": "draft",
    "version": 1,
-   "batch": 1
+   "batch": 1,
+   "topicGroup": "PAP follow-up and adherence"
   },
   {
    "questionId": "SDS-0142",
@@ -540,7 +552,8 @@
    "infoScales": [],
    "status": "draft",
    "version": 1,
-   "batch": 1
+   "batch": 1,
+   "topicGroup": "Reports and calculations"
   },
   {
    "questionId": "SDS-0006",
@@ -578,7 +591,8 @@
    ],
    "status": "draft",
    "version": 1,
-   "batch": 1
+   "batch": 1,
+   "topicGroup": "Circadian, insomnia and hypersomnia"
   },
   {
    "questionId": "SDS-0037",
@@ -614,7 +628,8 @@
    "infoScales": [],
    "status": "draft",
    "version": 1,
-   "batch": 1
+   "batch": 1,
+   "topicGroup": "Artifacts and signal quality"
   },
   {
    "questionId": "SDS-0050",
@@ -665,7 +680,8 @@
    "infoScales": [],
    "status": "draft",
    "version": 1,
-   "batch": 1
+   "batch": 1,
+   "topicGroup": "PAP titration"
   },
   {
    "questionId": "SDS-0062",
@@ -695,7 +711,8 @@
    "infoScales": [],
    "status": "draft",
    "version": 1,
-   "batch": 1
+   "batch": 1,
+   "topicGroup": "Emergencies and safety"
   },
   {
    "questionId": "SDS-0187",
@@ -746,7 +763,8 @@
    "infoScales": [],
    "status": "draft",
    "version": 1,
-   "batch": 1
+   "batch": 1,
+   "topicGroup": "PAP follow-up and adherence"
   },
   {
    "questionId": "SDS-0162",
@@ -776,7 +794,8 @@
    "infoScales": [],
    "status": "draft",
    "version": 1,
-   "batch": 1
+   "batch": 1,
+   "topicGroup": "PAP follow-up and adherence"
   },
   {
    "questionId": "SDS-0128",
@@ -806,7 +825,8 @@
    "infoScales": [],
    "status": "draft",
    "version": 1,
-   "batch": 1
+   "batch": 1,
+   "topicGroup": "Sleep staging"
   }
  ]
 }

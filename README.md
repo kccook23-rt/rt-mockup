@@ -42,3 +42,5 @@ The site now opens on the Otter Bay home page. Stats content in `js/stats.js` wa
 
 ## Practice builder (October 25, later)
 The Stats page is now the **Practice** tab: what to practice (all, not tried, review list, missed), sections you tap to select (with % correct bars and the weakest section flagged), more filters (images, data lists, rule cards, thinking level, patient age), count and mode, and a Start button that stays pinned at the bottom with a live match count. Bottom bar: Home, Practice, Questions, Apps.
+
+**Focus on Domain, Task or Topic.** Questions can be filtered by exam domain, task (outline section), or topic group (`topicGroup` field, e.g. "Mechanical ventilation", "PAP titration"). "Missed questions" now covers every question ever answered wrong, with an option to keep only the ones missed on the last attempt. Each row shows how many questions match, so "5 missed questions in Domain II" is two taps.
