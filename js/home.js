@@ -3,10 +3,22 @@
    and progress.js (RL, ST, load, save). Each exam site sets window.EXAM ("RRT", "SDS") and window.EXAM_LINKS. */
 (function () {
   const EXAMS = [
-    { key: "RRT", name: "CRT/RRT", sub: "Respiratory therapy", href: (window.EXAM_LINKS || {}).RRT },
-    { key: "SDS", name: "SDS", sub: "Sleep disorders specialist", href: (window.EXAM_LINKS || {}).SDS },
-    { key: "RPSGT", name: "RPSGT", sub: "Sleep technologist", href: null, soon: true },
+    { key: "RRT", name: "CRT/RRT Ready", sub: "Respiratory therapy", href: (window.EXAM_LINKS || {}).RRT },
+    { key: "SDS", name: "SDS Ready", sub: "Sleep disorders specialist", href: (window.EXAM_LINKS || {}).SDS },
+    { key: "RPSGT", name: "RPSGT Ready", sub: "Sleep technologist", href: null, soon: true },
   ];
+  // Each app has its own look on the same Otter Bay bones: daytime bay for CRT/RRT, night bay for SDS, dusk kelp forest for RPSGT.
+  const THEMES = {
+    RRT: { app: "CRT/RRT Ready", hi: ["Let's get your feet wet.", "Ready to pick up where you left off?"], bay: "#0A4A63", mid: "#0E6E8C", low: "#2A9FA6", tide: "#3FB8B3", accent: "#F5B83D", accentInk: "#3A2600", glass: "#E7F4F3",
+           sky: '<circle cx="330" cy="40" r="22" fill="#FFE3A1" opacity=".9"/><circle cx="330" cy="40" r="34" fill="#FFE3A1" opacity=".15"/>' },
+    SDS: { app: "SDS Ready", hi: ["Settle in for your first study.", "Back for another night shift?"], bay: "#14193F", mid: "#24306B", low: "#3B4F8F", tide: "#7E8FD6", accent: "#C9B8FF", accentInk: "#1C1240", glass: "#ECEEF8",
+           sky: '<path d="M342 22a20 20 0 1 0 14 34a16 16 0 0 1-14-34z" fill="#F4EBC6"/>' + [[40, 30], [90, 16], [150, 40], [210, 14], [262, 34], [300, 70], [120, 74], [24, 80]].map(([x, y], i) => `<circle cx="${x}" cy="${y}" r="${i % 3 ? 1.4 : 2.2}" fill="#fff" opacity=".85"/>`).join("") },
+    RPSGT: { app: "RPSGT Ready", hi: ["Let's dive into the tracings.", "Ready for more tracings?"], bay: "#123B2E", mid: "#1F5A45", low: "#3F8668", tide: "#7CC4A0", accent: "#F2A65A", accentInk: "#3A1E00", glass: "#EAF4EE",
+             sky: '<path d="M0 70h60l8-18 10 34 10-26 8 10h40l8-18 10 34 10-26 8 10h200" fill="none" stroke="#BFEAD3" stroke-width="2" opacity=".55"/>' },
+  };
+  const TH = THEMES[window.EXAM || "RRT"];
+  const themeVars = () => `--bay:${TH.bay};--tide:${TH.tide};--buoy:${TH.accent};--glass:${TH.glass};--mid:${TH.mid};--low:${TH.low};--accentInk:${TH.accentInk}`;
+  const topbar = () => `<header class="obtop"><span class="wm">${TH.app}<small>by Otter Bay</small></span><button type="button" class="obgear" data-act="settings" aria-label="Settings">${ICON.gear}</button></header>`;
   const DAY = (d) => d.toISOString().slice(0, 10);
   const LOG = load("dayLog", {});                       // { "2026-10-25": answered count }
 
@@ -56,23 +68,24 @@
     const rl = QS.filter((q) => RL[q.id]).length;
     const pct = QS.length ? Math.round(answered / QS.length * 100) : 0;
     const next = Math.min(10, QS.length - answered) || 10;
-    return `<div class="ob">
-      <header class="obtop"><span class="wm">Otter Bay</span><button type="button" class="obgear" data-act="settings" aria-label="Settings">${ICON.gear}</button></header>
+    return `<div class="ob" style="${themeVars()}">
+      ${topbar()}
       <div class="obscroll">
         <section class="bay">
+          <svg class="sky" viewBox="0 0 390 100" preserveAspectRatio="xMidYMin slice" aria-hidden="true">${TH.sky}</svg>
           <p class="hello">${greet()}</p>
-          <h1>${answered ? "Ready to pick up where you left off?" : "Let's get your feet wet."}</h1>
+          <h1>${TH.hi[answered ? 1 : 0]}</h1>
           <div class="water">
             <div class="raft">
               <div class="today">
-                <p class="tl">${exam.name} practice</p>
+                <p class="tl">${TH.app} practice</p>
                 <p class="tb">${answered ? `${next} new question${next === 1 ? "" : "s"}${rl ? ` and ${rl} from your review list` : ""}` : "Start with 10 questions to see where you stand"}</p>
                 <button type="button" class="obstart" data-act="go" data-v="quiz">${answered ? "Keep going" : "Start practicing"}</button>
                 ${PAWS}
               </div>
               ${OTTER}
             </div>
-            <svg class="waves" viewBox="0 0 400 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 22c40-14 80 14 120 0s80-14 120 0 80 14 120 0 40-8 40-8v46H0z" fill="#3FB8B3" opacity=".55"/><path d="M0 34c50-12 90 12 140 0s90-12 140 0 80 12 120 0v26H0z" fill="#0A4A63"/></svg>
+            <svg class="waves" viewBox="0 0 400 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 22c40-14 80 14 120 0s80-14 120 0 80 14 120 0 40-8 40-8v46H0z" style="fill:var(--tide)" opacity=".55"/><path d="M0 34c50-12 90 12 140 0s90-12 140 0 80 12 120 0v26H0z" style="fill:var(--bay)"/></svg>
           </div>
         </section>
         <section class="obsec">
@@ -106,17 +119,17 @@
   }
 
   const PRODUCTS = [
-    { key: "RRT", name: "Otter Bay CRT/RRT", color: "#0E6E8C", mark: '<path d="M4 34c6 0 6-8 12-8s6 8 12 8 6-8 12-8 6 8 12 8" />', blurb: "Practice for the NBRC Respiratory Therapist exam: blood gases, ventilator graphics, rhythm strips, and case-based questions in the same format as the test.", facts: ["Questions written to the January 2027 outline", "Rule-out answers, review list, exam mode", "Images and data lists like the real exam"], status: "In development", sample: (window.EXAM_LINKS || {}).RRT },
-    { key: "SDS", name: "Otter Bay SDS", color: "#2E3F7A", mark: '<path d="M38 12a16 16 0 1 0 10 28a13 13 0 0 1-10-28z" />', blurb: "Practice for the NBRC Sleep Disorders Specialty exam: staging epochs, respiratory event scoring, PAP titration, and treatment follow-up.", facts: ["Original PSG tracings and PAP reports", "AASM scoring and CMS rule cards", "Questions written to the SDS outline"], status: "In development", sample: (window.EXAM_LINKS || {}).SDS },
-    { key: "RPSGT", name: "Otter Bay RPSGT", color: "#2F6B4F", mark: '<path d="M4 28h8l4-12 6 24 6-18 4 6h16" />', blurb: "Practice for the BRPT Registered Polysomnographic Technologist exam, built around the tracings and scoring you use on every shift.", facts: ["Written to the BRPT blueprint", "Scoring, instrumentation, and PAP therapy", "Pediatric and infant scoring practice"], status: "Coming soon", sample: null },
+    { key: "RRT", name: "CRT/RRT Ready", color: "#0E6E8C", mark: '<path d="M4 34c6 0 6-8 12-8s6 8 12 8 6-8 12-8 6 8 12 8" />', blurb: "Practice for the NBRC Respiratory Therapist exam: blood gases, ventilator graphics, rhythm strips, and case-based questions in the same format as the test.", facts: ["Questions written to the January 2027 outline", "Rule-out answers, review list, exam mode", "Images and data lists like the real exam"], status: "In development", sample: (window.EXAM_LINKS || {}).RRT },
+    { key: "SDS", name: "SDS Ready", color: "#24306B", mark: '<path d="M38 12a16 16 0 1 0 10 28a13 13 0 0 1-10-28z" />', blurb: "Practice for the NBRC Sleep Disorders Specialty exam: staging epochs, respiratory event scoring, PAP titration, and treatment follow-up.", facts: ["Original PSG tracings and PAP reports", "AASM scoring and CMS rule cards", "Questions written to the SDS outline"], status: "In development", sample: (window.EXAM_LINKS || {}).SDS },
+    { key: "RPSGT", name: "RPSGT Ready", color: "#1F5A45", mark: '<path d="M4 28h8l4-12 6 24 6-18 4 6h16" />', blurb: "Practice for the BRPT Registered Polysomnographic Technologist exam, built around the tracings and scoring you use on every shift.", facts: ["Written to the BRPT blueprint", "Scoring, instrumentation, and PAP therapy", "Pediatric and infant scoring practice"], status: "Coming soon", sample: null },
   ];
 
   function products() {
-    return `<div class="ob">
-      <header class="obtop"><span class="wm">Otter Bay</span><button type="button" class="obgear" data-act="settings" aria-label="Settings">${ICON.gear}</button></header>
+    return `<div class="ob" style="${themeVars()}">
+      ${topbar()}
       <div class="obscroll">
         <section class="obsec">
-          <h1 class="ph">Otter Bay apps</h1>
+          <h1 class="ph">The Otter Bay apps</h1>
           <p class="lede">Exam prep for the people who keep patients breathing and sleeping safely. Pick the app for the credential you're working toward.</p>
         </section>
         ${PRODUCTS.map((p) => `<article class="prod" style="--pc:${p.color}">
@@ -141,8 +154,8 @@
   }
 
   function stats() {
-    return `<div class="ob obstats">
-      <header class="obtop"><span class="wm">Otter Bay</span><button type="button" class="obgear" data-act="settings" aria-label="Settings">${ICON.gear}</button></header>
+    return `<div class="ob obstats" style="${themeVars()}">
+      ${topbar()}
       <div class="obscroll"><div class="stats">${statsBody()}</div></div>
       ${nav("stats")}
     </div>`;

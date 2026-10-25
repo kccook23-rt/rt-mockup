@@ -4,14 +4,17 @@
   flex: 1; min-height: 0; display: flex; flex-direction: column; background: var(--glass); color: var(--ink2);
 }
 .obtop { height: 56px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 8px 0 18px; background: var(--bay); color: #fff; }
-.wm { font-family: "Fredoka", var(--font); font-weight: 600; font-size: 22px; letter-spacing: .01em; }
+.wm { font-family: "Fredoka", var(--font); font-weight: 600; font-size: 21px; letter-spacing: .01em; display: flex; flex-direction: column; line-height: 1.05; }
+.wm small { font-family: var(--font); font-weight: 400; font-size: 11px; color: rgba(255,255,255,.72); letter-spacing: .02em; }
+.sky { position: absolute; left: 0; top: 0; width: 100%; height: 100px; pointer-events: none; }
+.bay > *:not(.sky) { position: relative; }
 .obgear { width: 44px; height: 44px; border: 0; border-radius: 22px; background: transparent; color: #CFE9EC; display: flex; align-items: center; justify-content: center; cursor: pointer; }
 .obscroll { flex: 1; min-height: 0; overflow-y: auto; padding-bottom: 18px; }
 .ob h1 { font-family: "Fredoka", var(--font); font-weight: 600; margin: 0; line-height: 1.15; }
 .ob h2 { font-family: "Fredoka", var(--font); font-weight: 600; font-size: 19px; margin: 0 0 10px; color: var(--bay); }
 
 /* The bay: one illustrated moment. The otter floats on its back holding today's practice. */
-.bay { background: linear-gradient(180deg, var(--bay) 0%, #0E6E8C 55%, #2A9FA6 100%); color: #fff; padding: 8px 18px 0; position: relative; overflow: hidden; }
+.bay { background: linear-gradient(180deg, var(--bay) 0%, var(--mid) 55%, var(--low) 100%); color: #fff; padding: 8px 18px 0; position: relative; overflow: hidden; }
 .hello { margin: 0; font-size: 15px; color: #BFE5E6; }
 .bay h1 { font-size: 27px; margin-top: 2px; max-width: 15ch; }
 .water { position: relative; margin: 0 -18px 0; height: 262px; }
@@ -19,7 +22,7 @@
 .today { position: absolute; z-index: 2; left: 22px; bottom: 74px; width: 194px; background: #fff; color: var(--ink2); border-radius: 18px; padding: 14px 14px 12px; box-shadow: 0 10px 24px rgba(4, 34, 48, .35); box-sizing: border-box; }
 .tl { margin: 0; font-size: 13px; font-weight: 700; color: var(--kelp); }
 .tb { margin: 4px 0 12px; font-size: 16px; font-weight: 700; line-height: 1.3; }
-.obstart { width: 100%; min-height: 46px; border: 0; border-radius: 12px; background: var(--buoy); color: #3A2600; font: inherit; font-weight: 700; font-size: 16px; cursor: pointer; }
+.obstart { width: 100%; min-height: 46px; border: 0; border-radius: 12px; background: var(--buoy); color: var(--accentInk); font: inherit; font-weight: 700; font-size: 16px; cursor: pointer; }
 .obstart:hover { filter: brightness(1.04); }
 .paws { position: absolute; left: 52px; bottom: -18px; width: 84px; height: auto; }
 .otter { position: absolute; z-index: 1; left: 0; bottom: 0; width: 330px; height: auto; }
@@ -45,7 +48,7 @@ a.ex:hover { border-color: var(--tide); }
 .way b { font-size: 15px; } .way span { font-size: 13px; color: #4F6B75; line-height: 1.3; }
 .tide { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; height: 120px; align-items: end; background: #fff; border-radius: 16px; padding: 12px 12px 8px; box-sizing: border-box; }
 .tcol { height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: 4px; }
-.tbar { width: 100%; max-width: 26px; border-radius: 13px 13px 4px 4px; background: linear-gradient(180deg, var(--tide), #1C8C97); position: relative; min-height: 4px; }
+.tbar { width: 100%; max-width: 26px; border-radius: 13px 13px 4px 4px; background: linear-gradient(180deg, var(--tide), var(--bay)); position: relative; min-height: 4px; }
 .tbar span { position: absolute; top: -17px; left: 0; right: 0; text-align: center; font-size: 11px; font-weight: 700; color: var(--bay); }
 .tcol i { font-style: normal; font-size: 12px; color: #4F6B75; }
 .fine { margin: 6px 0 0; font-size: 12px; color: #5D7882; } .fine.pad { padding: 14px 16px 0; }
@@ -89,7 +92,7 @@ a.ex:hover { border-color: var(--tide); }
 .secrow.weak { background: #FFF6DE; }
 .sname { font-weight: 700; font-size: 14px; }
 .sbar { height: 10px; border-radius: 5px; background: #D7EBEC; overflow: hidden; }
-.sbar i { display: block; height: 100%; border-radius: 5px; background: linear-gradient(90deg, #3FB8B3, #0A4A63); }
+.sbar i { display: block; height: 100%; border-radius: 5px; background: linear-gradient(90deg, var(--tide), var(--bay)); }
 .secrow.weak .sbar i { background: #E3A21A; }
 .sval { font-size: 14px; font-weight: 700; text-align: right; font-variant-numeric: tabular-nums; }
 .scount { grid-column: 2 / 4; font-size: 12px; color: #5D7882; }
