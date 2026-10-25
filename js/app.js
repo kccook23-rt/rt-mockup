@@ -19,7 +19,7 @@ const REASONS = ["The keyed answer is wrong","More than one answer is correct","
 const ZOOMS = [1, 1.5, 2, 3];
 
 const freshRun = (set) => set.map(() => ({ out: {}, sel: null, done: false, unsure: false, note: null }));
-const S = { page: "quiz", mode: "study", requireOut: false, intro: !window.VET_MODE && !seenIntro(), settings: false, set: [], qi: 0, run: [], results: false, reviewing: false,
+const S = { page: window.START_PAGE || "quiz", mode: "study", requireOut: false, intro: !window.VET_MODE && !seenIntro(), settings: false, set: [], qi: 0, run: [], results: false, reviewing: false,
   started: Date.now(), finishedMs: 0, fb: null, reason: null, reported: {}, view: null, viewEv: false, scale: null, zoom: 1, rot: true,
   build: { src: "all", secs: {}, mode: "study", count: "all" }, loadError: null };
 const Q = () => QS[S.set[S.qi]];
@@ -76,13 +76,16 @@ function render() {
   const draftVal = draft ? draft.value : "";
   let h = "";
   const exam = S.mode === "exam";
-  h += `<div class="appbar"><b>${window.APP_LABEL || "RRT"}</b><span class="mode ${exam ? "exam" : ""}">${exam ? "Exam <span id=\"timer\">" + fmt((S.results ? S.finishedMs : Date.now() - S.started)) + "</span>" : "Study"}</span>
+  const PAGE = window.PAGES && window.PAGES[S.page];
+  if (!PAGE) h += `<div class="appbar">${window.PAGES && window.PAGES.home ? `<button type="button" class="homebtn" data-act="go" data-v="home" aria-label="Home">${window.APP_LABEL || "RRT"}</button>` : `<b>${window.APP_LABEL || "RRT"}</b>`}<span class="mode ${exam ? "exam" : ""}">${exam ? "Exam <span id=\"timer\">" + fmt((S.results ? S.finishedMs : Date.now() - S.started)) + "</span>" : "Study"}</span>
     <span class="count">${S.page === "stats" ? "Stats" : S.results && !S.reviewing ? "Results" : "Question " + (S.qi + 1) + " of " + S.set.length}</span>
     <button type="button" class="iconbtn" data-act="stats" aria-label="Stats and review list">${ICON.chart}</button>
     <button type="button" class="iconbtn" data-act="settings" aria-label="Settings">${ICON.gear}</button></div>`;
 
   if (!QS.length) {
     h += `<div class="sheet"><div class="stats"><p class="empty">${S.loadError ? "Couldn't load the questions. Check your connection and refresh the page." : "Loading questions…"}</p></div></div>`;
+  } else if (PAGE) {
+    h += PAGE();
   } else if (S.page === "stats") {
     h += statsPage();
   } else if (S.results && !S.reviewing) {
@@ -255,7 +258,8 @@ document.addEventListener("click", (e) => {
   if (!b || b.disabled || b.dataset.act === "reqout") return;
   if (!QS.length) return;
   const a = b.dataset.act, c = S.run[S.qi];
-  if (STATS_ACTIONS[a]) { if (STATS_ACTIONS[a](b) === false) return; }
+  if (window.PAGE_ACTIONS && window.PAGE_ACTIONS[a]) { if (window.PAGE_ACTIONS[a](b) === false) return; }
+  else if (STATS_ACTIONS[a]) { if (STATS_ACTIONS[a](b) === false) return; }
   else if (a === "pick") {
     const l = b.dataset.l; if (c.done) return;
     if (c.out[l]) { c.out[l] = false; }          // tapping a ruled-out choice restores it
