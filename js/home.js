@@ -16,7 +16,11 @@
     RPSGT: { app: "RPSGT Ready", hi: ["Let's dive into the tracings.", "Ready for more tracings?"], bay: "#123B2E", mid: "#1F5A45", low: "#3F8668", tide: "#7CC4A0", accent: "#F2A65A", accentInk: "#3A1E00", glass: "#EAF4EE",
              sky: '<path d="M0 70h60l8-18 10 34 10-26 8 10h40l8-18 10 34 10-26 8 10h200" fill="none" stroke="#BFEAD3" stroke-width="2" opacity=".55"/>' },
   };
+  const ROOT = ((document.querySelector('link[href*="home.css"]') || {}).href || "").replace(/css\/home\.css.*$/, "");
+  const PHOTO = { RRT: { src: ROOT + "images/brand/otter-rrt.jpg", alt: "A sea otter in the bay holding a wooden CRT/RRT sign" },
+                  SDS: { src: ROOT + "images/brand/otter-sds.jpg", alt: "A sleepy sea otter floating in the bay holding a wooden SDS sign" } };
   const TH = THEMES[window.EXAM || "RRT"];
+  const PH = PHOTO[window.EXAM || "RRT"];
   const themeVars = () => `--bay:${TH.bay};--tide:${TH.tide};--buoy:${TH.accent};--glass:${TH.glass};--mid:${TH.mid};--low:${TH.low};--accentInk:${TH.accentInk}`;
   const topbar = () => `<header class="obtop"><span class="wm">${TH.app}<small>by Otter Bay</small></span><button type="button" class="obgear" data-act="settings" aria-label="Settings">${ICON.gear}</button></header>`;
   const DAY = (d) => d.toISOString().slice(0, 10);
@@ -80,7 +84,16 @@
     return `<div class="ob" style="${themeVars()}">
       ${topbar()}
       <div class="obscroll">
-        <section class="bay">
+        ${PH ? `<section class="bay photo">
+          <p class="hello">${greet()}</p>
+          <h1>${TH.hi[answered ? 1 : 0]}</h1>
+          <figure class="hero"><img src="${PH.src}" alt="${PH.alt}" width="720" height="1072"></figure>
+          <div class="today">
+                <p class="tl">${TH.app} practice</p>
+                <p class="tb">${answered ? `${next} new question${next === 1 ? "" : "s"}${rl ? ` and ${rl} from your review list` : ""}` : "Start with 10 questions to see where you stand"}</p>
+                <button type="button" class="obstart" data-act="go" data-v="quiz">${answered ? "Keep going" : "Start practicing"}</button>
+              </div>
+        </section>` : `<section class="bay">
           <svg class="sky" viewBox="0 0 390 100" preserveAspectRatio="xMidYMin slice" aria-hidden="true">${TH.sky}</svg>
           <p class="hello">${greet()}</p>
           <h1>${TH.hi[answered ? 1 : 0]}</h1>
@@ -95,7 +108,7 @@
             </div>
             <svg class="waves" viewBox="0 0 400 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 22c40-14 80 14 120 0s80-14 120 0 80 14 120 0 40-8 40-8v46H0z" style="fill:var(--tide)" opacity=".55"/><path d="M0 34c50-12 90 12 140 0s90-12 140 0 80 12 120 0v26H0z" style="fill:var(--bay)"/></svg>
           </div>
-        </section>
+        </section>`}
         <section class="obsec">
           <h2>Your exam</h2>
           <div class="exams">${EXAMS.map((e) => e.key === exam.key
@@ -141,7 +154,7 @@
           <p class="lede">Exam prep for the people who keep patients breathing and sleeping safely. Pick the app for the credential you're working toward.</p>
         </section>
         ${PRODUCTS.map((p) => `<article class="prod" style="--pc:${p.color}">
-          <div class="phead"><svg class="pmark" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="25" fill="var(--pc)"/><g fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">${p.mark}</g></svg>
+          <div class="phead">${PHOTO[p.key] ? `<img class="pphoto" src="${PHOTO[p.key].src}" alt="" width="52" height="52">` : `<svg class="pmark" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="25" fill="var(--pc)"/><g fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">${p.mark}</g></svg>`}
             <div><h2>${p.name}</h2><span class="pstat ${p.status === "Coming soon" ? "soon" : ""}">${p.status}</span></div></div>
           <p>${p.blurb}</p>
           <ul>${p.facts.map((f) => `<li>${f}</li>`).join("")}</ul>
