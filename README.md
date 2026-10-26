@@ -17,6 +17,7 @@ Clickable design mock-up of the CRT/RRT exam-prep app. Not production code: the 
 | `js/calc.js`, `css/calc.css` | On-screen calculator, like the NBRC exam's. "Calc" button at the top of the answer ribbon; floating, draggable, keyboard-friendly; closes on each new question. | Ken + Claude |
 | `js/sleep_scales.js` | Sleep reference cards (staging, scoring rules, titration, CMS, ESS, STOP-BANG) used by the sleep samples | Ken + Claude |
 | `sds/` | 20-question public sample for the SDS sleep app (its own `data/` and `images/`; shares the JS and CSS above) | Ken + Claude |
+| `rpsgt/` | 20-question public sample for the RPSGT sleep app (same layout as `sds/`) | Ken + Claude |
 | `js/home.js`, `css/home.css` | Otter Bay home page, Apps (products) page, themed Stats frame, bottom navigation | Ken + Claude |
 | `js/progress.js` | Review list and per-question progress storage (used by both) | Shared: post in Discord before changing |
 | `css/app.css` | Colors, fonts, layout | Shared: post in Discord before changing |
@@ -35,7 +36,7 @@ The page loads `data/questions.json`, so open it through a local web server inst
 In `index.html`, change the `?v=` number on the file links (for example `?v=20261022` → `?v=20261022b`) so everyone's browser loads the new version instead of an old saved copy.
 
 ## Sleep samples
-The SDS sample lives at `/sds/` on the same site. Each exam keeps its own review list and stats in the browser. The full sleep question banks are private.
+The SDS sample lives at `/sds/` and the RPSGT sample at `/rpsgt/` on the same site. Each exam keeps its own review list and stats in the browser. The full sleep question banks are private.
 
 ## Home page (October 25)
 The site now opens on the Otter Bay home page. Stats content in `js/stats.js` was reordered (summary, by-domain progress with weakest section, review list, practice builder) and split into `statsBody()` so the home frame can wrap it; all existing actions still work.

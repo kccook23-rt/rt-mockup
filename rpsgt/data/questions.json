@@ -1,0 +1,945 @@
+{
+ "version": 1,
+ "status": "draft",
+ "exam": "RPSGT",
+ "count": 20,
+ "note": "Public 20-question sample of draft RPSGT questions under review. Tracings are original.",
+ "questions": [
+  {
+   "questionId": "RPSGT-0004",
+   "exam": "RPSGT",
+   "domain": "1",
+   "domainName": "Clinical Overview, Education, Patient Support",
+   "section": "1-A",
+   "sectionName": "Patient information and clinical assessment",
+   "topic": "Epworth score meaning",
+   "cognitiveLevel": "Recall",
+   "patientAge": "Adult",
+   "setting": "In-laboratory",
+   "tracheostomy": false,
+   "stem": "A patient's Epworth Sleepiness Scale total is 17. This score is best described as",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "diagnostic of narcolepsy.",
+    "mild excessive daytime sleepiness.",
+    "within the normal range.",
+    "severe excessive daytime sleepiness."
+   ],
+   "correctAnswer": "D",
+   "rationale": "ESS totals of 16 to 24 indicate severe excessive sleepiness. Scores of 10 or less are normal and 11 to 12 are mild. The ESS rates sleepiness only; it cannot diagnose any disorder.",
+   "reference": "Johns MW. Sleep. 1991;14(6):540-545.",
+   "image": null,
+   "infoScales": [
+    "ess"
+   ],
+   "evidence": null,
+   "topicGroup": "Circadian, insomnia and hypersomnia",
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "RPSGT-0005",
+   "exam": "RPSGT",
+   "domain": "1",
+   "domainName": "Clinical Overview, Education, Patient Support",
+   "section": "1-A",
+   "sectionName": "Patient information and clinical assessment",
+   "topic": "Medication effect - SSRI and REM",
+   "cognitiveLevel": "Application",
+   "patientAge": "Adult",
+   "setting": "In-laboratory",
+   "tracheostomy": false,
+   "stem": "During setup, a patient lists sertraline, an SSRI antidepressant, among daily medications. Which effect on tonight's recording should the technologist anticipate and note?",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "Fewer periodic limb movements than usual",
+    "Suppressed REM sleep and possible REM without atonia",
+    "More slow-wave sleep and fewer arousals",
+    "Sleep-onset REM periods on every nap"
+   ],
+   "correctAnswer": "B",
+   "rationale": "SSRIs suppress REM sleep, lengthen REM latency, and can cause REM sleep without atonia and increased periodic limb movements. They do not increase slow-wave sleep or cause SOREMPs; abrupt withdrawal of REM-suppressing drugs, not their use, can cause REM rebound.",
+   "reference": "Wichniak A, et al. Effects of antidepressants on sleep. Curr Psychiatry Rep. 2017;19(9):63.",
+   "image": null,
+   "infoScales": [
+    "staging"
+   ],
+   "evidence": null,
+   "topicGroup": "Patient care and education",
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "RPSGT-0026",
+   "exam": "RPSGT",
+   "domain": "1",
+   "domainName": "Clinical Overview, Education, Patient Support",
+   "section": "1-B",
+   "sectionName": "Patient and caregiver education",
+   "topic": "Explaining MSLT to patient",
+   "cognitiveLevel": "Application",
+   "patientAge": "Adult",
+   "setting": "Home or clinic",
+   "tracheostomy": false,
+   "stem": "A patient scheduled for an MSLT asks what will happen during the day. The technologist should explain that the patient will",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "stay awake in a dark room for 8 hours.",
+    "sleep through the morning and leave at noon.",
+    "take 5 scheduled naps about 2 hours apart and stay awake between them.",
+    "nap whenever they feel tired during the day."
+   ],
+   "correctAnswer": "C",
+   "rationale": "The MSLT is five nap opportunities at 2-hour intervals, starting 1.5 to 3 hours after the overnight study ends. Between naps, the patient must stay out of bed and awake, avoid caffeine and bright sunlight, and not smoke for 30 minutes before each nap.",
+   "reference": "Littner MR, et al. Sleep. 2005;28(1):113-121.",
+   "image": null,
+   "infoScales": [
+    "mslt"
+   ],
+   "evidence": null,
+   "topicGroup": "Reports and calculations",
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "RPSGT-0027",
+   "exam": "RPSGT",
+   "domain": "1",
+   "domainName": "Clinical Overview, Education, Patient Support",
+   "section": "1-B",
+   "sectionName": "Patient and caregiver education",
+   "topic": "Weight and OSA education",
+   "cognitiveLevel": "Application",
+   "patientAge": "Adult",
+   "setting": "Home or clinic",
+   "tracheostomy": false,
+   "stem": "An overweight patient with moderate OSA asks whether losing weight could help. Which response is most accurate?",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "Weight loss often lowers the AHI and is advised along with other treatment.",
+    "Body weight has little effect on how severe sleep apnea becomes.",
+    "Losing about 5 pounds is enough to cure most cases of sleep apnea.",
+    "Weight loss usually cures sleep apnea, so CPAP can stop right away."
+   ],
+   "correctAnswer": "A",
+   "rationale": "Weight loss commonly reduces OSA severity and is recommended for overweight or obese patients, but it rarely cures moderate OSA on its own and takes time, so other treatment continues. Any change in weight may change the pressure needed.",
+   "reference": "Hudgel DW, et al. The role of weight management in the treatment of adult OSA: an ATS clinical practice guideline. Am J Respir Crit Care Med. 2018;198(6):e70-e87.",
+   "image": null,
+   "infoScales": [
+    "alt_tx"
+   ],
+   "evidence": null,
+   "topicGroup": "PAP follow-up and adherence",
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "RPSGT-0077",
+   "exam": "RPSGT",
+   "domain": "2",
+   "domainName": "Sleep Study Preparation and Performance",
+   "section": "2-C",
+   "sectionName": "Identify, respond, and document",
+   "topic": "60 Hz artifact recognition",
+   "cognitiveLevel": "Application",
+   "patientAge": "Adult",
+   "setting": "In-laboratory",
+   "tracheostomy": false,
+   "stem": "The epoch shown is recorded during the first hour of a study. Which action should the technologist take FIRST?",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "Check the impedance of the O2 and M1 electrodes and re-prep as needed",
+    "Turn on the 60 Hz notch filter for all channels",
+    "Lower the high-frequency filter on O2-M1 to 15 Hz",
+    "Ignore it, because it only affects one channel"
+   ],
+   "correctAnswer": "A",
+   "rationale": "A thick, uniform band on one channel is 60 Hz line interference, usually caused by a high-impedance or loose electrode. The fix is to correct the electrode. A notch filter is a last resort, and lowering the high-frequency filter distorts EEG.",
+   "reference": "AASM Scoring Manual v3; standard PSG technology texts.",
+   "image": {
+    "file": "images/D2_60hz.png",
+    "type": "PSG epoch",
+    "alt": "N2 epoch with a thick, uniform, fuzzy band obscuring the O2-M1 channel; other channels look normal.",
+    "width": 1320,
+    "height": 723
+   },
+   "infoScales": [
+    "artifacts"
+   ],
+   "evidence": {
+    "color": "#FFD43B",
+    "halo": "rgba(0,0,0,.6)",
+    "label": "tracing",
+    "marks": [
+     {
+      "n": 1,
+      "kind": "ellipse",
+      "cx": 706,
+      "cy": 160,
+      "rx": 565,
+      "ry": 28,
+      "note": "Thick, even band of fast activity on O2-M1 only. Every other channel is clean, which points to one bad electrode."
+     }
+    ],
+    "takeaway": "Line noise on a single channel means a high-impedance or loose electrode. Fix O2 or M1 before reaching for the notch filter."
+   },
+   "topicGroup": "Artifacts and signal quality",
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "RPSGT-0078",
+   "exam": "RPSGT",
+   "domain": "2",
+   "domainName": "Sleep Study Preparation and Performance",
+   "section": "2-C",
+   "sectionName": "Identify, respond, and document",
+   "topic": "Sweat artifact recognition",
+   "cognitiveLevel": "Application",
+   "patientAge": "Adult",
+   "setting": "In-laboratory",
+   "tracheostomy": false,
+   "stem": "The epoch shown is recorded in a warm room from a patient under two blankets. What is the most likely cause of the abnormal activity?",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "ECG artifact",
+    "Sweat artifact",
+    "60 Hz interference",
+    "Electrode popping"
+   ],
+   "correctAnswer": "B",
+   "rationale": "Slow, high-amplitude drifting waves across several EEG and EOG channels in a warm patient are typical of sweat artifact, which changes the skin-electrode potential. Cooling the room and removing blankets usually helps.",
+   "reference": "Standard PSG technology texts.",
+   "image": {
+    "file": "images/D2_sweat.png",
+    "type": "PSG epoch",
+    "alt": "N2 epoch with large, slow, rolling waves of about one cycle every 4 seconds in all EEG and EOG channels, much larger than the background.",
+    "width": 1320,
+    "height": 723
+   },
+   "infoScales": [
+    "artifacts"
+   ],
+   "evidence": {
+    "color": "#FFD43B",
+    "halo": "rgba(0,0,0,.6)",
+    "label": "tracing",
+    "marks": [
+     {
+      "n": 1,
+      "kind": "ellipse",
+      "cx": 706,
+      "cy": 160,
+      "rx": 565,
+      "ry": 117,
+      "note": "Slow, rolling waves of about one cycle every 4 seconds across all EEG and EOG channels, far larger than the background."
+     }
+    ],
+    "takeaway": "Very slow drift on many channels in a warm patient is sweat. Cool the patient and room."
+   },
+   "topicGroup": "Artifacts and signal quality",
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "RPSGT-0056",
+   "exam": "RPSGT",
+   "domain": "2",
+   "domainName": "Sleep Study Preparation and Performance",
+   "section": "2-A",
+   "sectionName": "Determine technical preparation",
+   "topic": "Calibration signal - time constant",
+   "cognitiveLevel": "Application",
+   "patientAge": "Adult",
+   "setting": "In-laboratory",
+   "tracheostomy": false,
+   "stem": "The amplifier calibration signal shown is recorded before a study. The time from the start of the pulse to point B is used to verify the channel's",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "electrode impedance at that site.",
+    "sampling rate of the amplifier.",
+    "low-frequency filter (time constant).",
+    "high-frequency filter setting."
+   ],
+   "correctAnswer": "C",
+   "rationale": "When a square-wave pulse is applied, the trace decays back toward baseline. The time to fall to about 37% of the peak is the time constant, which is set by the low-frequency filter. A shorter time constant means a higher low-frequency filter setting.",
+   "reference": "PSG instrumentation texts on amplifier calibration.",
+   "image": {
+    "file": "images/D2_cal.png",
+    "type": "Calibration signal",
+    "alt": "Amplifier calibration square wave. Point A marks the peak of the deflection; point B marks where the signal has decayed to about 37% of its peak.",
+    "width": 880,
+    "height": 286
+   },
+   "infoScales": [
+    "tech"
+   ],
+   "evidence": null,
+   "topicGroup": "Sensors, setup and calibration",
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "RPSGT-0048",
+   "exam": "RPSGT",
+   "domain": "2",
+   "domainName": "Sleep Study Preparation and Performance",
+   "section": "2-A",
+   "sectionName": "Determine technical preparation",
+   "topic": "Airflow sensors for apnea vs hypopnea",
+   "cognitiveLevel": "Recall",
+   "patientAge": "Adult",
+   "setting": "In-laboratory",
+   "tracheostomy": false,
+   "stem": "During a diagnostic PSG, which sensor is recommended to score apneas?",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "Thoracic RIP belt",
+    "Snore microphone",
+    "Nasal pressure transducer",
+    "Oronasal thermal sensor"
+   ],
+   "correctAnswer": "D",
+   "rationale": "The oronasal thermal sensor is the recommended sensor for apneas, and the nasal pressure transducer for hypopneas. RIP sum or nasal pressure is an alternative if the thermal signal fails.",
+   "reference": "AASM Scoring Manual v3, respiratory rules (sensors).",
+   "image": null,
+   "infoScales": [
+    "resp_adult"
+   ],
+   "evidence": null,
+   "topicGroup": "Respiratory events",
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "RPSGT-0066",
+   "exam": "RPSGT",
+   "domain": "2",
+   "domainName": "Sleep Study Preparation and Performance",
+   "section": "2-B",
+   "sectionName": "Perform procedures and follow practice guidelines",
+   "topic": "HSAT - candidate selection",
+   "cognitiveLevel": "Application",
+   "patientAge": "Adult",
+   "setting": "Home or clinic",
+   "tracheostomy": false,
+   "stem": "Which patient is the best candidate for a home sleep apnea test?",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "A 9-year-old with enlarged tonsils",
+    "A 70-year-old with heart failure and an ejection fraction of 25%",
+    "A 48-year-old with loud snoring, witnessed apneas, and sleepiness, without other major illness",
+    "A 55-year-old on long-term methadone"
+   ],
+   "correctAnswer": "C",
+   "rationale": "HSAT is meant for uncomplicated adults with a high pretest probability of moderate to severe OSA. Significant heart failure, opioid use (risk of central apnea), and children are reasons to choose in-lab PSG.",
+   "reference": "Kapur VK, et al. J Clin Sleep Med. 2017;13(3):479-504.",
+   "image": null,
+   "infoScales": [
+    "hsat"
+   ],
+   "evidence": null,
+   "topicGroup": "Home sleep testing",
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "RPSGT-0070",
+   "exam": "RPSGT",
+   "domain": "2",
+   "domainName": "Sleep Study Preparation and Performance",
+   "section": "2-B",
+   "sectionName": "Perform procedures and follow practice guidelines",
+   "topic": "Split-night - when to switch",
+   "cognitiveLevel": "Application",
+   "patientAge": "Adult",
+   "setting": "In-laboratory",
+   "tracheostomy": false,
+   "stem": "A split-night study is ordered. After 2 hours of recording, the AHI is 48 events per hour, and 4 hours remain before lights on. The technologist should",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "wait one more hour before deciding",
+    "continue the diagnostic study until morning",
+    "start CPAP titration per the split-night protocol",
+    "wake the patient and end the study"
+   ],
+   "correctAnswer": "C",
+   "rationale": "An AHI of 40 or more after at least 2 hours of diagnostic recording meets split-night criteria, and more than 3 hours remain for titration. Starting titration now follows the protocol.",
+   "reference": "Kushida CA, et al. Sleep. 2005;28(4):499-521; AASM split-night guidance.",
+   "image": null,
+   "infoScales": [
+    "titration"
+   ],
+   "evidence": null,
+   "topicGroup": "PAP titration",
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "RPSGT-0096",
+   "exam": "RPSGT",
+   "domain": "3",
+   "domainName": "Scoring, Reporting, and Data Verification",
+   "section": "3-A",
+   "sectionName": "Score adult studies",
+   "topic": "Stage W - alpha rhythm",
+   "cognitiveLevel": "Application",
+   "patientAge": "Adult",
+   "setting": "In-laboratory",
+   "tracheostomy": false,
+   "stem": "The epoch shown is from an adult. It should be scored as stage",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "N1.",
+    "W.",
+    "N2.",
+    "R."
+   ],
+   "correctAnswer": "B",
+   "rationale": "Alpha rhythm fills more than half the epoch over the occipital lead, with blinks and high chin tone. That meets the criteria for stage W.",
+   "reference": "AASM Scoring Manual v3, sleep staging rules.",
+   "image": {
+    "file": "images/D3_W.png",
+    "type": "PSG epoch",
+    "alt": "Epoch with 8 to 12 Hz rhythmic activity in O2-M1 throughout, eye blinks in the EOG channels, and high chin EMG.",
+    "width": 1320,
+    "height": 585
+   },
+   "infoScales": [
+    "staging"
+   ],
+   "evidence": {
+    "color": "#FFD43B",
+    "halo": "rgba(0,0,0,.6)",
+    "label": "tracing",
+    "marks": [
+     {
+      "n": 1,
+      "kind": "ellipse",
+      "cx": 706,
+      "cy": 159,
+      "rx": 565,
+      "ry": 28,
+      "note": "Rhythmic 8 to 12 Hz alpha over the occipital lead through most of the epoch."
+     },
+     {
+      "n": 2,
+      "kind": "ellipse",
+      "cx": 706,
+      "cy": 247,
+      "rx": 565,
+      "ry": 72,
+      "note": "Eye blinks and high chin tone."
+     }
+    ],
+    "takeaway": "Alpha in more than half the epoch, with blinks and high chin tone, is stage W."
+   },
+   "topicGroup": "Sleep staging",
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "RPSGT-0097",
+   "exam": "RPSGT",
+   "domain": "3",
+   "domainName": "Scoring, Reporting, and Data Verification",
+   "section": "3-A",
+   "sectionName": "Score adult studies",
+   "topic": "Stage N1 - alpha replaced",
+   "cognitiveLevel": "Application",
+   "patientAge": "Adult",
+   "setting": "In-laboratory",
+   "tracheostomy": false,
+   "stem": "The epoch shown is from an adult. It should be scored as stage",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "N3.",
+    "W.",
+    "N1.",
+    "N2."
+   ],
+   "correctAnswer": "C",
+   "rationale": "Alpha is present for less than half the epoch and is replaced by low-amplitude 4 to 7 Hz activity, with slow eye movements and a vertex sharp wave. There are no spindles or K-complexes for N2.",
+   "reference": "AASM Scoring Manual v3, sleep staging rules.",
+   "image": {
+    "file": "images/D3_N1.png",
+    "type": "PSG epoch",
+    "alt": "Epoch with alpha only in the first several seconds, then low-amplitude 4 to 7 Hz activity, slow rolling eye movements, and a vertex sharp wave.",
+    "width": 1320,
+    "height": 585
+   },
+   "infoScales": [
+    "staging"
+   ],
+   "evidence": {
+    "color": "#FFD43B",
+    "halo": "rgba(0,0,0,.6)",
+    "label": "tracing",
+    "marks": [
+     {
+      "n": 1,
+      "kind": "ellipse",
+      "cx": 320,
+      "cy": 159,
+      "rx": 186,
+      "ry": 28,
+      "note": "Alpha only at the start of the epoch, less than half of it."
+     },
+     {
+      "n": 2,
+      "kind": "ellipse",
+      "cx": 878,
+      "cy": 159,
+      "rx": 393,
+      "ry": 116,
+      "note": "Then low-amplitude 4 to 7 Hz activity with slow rolling eye movements and a vertex sharp wave."
+     }
+    ],
+    "takeaway": "Alpha replaced by low-amplitude mixed frequencies for most of the epoch, without spindles or K-complexes, is N1."
+   },
+   "topicGroup": "Sleep staging",
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "RPSGT-0123",
+   "exam": "RPSGT",
+   "domain": "3",
+   "domainName": "Scoring, Reporting, and Data Verification",
+   "section": "3-B",
+   "sectionName": "Score pediatric and infant studies",
+   "topic": "Pediatric hypopnea - 2 breaths",
+   "cognitiveLevel": "Application",
+   "patientAge": "Pediatric",
+   "setting": "In-laboratory",
+   "tracheostomy": false,
+   "stem": "The 30-second tracing shown is from a 5-year-old during N2. Nasal pressure falls about 50% for about 4 breaths (10 seconds), followed by a 4% desaturation. How should it be scored?",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "No event, because it lasts only 10 seconds",
+    "Obstructive apnea",
+    "Central apnea",
+    "Hypopnea"
+   ],
+   "correctAnswer": "D",
+   "rationale": "Pediatric hypopneas need a 30% or greater drop in flow for at least 2 breaths with a 3% desaturation or an arousal. Duration in seconds isn't the criterion in children; breath count is.",
+   "reference": "AASM Scoring Manual v3, pediatric respiratory rules.",
+   "image": {
+    "file": "images/D3_peds_hyp.png",
+    "type": "PSG epoch",
+    "alt": "30-second pediatric tracing at about 24 breaths per minute where nasal pressure falls by about half for four breaths, followed by an SpO2 drop of about 4% and an arousal.",
+    "width": 1320,
+    "height": 539
+   },
+   "infoScales": [
+    "peds_resp"
+   ],
+   "evidence": {
+    "color": "#FFD43B",
+    "halo": "rgba(0,0,0,.6)",
+    "label": "tracing",
+    "marks": [
+     {
+      "n": 1,
+      "kind": "ellipse",
+      "cx": 668,
+      "cy": 333,
+      "rx": 221,
+      "ry": 28,
+      "note": "Nasal pressure falls about 50% for about four breaths."
+     },
+     {
+      "n": 2,
+      "kind": "ellipse",
+      "cx": 1012,
+      "cy": 463,
+      "rx": 201,
+      "ry": 28,
+      "note": "SpO2 then drops about 4%."
+     }
+    ],
+    "takeaway": "In children, a 30% drop for 2 or more breaths with a 3% desaturation or arousal is a hypopnea."
+   },
+   "topicGroup": "Respiratory events",
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "RPSGT-0124",
+   "exam": "RPSGT",
+   "domain": "3",
+   "domainName": "Scoring, Reporting, and Data Verification",
+   "section": "3-B",
+   "sectionName": "Score pediatric and infant studies",
+   "topic": "Pediatric central apnea",
+   "cognitiveLevel": "Application",
+   "patientAge": "Pediatric",
+   "setting": "In-laboratory",
+   "tracheostomy": false,
+   "stem": "The tracing shown is from a 6-year-old during N2. Airflow and effort both stop for 7 seconds (about 3 missed breaths), followed by a 4% desaturation. How should this be scored?",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "Obstructive apnea",
+    "Central apnea",
+    "Hypopnea",
+    "No event, because it lasts less than 20 seconds"
+   ],
+   "correctAnswer": "B",
+   "rationale": "In children, a central apnea can be scored if it lasts at least 20 seconds, or if it lasts at least 2 missed breaths and is associated with an arousal or a 3% or greater desaturation. Here a 4% desaturation follows a 3-breath pause.",
+   "reference": "AASM Scoring Manual v3, pediatric respiratory rules.",
+   "image": {
+    "file": "images/D3_peds_central.png",
+    "type": "PSG epoch",
+    "alt": "30-second pediatric tracing with a 7-second pause in which airflow and both effort belts are flat, followed by an SpO2 drop of about 4%.",
+    "width": 1320,
+    "height": 492
+   },
+   "infoScales": [
+    "peds_resp"
+   ],
+   "evidence": {
+    "color": "#FFD43B",
+    "halo": "rgba(0,0,0,.6)",
+    "label": "tracing",
+    "marks": [
+     {
+      "n": 1,
+      "kind": "ellipse",
+      "cx": 649,
+      "cy": 309,
+      "rx": 163,
+      "ry": 93,
+      "note": "Airflow and effort both stop for about 7 seconds, about 3 missed breaths."
+     },
+     {
+      "n": 2,
+      "kind": "ellipse",
+      "cx": 955,
+      "cy": 417,
+      "rx": 221,
+      "ry": 28,
+      "note": "A desaturation of about 4% follows."
+     }
+    ],
+    "takeaway": "A pediatric central pause of 2 or more breaths with a 3% desaturation (or arousal) is a central apnea."
+   },
+   "topicGroup": "Respiratory events",
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "RPSGT-0138",
+   "exam": "RPSGT",
+   "domain": "3",
+   "domainName": "Scoring, Reporting, and Data Verification",
+   "section": "3-C",
+   "sectionName": "Generate and verify report",
+   "topic": "Calculate PLMS index",
+   "cognitiveLevel": "Application",
+   "patientAge": "Adult",
+   "setting": "In-laboratory",
+   "tracheostomy": false,
+   "stem": "Data from a PSG are shown.",
+   "stemTable": [
+    [
+     "Total sleep time",
+     "375 minutes"
+    ],
+    [
+     "Periodic limb movements in sleep",
+     "150"
+    ],
+    [
+     "PLMs with arousal",
+     "40"
+    ]
+   ],
+   "stemAfterTable": "What is the PLMS index?",
+   "options": [
+    "20/hr",
+    "30/hr",
+    "24/hr",
+    "6/hr"
+   ],
+   "correctAnswer": "C",
+   "rationale": "PLMS index = PLMS × 60 ÷ TST in minutes = 150 × 60 ÷ 375 = 24 per hour. The PLM arousal index would be 40 × 60 ÷ 375 = 6.4 per hour.",
+   "reference": "AASM Scoring Manual v3, parameters to be reported.",
+   "image": null,
+   "infoScales": [
+    "stats",
+    "plm"
+   ],
+   "evidence": null,
+   "topicGroup": "Movements and parasomnias",
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "RPSGT-0148",
+   "exam": "RPSGT",
+   "domain": "4",
+   "domainName": "Treatment and Intervention",
+   "section": "4-A",
+   "sectionName": "Administer PAP therapy",
+   "topic": "CPAP increase - obstructive apneas",
+   "cognitiveLevel": "Application",
+   "patientAge": "Adult",
+   "setting": "In-laboratory",
+   "tracheostomy": false,
+   "stem": "During a CPAP titration in an adult at 8 cm H2O, the 2-minute view shown is recorded during N2. What should the technologist do?",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "Switch to bilevel PAP right away",
+    "Add oxygen at 1 L/min",
+    "Decrease CPAP by 1 cm H2O",
+    "Increase CPAP by at least 1 cm H2O"
+   ],
+   "correctAnswer": "D",
+   "rationale": "For patients 12 and older, CPAP is increased by at least 1 cm H2O (no sooner than every 5 minutes) when at least 2 obstructive apneas are observed. Three obstructive apneas with desaturation show the pressure is still too low.",
+   "reference": "Kushida CA, et al. J Clin Sleep Med. 2008;4(2):157-171.",
+   "image": {
+    "file": "images/D4_tit_oa.png",
+    "type": "PSG tracing",
+    "alt": "Two-minute titration tracing at CPAP 8 cm H2O with three obstructive apneas of 17 to 20 seconds each, with continued and growing effort, snoring after each, and SpO2 drops of 6 to 7%.",
+    "width": 1320,
+    "height": 539
+   },
+   "infoScales": [
+    "titration"
+   ],
+   "evidence": {
+    "color": "#FFD43B",
+    "halo": "rgba(0,0,0,.6)",
+    "label": "tracing",
+    "marks": [
+     {
+      "n": 1,
+      "kind": "ellipse",
+      "cx": 735,
+      "cy": 333,
+      "rx": 508,
+      "ry": 28,
+      "note": "Three pauses in PAP flow of 17 to 20 seconds each."
+     },
+     {
+      "n": 2,
+      "kind": "ellipse",
+      "cx": 735,
+      "cy": 398,
+      "rx": 508,
+      "ry": 50,
+      "note": "Effort continues through each pause, so they're obstructive."
+     }
+    ],
+    "takeaway": "Two or more obstructive apneas in an adult means CPAP should go up by at least 1 cm H2O."
+   },
+   "topicGroup": "Respiratory events",
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "RPSGT-0173",
+   "exam": "RPSGT",
+   "domain": "4",
+   "domainName": "Treatment and Intervention",
+   "section": "4-A",
+   "sectionName": "Administer PAP therapy",
+   "topic": "Download - APAP pressure for fixed CPAP",
+   "cognitiveLevel": "Application",
+   "patientAge": "Adult",
+   "setting": "Home or clinic",
+   "tracheostomy": false,
+   "stem": "The 30-day APAP report shown is for an adult with uncomplicated OSA. The provider wants to switch to fixed CPAP. Which pressure is suggested by the data?",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "About 11 cm H2O, near the 90th percentile pressure",
+    "5 cm H2O, the minimum setting",
+    "8 cm H2O, halfway through the range",
+    "15 cm H2O, the maximum setting"
+   ],
+   "correctAnswer": "A",
+   "rationale": "With good use, a low residual AHI, and low leak, the 90th (or 95th) percentile pressure, about 11 cm H2O here, is commonly used to choose a fixed CPAP pressure.",
+   "reference": "Morgenthaler TI, et al. Sleep. 2008;31(1):141-147.",
+   "image": {
+    "file": "images/D4_apap.png",
+    "type": "PAP download report",
+    "alt": "30-day APAP report at 5 to 15 cm H2O with use about 7 hours a night, residual AHI about 2, low leak, and a 90th percentile pressure of about 11 cm H2O on the summary and daily graph.",
+    "width": 1018,
+    "height": 639
+   },
+   "infoScales": [
+    "download"
+   ],
+   "evidence": null,
+   "topicGroup": "PAP follow-up and adherence",
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "RPSGT-0195",
+   "exam": "RPSGT",
+   "domain": "4",
+   "domainName": "Treatment and Intervention",
+   "section": "4-C",
+   "sectionName": "Administer oxygen therapy",
+   "topic": "O2 during titration - when to add",
+   "cognitiveLevel": "Application",
+   "patientAge": "Adult",
+   "setting": "In-laboratory",
+   "tracheostomy": false,
+   "stem": "During a CPAP titration, the 2-minute REM view shown is recorded after obstructive events have been controlled at 10 cm H2O. SpO2 has stayed at about 87% for 8 minutes. What should the technologist do?",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "Increase CPAP to 15 cm H2O",
+    "Wake the patient to end REM sleep",
+    "Add supplemental O2 at 1 L/min per protocol",
+    "Switch to APAP"
+   ],
+   "correctAnswer": "C",
+   "rationale": "When SpO2 stays at 88% or less for 5 minutes or more without obstructive events, the AASM recommends adding O2, starting at 1 L/min. Raising pressure without obstructive events doesn't fix hypoxemia from lung disease or hypoventilation.",
+   "reference": "Kushida CA, et al. J Clin Sleep Med. 2008;4(2):157-171.",
+   "image": {
+    "file": "images/D4_desat.png",
+    "type": "PSG tracing",
+    "alt": "Two-minute stage R tracing on CPAP 10 cm H2O with regular breathing, no apneas, hypopneas, or snoring, and SpO2 steady between about 86% and 88%.",
+    "width": 1320,
+    "height": 539
+   },
+   "infoScales": [
+    "o2titr"
+   ],
+   "evidence": {
+    "color": "#FFD43B",
+    "halo": "rgba(0,0,0,.6)",
+    "label": "tracing",
+    "marks": [
+     {
+      "n": 1,
+      "kind": "ellipse",
+      "cx": 706,
+      "cy": 376,
+      "rx": 575,
+      "ry": 71,
+      "note": "Regular breathing with no apneas, hypopneas, or snoring on CPAP 10."
+     },
+     {
+      "n": 2,
+      "kind": "ellipse",
+      "cx": 706,
+      "cy": 463,
+      "rx": 575,
+      "ry": 28,
+      "note": "SpO2 stays at about 86% to 88% anyway."
+     }
+    ],
+    "takeaway": "Persistent SpO2 of 88% or less for 5 minutes or more without obstructive events means add O2 at 1 L/min."
+   },
+   "topicGroup": "PAP titration",
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "RPSGT-0182",
+   "exam": "RPSGT",
+   "domain": "4",
+   "domainName": "Treatment and Intervention",
+   "section": "4-B",
+   "sectionName": "Identify alternative therapies",
+   "topic": "Oral appliance mechanism",
+   "cognitiveLevel": "Recall",
+   "patientAge": "Adult",
+   "setting": "Home or clinic",
+   "tracheostomy": false,
+   "stem": "How does a mandibular advancement oral appliance treat OSA?",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "It keeps the patient from rolling onto the back during sleep",
+    "It holds the lower jaw forward, enlarging the airway behind the tongue",
+    "It stimulates the hypoglossal nerve to move the tongue forward",
+    "It delivers pressurized air through the mouth to splint the airway"
+   ],
+   "correctAnswer": "B",
+   "rationale": "Mandibular advancement devices position the lower jaw and tongue forward, which enlarges the upper airway and reduces collapse during sleep.",
+   "reference": "Ramar K, et al. AASM/AADSM oral appliance guideline. J Clin Sleep Med. 2015;11(7):773-827.",
+   "image": null,
+   "infoScales": [
+    "alt_tx"
+   ],
+   "evidence": null,
+   "topicGroup": "Alternative therapies",
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  },
+  {
+   "questionId": "RPSGT-0189",
+   "exam": "RPSGT",
+   "domain": "4",
+   "domainName": "Treatment and Intervention",
+   "section": "4-B",
+   "sectionName": "Identify alternative therapies",
+   "topic": "First-line treatment pediatric OSA",
+   "cognitiveLevel": "Recall",
+   "patientAge": "Pediatric",
+   "setting": "In-laboratory",
+   "tracheostomy": false,
+   "stem": "What is the first-line treatment for most otherwise healthy children with OSA and enlarged tonsils?",
+   "stemTable": [],
+   "stemAfterTable": "",
+   "options": [
+    "CPAP",
+    "Positional therapy",
+    "Adenotonsillectomy",
+    "An oral appliance"
+   ],
+   "correctAnswer": "C",
+   "rationale": "Adenotonsillectomy is first-line for children with OSA and adenotonsillar hypertrophy. CPAP is used if surgery isn't an option or OSA persists afterward.",
+   "reference": "Marcus CL, et al. Pediatrics. 2012;130(3):e714-e755.",
+   "image": null,
+   "infoScales": [
+    "alt_tx"
+   ],
+   "evidence": null,
+   "topicGroup": "Screening and test selection",
+   "status": "draft",
+   "version": 1,
+   "batch": 1
+  }
+ ]
+}

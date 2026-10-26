@@ -5,7 +5,7 @@
   const EXAMS = [
     { key: "RRT", name: "CRT/RRT Ready", sub: "Respiratory therapy", href: (window.EXAM_LINKS || {}).RRT },
     { key: "SDS", name: "SDS Ready", sub: "Sleep disorders specialist", href: (window.EXAM_LINKS || {}).SDS },
-    { key: "RPSGT", name: "RPSGT Ready", sub: "Sleep technologist", href: null, soon: true },
+    { key: "RPSGT", name: "RPSGT Ready", sub: "Sleep technologist", href: (window.EXAM_LINKS || {}).RPSGT },
   ];
   // Each app has its own look on the same Otter Bay bones: daytime bay for CRT/RRT, night bay for SDS, dusk kelp forest for RPSGT.
   const THEMES = {
@@ -142,7 +142,7 @@
   const PRODUCTS = [
     { key: "RRT", name: "CRT/RRT Ready", color: "#0E6E8C", mark: '<path d="M4 34c6 0 6-8 12-8s6 8 12 8 6-8 12-8 6 8 12 8" />', blurb: "Practice for the NBRC Respiratory Therapist exam: blood gases, ventilator graphics, rhythm strips, and case-based questions in the same format as the test.", facts: ["Questions written to the January 2027 outline", "Rule-out answers, review list, exam mode", "Images and data lists like the real exam"], status: "In development", sample: (window.EXAM_LINKS || {}).RRT },
     { key: "SDS", name: "SDS Ready", color: "#24306B", mark: '<path d="M38 12a16 16 0 1 0 10 28a13 13 0 0 1-10-28z" />', blurb: "Practice for the NBRC Sleep Disorders Specialty exam: staging epochs, respiratory event scoring, PAP titration, and treatment follow-up.", facts: ["Original PSG tracings and PAP reports", "AASM scoring and CMS rule cards", "Questions written to the SDS outline"], status: "In development", sample: (window.EXAM_LINKS || {}).SDS },
-    { key: "RPSGT", name: "RPSGT Ready", color: "#1F5A45", mark: '<path d="M4 28h8l4-12 6 24 6-18 4 6h16" />', blurb: "Practice for the BRPT Registered Polysomnographic Technologist exam, built around the tracings and scoring you use on every shift.", facts: ["Written to the BRPT blueprint", "Scoring, instrumentation, and PAP therapy", "Pediatric and infant scoring practice"], status: "Coming soon", sample: null },
+    { key: "RPSGT", name: "RPSGT Ready", color: "#1F5A45", mark: '<path d="M4 28h8l4-12 6 24 6-18 4 6h16" />', blurb: "Practice for the BRPT Registered Polysomnographic Technologist exam, built around the tracings and scoring you use on every shift.", facts: ["Written to the BRPT blueprint", "Scoring, instrumentation, and PAP therapy", "Pediatric and infant scoring practice"], status: "In development", sample: (window.EXAM_LINKS || {}).RPSGT },
   ];
 
   function products() {
