@@ -62,7 +62,8 @@
    "version": 1,
    "batch": 1,
    "infoScales": [
-    "berlin"
+    "berlin",
+    "oxy"
    ],
    "evidence": null,
    "topicGroup": "Mechanical ventilation"
@@ -261,7 +262,8 @@
    "version": 1,
    "batch": 1,
    "infoScales": [
-    "gold"
+    "gold",
+    "pft"
    ],
    "evidence": null,
    "topicGroup": "Pulmonary function and diagnostics"
@@ -333,7 +335,9 @@
    "status": "draft",
    "version": 1,
    "batch": 1,
-   "infoScales": [],
+   "infoScales": [
+    "ecg"
+   ],
    "evidence": {
     "color": "#1F5FD6",
     "halo": "rgba(255,255,255,.9)",
@@ -415,7 +419,10 @@
    "status": "draft",
    "version": 1,
    "batch": 1,
-   "infoScales": [],
+   "infoScales": [
+    "acls",
+    "ecg"
+   ],
    "evidence": {
     "color": "#1F5FD6",
     "halo": "rgba(255,255,255,.9)",
@@ -486,7 +493,9 @@
    "status": "draft",
    "version": 1,
    "batch": 1,
-   "infoScales": [],
+   "infoScales": [
+    "ecg"
+   ],
    "evidence": {
     "color": "#1F5FD6",
     "halo": "rgba(255,255,255,.9)",
@@ -797,7 +806,9 @@
    "status": "draft",
    "version": 1,
    "batch": 1,
-   "infoScales": [],
+   "infoScales": [
+    "oxy"
+   ],
    "evidence": null,
    "topicGroup": "Blood gases and acid-base"
   },
@@ -874,7 +885,9 @@
    "status": "draft",
    "version": 1,
    "batch": 1,
-   "infoScales": [],
+   "infoScales": [
+    "abg"
+   ],
    "evidence": null,
    "topicGroup": "Neonatal and pediatric"
   },
@@ -991,7 +1004,9 @@
    "status": "draft",
    "version": 1,
    "batch": 1,
-   "infoScales": [],
+   "infoScales": [
+    "abg"
+   ],
    "evidence": null,
    "topicGroup": "Blood gases and acid-base"
   },
@@ -1052,7 +1067,9 @@
    "status": "draft",
    "version": 1,
    "batch": 1,
-   "infoScales": [],
+   "infoScales": [
+    "abg"
+   ],
    "evidence": null,
    "topicGroup": "Blood gases and acid-base"
   },
@@ -1156,7 +1173,9 @@
    "status": "draft",
    "version": 1,
    "batch": 1,
-   "infoScales": [],
+   "infoScales": [
+    "o2dev"
+   ],
    "evidence": null,
    "topicGroup": "Noninvasive support and oxygen"
   },
@@ -1310,7 +1329,9 @@
    "status": "draft",
    "version": 1,
    "batch": 1,
-   "infoScales": [],
+   "infoScales": [
+    "croup"
+   ],
    "evidence": null,
    "topicGroup": "Neonatal and pediatric"
   }
