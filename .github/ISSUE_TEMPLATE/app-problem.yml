@@ -1,0 +1,31 @@
+name: App problem
+description: Something in the mock-up doesn't work or looks wrong
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: "This repo is **public**: don't paste questions from the private banks here. Use the question ID instead."
+  - type: dropdown
+    id: app
+    attributes:
+      label: Which app?
+      options: ["CRT/RRT Ready", "SDS Ready", "RPSGT Ready", "All of them"]
+    validations:
+      required: true
+  - type: dropdown
+    id: page
+    attributes:
+      label: Which page?
+      options: ["Home", "Practice", "Questions", "Apps", "Calculator", "Info or evidence card", "Other"]
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, and what you saw. A screenshot helps a lot (drag it into this box).
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Device and browser
+      placeholder: iPhone 15, Safari

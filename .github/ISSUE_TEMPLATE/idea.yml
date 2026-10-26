@@ -1,0 +1,15 @@
+name: Feature idea
+description: An idea for the app
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: The idea
+    validations:
+      required: true
+  - type: dropdown
+    id: app
+    attributes:
+      label: Which app?
+      options: ["All apps", "CRT/RRT Ready", "SDS Ready", "RPSGT Ready"]
